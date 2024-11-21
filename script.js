@@ -8,18 +8,18 @@ let hamMenuIcon = document.getElementById("ham-menu");
 
 
 
-function showSearch() {
-  inputElem.classList.remove("hidden");
-  searchButton.classList.add("hidden");
-}
+// function showSearch() {
+//   inputElem.classList.remove("hidden");
+//   searchButton.classList.add("hidden");
+// }
 
-function hideSearch() {
-  inputElem.classList.add("hidden");
-  searchButton.classList.remove("hidden");
-}
+// function hideSearch() {
+//   inputElem.classList.add("hidden");
+//   searchButton.classList.remove("hidden");
+// }
 
-inputElem.addEventListener("focus", showSearch);
-inputElem.addEventListener("blur", hideSearch);
+// inputElem.addEventListener("focus", showSearch);
+// inputElem.addEventListener("blur", hideSearch);
 
 
 function showMenu() {
