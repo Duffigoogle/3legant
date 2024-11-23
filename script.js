@@ -47,6 +47,8 @@ closeIcon.addEventListener("click", () => {
 
 let dropdownElem = document.querySelector(".shop");
 let dropdownBox = document.querySelector(".drop-down");
+let chevronElem = document.querySelector(".fa-chevron-down");
+
 
 // dropdownElem.addEventListener("click", () => {
 //   dropdownBox.classList.toggle("hidden");
@@ -54,10 +56,11 @@ let dropdownBox = document.querySelector(".drop-down");
 
 dropdownElem.addEventListener("mouseover", () => {
   dropdownBox.style.display = "block";
-  dropdownBox.style.backgroundColor = "red";
+  dropdownBox.style.backgroundColor = "#377DFF";
+  chevronElem.style.transform = "rotate(180deg)";
 })
 
 dropdownElem.addEventListener("mouseout", () => {
   dropdownBox.style.display = "";
-
+  chevronElem.style.transform = "rotate(0deg)";
 })
