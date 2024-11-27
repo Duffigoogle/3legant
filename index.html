@@ -184,12 +184,12 @@
         </nav>
       </div>
     </header>
-    <main class="container mx-auto">
-      <section
-        class="h-[100vh] bg-cover bg-center bg-no-repeat"
+    <main class="">
+      <section 
+        class="container mx-auto h-[100vh] bg-cover bg-center bg-no-repeat"
         style="background-image: url('./assets/images/hero.png')"
       ></section>
-      <section class="">
+      <section class="container mx-auto">
         <div class="flex justify-between items-center pr-20 py-10">
           <h2
             class="text-[#141718] text-7xl leading-[76px] tracking-[2px] font-medium"
@@ -264,7 +264,7 @@
           </div>
         </div>
       </section>
-      <section class="">
+      <section class="container mx-auto">
         <div class="flex justify-between items-end py-10">
           <h3
             class="text-[#141718] text-5xl leading-[44px] tracking-[0.4px] font-medium"
@@ -430,7 +430,7 @@
           </div>
         </div>
       </section>
-      <section class="py-20 grid-cols-4 grid gap-10">
+      <section class="container mx-auto py-20 grid-cols-4 grid gap-10">
         <div class="bg-[#F3F5F7] px-12 py-16">
           <i class="fa-solid fa-truck-fast fa-2x"></i>
           <h4 class="text-xl font-bold py-3 text-[#141718]">Free Shipping</h4>
@@ -456,17 +456,69 @@
         <div class="w-full">
           <img src="./assets/images/sales-img.png" alt="Sales furniture" class="w-full">
         </div>
-        <div class="bg-[#F3F5F7] flex flex-col justify-center">
-          <p>SALE UP TO 35% OFF</p>
-          <h3>HUNDREDS of 
-            New lower prices!</h3>
-            <p class="py-3">It’s more affordable than ever to give every room in your home a stylish makeover</p>
+        <div class="bg-[#F3F5F7] flex flex-col justify-center pl-20 pr-30">
+          <p class="font bold text-blue-500 text-base font-[Inter] py-2">SALE UP TO 35% OFF</p>
+          <h4 class="text-[#141718] text-4xl font-normal">HUNDREDS of <br>
+            New lower prices!</h4>
+            <p class="pt-3 pb-6 text-xl font-[Inter] font-normal">It’s more affordable than ever to give every <br> room in your home a stylish makeover</p>
             <a
                   href=""
-                  class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-lg w-fit"
+                  class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-lg w-fit cursor-pointer"
                   >Shop Now <i class="fa-solid fa-arrow-right-long"></i
                 ></a>
 
+        </div>
+      </section>
+      <section class="container mx-auto py-14">
+        <div class="flex justify-between items-center">
+          <h4 class="text-4xl">Articles</h4>
+          <a
+                  href=""
+                  class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-base w-fit cursor-pointer"
+                  >More Articles <i class="fa-solid fa-arrow-right-long"></i
+                ></a>
+        </div>
+        <div class="grid grid-cols-3 gap-10 mt-8">
+          <div>
+            <img src="./assets/images/articles/photo-1.png" alt="Article 1" class="w-full">
+            <h6 class="text-xl pt-4 pb-2">7 ways to decor your home</h6>
+            <a
+            href=""
+            class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-base w-fit cursor-pointer"
+            >Read More <i class="fa-solid fa-arrow-right-long"></i
+          ></a>
+          </div>
+          <div>
+            <img src="./assets/images/articles/photo-2.png" alt="Article 2" class="w-full">
+            <h6 class="text-xl pt-4 pb-2">Kitchen organization</h6>
+            <a
+            href=""
+            class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-base w-fit cursor-pointer"
+            >Read More <i class="fa-solid fa-arrow-right-long"></i
+          ></a>
+          </div>
+          <div>
+            <img src="./assets/images/articles/photo-3.png" alt="Article 3" class="w-full">
+            <h6 class="text-xl pt-4 pb-2">Decor your bedroom</h6>
+            <a
+            href=""
+            class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-base w-fit cursor-pointer"
+            >Read More <i class="fa-solid fa-arrow-right-long"></i
+          ></a>
+          </div>
+
+        </div>
+      </section>
+      <section class="text-center py-20 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('./assets/images/newsletter/newsletter-bg.png')">
+        <h4 class="text-4xl font-medium">Join Our Newsletter</h4>
+        <p class="font-[Inter] py-2">Sign up for deals, new products and promotions</p>
+        <div class="border-b-2 border-[#6C7275] my-6 w-96 mx-auto flex justify-between items-center text-[#6C7275] py-3">
+          <div class="flex gap-2 items-center">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="text" placeholder="Email address" class="w-full bg-transparent outline-transparent">
+          </div>
+          <button class="text-[#6C7275]">Signup</button>
         </div>
       </section>
       <!-- relative max-w-fit pr-3 md:pr-0 py-1 after:bg-gradient-to-r from-[#2b68e0] to-[#e710ea] after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 -->
