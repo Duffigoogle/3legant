@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/accessories.css" />
+    <title>3Legant | Accessories</title>
+  </head>
+  <body>
+    <header class="">
+      <div class="">
+        <div class="flex justify-around items-center h-[50px] bg-black">
+          <div class="flex justify-between items-center text-white">
+            <i class="fa-solid fa-ticket text-[22px]"></i>
+            <p class="px-2">30% off storewide — Limited time!</p>
+            <span
+              class="border-b-2 border-[#FFAB00] pb-1 text-[#FFAB00] hidden md:block"
+            >
+              <a href="" class="">Shop Now</a>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
+          </div>
+          <i class="fa-solid fa-xmark text-white"></i>
+        </div>
+      </div>
+      <div
+        class="bg-[#FFAB00] flex justify-between items-center h-[100px] px-8 relative shadow-lg z-10 md:h-[70px]"
+      >
+        <nav class="w-full flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-bars text-[25px] md:hidden" id="ham-menu"></i>
+            <a href="" class="text-xl font-semibold md:text-2xl md:font-normal"
+              >3legant.</a
+            >
+          </div>
+          <div
+            id="nav-menu"
+            class="duration-500 absolute left-[-100%] top-[100%] w-full md:static md:w-auto px-8 pb-4 pt-2 md:py-0 md:px-0"
+          >
+            <form
+              action=""
+              class="flex gap-2 items-center border border-[#6C7275] px-4 py-3 rounded-lg md:hidden"
+            >
+              <button
+                type="submit"
+                class="search-btn bg-transparent"
+                onclick="showSearch()"
+              >
+                <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+              </button>
+              <input
+                type="text"
+                name=""
+                id="search-bar"
+                placeholder="Search..."
+                class="w-full"
+              />
+            </form>
+            <ul
+              class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]"
+            >
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a
+                  href="../index.html"
+                  class="text-[#141718] text-md md:text-md text-black"
+                  >Home</a
+                >
+              </li>
+              <li
+                class="shop border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0 cursor-pointer"
+                onclick="showModal()"
+              >
+                Shop
+                <!-- <a href="" class="text-[#141718] text-md md:text-md text-black"
+                >Shop</a -->
+                <i class="fa-solid fa-chevron-down text-[#377DFF]"></i>
+                <!-- <i class="fa-solid fa-chevron-up hidden"></i> -->
+                <ul class="drop-down bg-black text-white p-4 absolute hidden">
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="../index.html" class="">Furniture</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="./accessories.html" class="">Accessories</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="" class="">Sports</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="" class="">Clothings</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a href="" class="text-[#141718] text-md md:text-md text-black"
+                  >Product</a
+                >
+              </li>
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a href="./contact.html" class="text-[#141718] text-md md:text-md text-black"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <div class="mt-72 md:hidden">
+              <ul class="flex flex-col gap-4">
+                <li
+                  class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
+                >
+                  <a href="" class="text-[#6C7275] text-lg">Cart</a>
+                  <i class="fa-solid fa-bag-shopping text-[26px]"></i>
+                </li>
+                <li
+                  class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
+                >
+                  <a href="" class="text-[#6C7275] text-lg">Wishlist</a>
+                  <i class="fa-regular fa-heart text-[26px]"></i>
+                </li>
+              </ul>
+              <button
+                class="bg-black w-full text-white rounded-md py-3 cursor-pointer mt-8 mb-4 text-lg"
+              >
+                Sign In
+              </button>
+              <div class="flex items-center gap-6 mt-4">
+                <a href="" class="cursor-pointer">
+                  <i class="fa-brands fa-instagram text-[26px]"></i>
+                </a>
+                <a href="" class="cursor-pointer">
+                  <i
+                    class="fa-brands fa-facebook-f text-[26px]"
+                    style="color: blue"
+                  ></i>
+                </a>
+                <a href="" class="cursor-pointer">
+                  <i
+                    class="fa-brands fa-youtube text-[26px]"
+                    style="color: red"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center duration-500">
+            <form
+              action=""
+              class="flex gap-2 items-center rounded-xl md:border-none md:py-2 md:px-4 md:border md:border-black"
+            >
+              <button
+                type="submit"
+                class="search-btn bg-transparent"
+                onclick="showSearch()"
+              >
+                <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+              </button>
+              <input
+                type="text"
+                name=""
+                id="search-bar"
+                placeholder="Search..."
+                class="w-full hidden"
+              />
+            </form>
+            <i class="fa-solid fa-circle-user text-[25px]" id="user-icon"></i>
+            <i class="fa-solid fa-bag-shopping text-[25px]" id="bag-icon"></i>
+            <i class="fa-solid fa-xmark text-[25px] hidden" id="close-icon"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section
+        class="container mx-auto h-[100vh] bg-cover bg-center bg-no-repeat flex justify-end items-center border"
+        style="background-image: url('../assets/images/accessories/hero.png')"
+      >
+        <div class="w-1/2 px-12">
+          <h1
+            class="text-[80px] text-[#121212] font-medium leading-[84px] tracking-[-3px]"
+          >
+            Listen to <br />
+            the <span class="text-[#377DFF]">amazing</span> music sound.
+          </h1>
+          <p class="text-[#121212] font-[inter] text-xl">
+            Experience music like never before
+          </p>
+          <button class="bg-black px-4 py-2 rounded-md text-white mt-8">
+            Shopping Now
+          </button>
+        </div>
+      </section>
+      <section class="container mx-auto py-10">
+        <div class="flex w-fit mx-auto gap-4">
+          <img src="../assets/images/accessories/logo-1.png" alt="" />
+          <img src="../assets/images/accessories/logo-2.png" alt="" />
+          <img src="../assets/images/accessories/logo-3.png" alt="" />
+          <img src="../assets/images/accessories/logo-4.png" alt="" />
+          <img src="../assets/images/accessories/logo-5.png" alt="" />
+          <img src="../assets/images/accessories/logo-6.png" alt="" />
+        </div>
+      </section>
+      <section class="container mx-auto">
+        <div class="flex justify-between items-end py-10">
+          <h2
+            class="text-[#141718] text-5xl leading-[44px] tracking-[0.4px] font-medium"
+          >
+            New Arrivals
+          </h2>
+          <div class="slider-indicators flex justify-center mt-8"></div>
+        </div>
+        <div class="w-[90%] mx-auto my-5 overflow-hidden relative">
+          <div
+            class="slider flex transition-transform duration-500 ease-in-out"
+          >
+            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/accessories/headset-1.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      NEW
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
+                    -50%
+                  </p>
+                </div>
+                <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button>
+              </div>
+              <div class="py-2">
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <p class="text-[#141718] font-normal text-xl py-1">
+                  Loveseat Sofa
+                </p>
+                <p class="text-[#121212] text-md font-[Inter] font-bold">
+                  $199.00
+                  <span class="pl-4 text-[#6C7275] line-through">$400.00</span>
+                </p>
+              </div>
+            </div>
+            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/accessories/headset-2.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      NEW
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
+                    -50%
+                  </p>
+                </div>
+                <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button>
+              </div>
+              <div class="py-2">
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <p class="text-[#141718] font-normal text-xl py-1">
+                  Table Lamp
+                </p>
+                <p class="text-[#121212] text-md font-[Inter] font-bold">
+                  $24.99
+                  <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+                </p>
+              </div>
+            </div>
+            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/accessories/headset-3.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      NEW
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
+                    -50%
+                  </p>
+                </div>
+                <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button>
+              </div>
+              <div class="py-2">
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <p class="text-[#141718] font-normal text-xl py-1">
+                  Biege Table Lamp
+                </p>
+                <p class="text-[#121212] text-md font-[Inter] font-bold">
+                  $24.99
+                  <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+                </p>
+              </div>
+            </div>
+            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/accessories/headset-4.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      NEW
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
+                    -50%
+                  </p>
+                </div>
+                <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button>
+              </div>
+              <div class="py-2">
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <p class="text-[#141718] font-normal text-xl py-1">
+                  Bamboo basket
+                </p>
+                <p class="text-[#121212] text-md font-[Inter] font-bold">
+                  $24.99
+                  <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+                </p>
+              </div>
+            </div>
+            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/accessories/headset-5.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      NEW
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
+                    -50%
+                  </p>
+                </div>
+                <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button>
+              </div>
+              <div class="py-2">
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <p class="text-[#141718] font-normal text-xl py-1">
+                  Bamboo basket
+                </p>
+                <p class="text-[#121212] text-md font-[Inter] font-bold">
+                  $24.99
+                  <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+                </p>
+              </div>
+            </div>
+            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/accessories/headset-6.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      NEW
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
+                    -50%
+                  </p>
+                </div>
+                <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button>
+              </div>
+              <div class="py-2">
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <p class="text-[#141718] font-normal text-xl py-1">
+                  Bamboo basket
+                </p>
+                <p class="text-[#121212] text-md font-[Inter] font-bold">
+                  $24.99
+                  <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between absolute z-10 top-[50%] w-full">
+            <button
+              class="p-4 bg-orange-400 rounded-3xl text-white shadow-2xl"
+              onclick="slideLeft()"
+            >
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button
+              class="p-4 bg-orange-400 rounded-3xl text-white shadow-2xl"
+              onclick="slideRight()"
+            >
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <div class="container mx-auto text-center mt-20">
+        <h1 class="text-5xl font-bold mb-4">Countdown</h1>
+        <div id="countdown" class="flex gap-6">
+          <div id="days" class="text-5xl font-bold"></div>
+          <div id="hours" class="text-5xl font-bold"></div>
+          <div id="minutes" class="text-5xl font-bold"></div>
+          <div id="seconds" class="text-5xl font-bold"></div>
+        </div>
+      </div>
+      <section>
+        <div class="review-top">
+          <h2><span>11</span>reviews</h2>
+          <select name="reviews" id="">
+            <option value="new">newest</option>
+            <option value="old">oldest</option>
+          </select>
+        </div>
+        <div class="review-container" id="review-container">
+            <!-- <div class="review">
+              <div>
+                <img src="" alt="">
+              </div>
+              <div>
+                <h5>Demo</h5>
+                <p>Demo text</p>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <div>
+                  <span>like</span>
+                  <span>reply</span>
+                </div>
+              </div>
+            </div> -->
+        </div>
+      </section>
+    </main>
+    <script src="../js/script.js"></script>
+    <script src="../js/reviews.js"></script>"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+.slider {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Accessories page styling */
+.indicator {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ccc; /* inactive color */
+  cursor: pointer; /* Make indicators clikable */
+}
+
+.indicator.active {
+  background-color: #333;
+}

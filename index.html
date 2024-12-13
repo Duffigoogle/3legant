@@ -21,7 +21,7 @@
     />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
 
     <title>3LEGANT | Home</title>
   </head>
@@ -97,7 +97,7 @@
                     <a href="" class="">Furniture</a>
                   </li>
                   <li class="border-b-2 border-[#cec] pb-2">
-                    <a href="" class="">Accessories</a>
+                    <a href="./pages/accessories.html" class="">Accessories</a>
                   </li>
                   <li class="border-b-2 border-[#cec] pb-2">
                     <a href="" class="">Sports</a>
@@ -113,7 +113,7 @@
                 >
               </li>
               <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
-                <a href="" class="text-[#141718] text-md md:text-md text-black"
+                <a href="./pages/contact.html" class="text-[#141718] text-md md:text-md text-black"
                   >Contact Us</a
                 >
               </li>
@@ -185,10 +185,27 @@
       </div>
     </header>
     <main class="">
-      <section 
+      <!-- <section 
         class="container mx-auto h-[100vh] bg-cover bg-center bg-no-repeat"
         style="background-image: url('./assets/images/hero.png')"
-      ></section>
+      ></section> -->
+      <section class="container relative overflow-hidden mx-auto border">
+        <div class="carousel-slide flex transition-transform duration-500 ease-in-out w-fit h-screen">
+            <img src="./assets/images/hero.png" alt="product-1" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-1.jpg" alt="product-1" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-2.jpg" alt="product-2" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-3.jpg" alt="product-3" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-4.jpg" alt="product-4" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-5.jpg" alt="product-5" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-6.jpg" alt="product-6" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-7.jpg" alt="product-6" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-8.jpg" alt="product-6" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-9.jpg" alt="product-6" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-10.jpg" alt="product-6" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-11.jpg" alt="product-6" class="w-full h-auto block object-cover object-bottom">
+            <img src="./assets/images/hero-carousel/hero-unsplash-12.jpg" alt="product-6" class="w-full h-auto block object-cover object-bottom">
+        </div>
+      </section>
       <section class="container mx-auto">
         <div class="flex justify-between items-center pr-20 py-10">
           <h2
@@ -588,9 +605,9 @@
           <a href="" class="">Terms of Use</a>
         </div>
         <div class="flex gap-8">
-          <i class="fa-brands fa-instagram fa-2x"></i>
-          <i class="fa-brands fa-facebook-f fa-2x"></i>
-          <i class="fa-brands fa-youtube fa-2x"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-youtube"></i>
         </div>
       </div>
     </footer>
@@ -600,6 +617,7 @@
       let searchInput = document.getElementById("search-bar");
       window.alert("Hello Desire!");
     </script> -->
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/hero-slider.js"></script>
   </body>
 </html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/contact.css" />
+    <title>3Legant | Contact</title>
+  </head>
+  <body>
+    <header class="">
+      <!-- <div class="">
+      <div class="flex justify-around items-center h-[50px] bg-black">
+        <div class="flex justify-between items-center text-white">
+          <i class="fa-solid fa-ticket text-[22px]"></i>
+          <p class="px-2">30% off storewide — Limited time!</p>
+          <span
+            class="border-b-2 border-[#FFAB00] pb-1 text-[#FFAB00] hidden md:block"
+          >
+            <a href="" class="">Shop Now</a>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </span>
+        </div>
+        <i class="fa-solid fa-xmark text-white"></i>
+      </div>
+    </div> -->
+      <div
+        class="bg-white flex justify-between items-center h-[100px] px-8 relative shadow-lg z-10 md:h-[70px]"
+      >
+        <nav class="w-full flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-bars text-[25px] md:hidden" id="ham-menu"></i>
+            <a href="" class="text-xl font-semibold md:text-2xl md:font-normal"
+              >3legant.</a
+            >
+          </div>
+          <div
+            id="nav-menu"
+            class="duration-500 absolute left-[-100%] top-[100%] w-full md:static md:w-auto px-8 pb-4 pt-2 md:py-0 md:px-0"
+          >
+            <form
+              action=""
+              class="flex gap-2 items-center border border-[#6C7275] px-4 py-3 rounded-lg md:hidden"
+            >
+              <button
+                type="submit"
+                class="search-btn bg-transparent"
+                onclick="showSearch()"
+              >
+                <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+              </button>
+              <input
+                type="text"
+                name=""
+                id="search-bar"
+                placeholder="Search..."
+                class="w-full"
+              />
+            </form>
+            <ul
+              class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]"
+            >
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a
+                  href="../index.html"
+                  class="text-[#141718] text-md md:text-md text-black"
+                  >Home</a
+                >
+              </li>
+              <li
+                class="shop border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0 cursor-pointer"
+                onclick="showModal()"
+              >
+                Shop
+                <!-- <a href="" class="text-[#141718] text-md md:text-md text-black"
+              >Shop</a -->
+                <i class="fa-solid fa-chevron-down text-[#377DFF]"></i>
+                <!-- <i class="fa-solid fa-chevron-up hidden"></i> -->
+                <ul class="drop-down bg-black text-white p-4 absolute hidden">
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="../index.html" class="">Furniture</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="./accessories.html" class="">Accessories</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="" class="">Sports</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="" class="">Clothings</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a href="" class="text-[#141718] text-md md:text-md text-black"
+                  >Product</a
+                >
+              </li>
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a
+                  href="contact.html"
+                  class="text-[#141718] text-md md:text-md text-black"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <div class="mt-72 md:hidden">
+              <ul class="flex flex-col gap-4">
+                <li
+                  class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
+                >
+                  <a href="" class="text-[#6C7275] text-lg">Cart</a>
+                  <i class="fa-solid fa-bag-shopping text-[26px]"></i>
+                </li>
+                <li
+                  class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
+                >
+                  <a href="" class="text-[#6C7275] text-lg">Wishlist</a>
+                  <i class="fa-regular fa-heart text-[26px]"></i>
+                </li>
+              </ul>
+              <button
+                class="bg-black w-full text-white rounded-md py-3 cursor-pointer mt-8 mb-4 text-lg"
+              >
+                Sign In
+              </button>
+              <div class="flex items-center gap-6 mt-4">
+                <a href="" class="cursor-pointer">
+                  <i class="fa-brands fa-instagram text-[26px]"></i>
+                </a>
+                <a href="" class="cursor-pointer">
+                  <i
+                    class="fa-brands fa-facebook-f text-[26px]"
+                    style="color: blue"
+                  ></i>
+                </a>
+                <a href="" class="cursor-pointer">
+                  <i
+                    class="fa-brands fa-youtube text-[26px]"
+                    style="color: red"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center duration-500">
+            <form
+              action=""
+              class="flex gap-2 items-center rounded-xl md:border-none md:py-2 md:px-4 md:border md:border-black"
+            >
+              <button
+                type="submit"
+                class="search-btn bg-transparent"
+                onclick="showSearch()"
+              >
+                <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+              </button>
+              <input
+                type="text"
+                name=""
+                id="search-bar"
+                placeholder="Search..."
+                class="w-full hidden"
+              />
+            </form>
+            <i class="fa-solid fa-circle-user text-[25px]" id="user-icon"></i>
+            <i class="fa-solid fa-bag-shopping text-[25px]" id="bag-icon"></i>
+            <i class="fa-solid fa-xmark text-[25px] hidden" id="close-icon"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="container mx-auto">
+      <section class="px-3 md:px-10 lg:px-0 lg:w-[950px] py-10">
+        <h3 class="text-[#141718] text-4xl md:text-5xl lg:text-6xl font-[Poppins] font-normal">
+          We believe in sustainable decor. We’re passionate about life at home.
+        </h3>
+        <p class="font-[Inter] text-justify pt-6">
+          Our features timeless furniture, with natural fabrics, curved lines,
+          plenty of mirrors and classic design, which can be incorporated into
+          any decor project. The pieces enchant for their sobriety, to last for
+          generations, faithful to the shapes of each period, with a touch of
+          the present
+        </p>
+      </section>
+      <section class="px-3 md:px-10  grid grid-cols-1 lg:grid-cols-2 lg:px-0">
+        <div class="w-full">
+          <img src="../assets/images/sales-img.png" alt="Sales furniture" class="w-full">
+        </div>
+        <div class="bg-[#F3F5F7] flex flex-col justify-center px-4 py-0 lg:pl-20 lg:pr-30 py-12">
+          <h4 class="text-[#141718] text-4xl font-normal">About Us</h4>
+            <p class="pt-3 pb-6 text-base md:text-xl font-[Inter] font-normal">3legant is a gift & decorations store based in HCMC, Vietnam. Est
+              since 2019.<br>Our customer service is always prepared to support you
+              24/7</p>
+            <a
+                  href=""
+                  class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-lg w-fit cursor-pointer"
+                  >Shop Now <i class="fa-solid fa-arrow-right-long"></i
+                ></a>
+        </div>
+      </section>
+      <section class="my-12 px-3 md:px-10 lg:px-0 py-10">
+        <h4 class="text-3xl font-[Poppins] p-6 text-center">Contact Us</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-8">
+            <div class="text-center flex-col justify-center items-center bg-[#F3F5F7] py-14 px-12 md:py-6 md:px-8">
+              <i class="fa-solid fa-store"></i>
+              <h6 class="text-[#6C7275]">ADDRESS</h6>
+              <p class="font-semibold text-sm">234 Hai Trieu, Ho Chi Minh City, 
+                Viet Nam</p>
+            </div>
+            <div class="text-center flex-col justify-center items-center bg-[#F3F5F7] py-14 px-12 md:py-6 md:px-8">
+              <i class="fa-solid fa-phone"></i>              
+              <h6 class="text-[#6C7275]">CONTACT US</h6>
+              <p class="font-semibold text-sm">+84 234 567 890</p>
+            </div>
+            <div class="text-center flex-col justify-center items-center bg-[#F3F5F7] py-14 px-12 md:py-6 md:px-8">
+              <i class="fa-solid fa-store"></i>
+              <h6 class="text-[#6C7275]">EMAIL</h6>
+              <p class="font-semibold text-sm">hello@3legant.com
+              </p>
+            </div>
+        </div>
+      </section>
+      <section class="container mx-auto grid px-3 md:px-0 grid-cols-1 lg:grid-cols-2 lg:gap-6">
+        <form action="" class="">
+          <label for="fullname" class="block mb-2 text-sm font-medium text-[#6C7275]">FULL NAME</label>
+          <input type="text" name="fullname" placeholder="Your name" id="fullname" class="block px-2 py-2 mb-4 border border-[#6C7275] rounded-md w-full outline-none">
+          <label for="email" class="block mb-2 text-sm font-medium text-[#6C7275]">EMAIL</label>
+          <input type="email" name="email" placeholder="Your email" id="email" class="block px-2 py-2 mb-4 border border-[#6C7275] rounded-md w-full outline-none">
+         <label for="message" class="block mb-2 text-sm font-medium text-[#6C7275]">MESSAGE</label>
+         <textarea name="message" id="message" class="block px-2 py-2 border border-[#6C7275] rounded-md w-full h-48" placeholder="Your message outline-none"></textarea>
+         <button type="submit" class="bg-black py-2 px-6 text-white rounded-lg mt-6">Send Message</button>
+        </form>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.790951546073!2d7.006342973650163!3d4.805919595169502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cdd0ae15f0d3%3A0x5633185f2c5e93c9!2sSpar!5e0!3m2!1sen!2sng!4v1734119512460!5m2!1sen!2sng" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full mt-10 lg:m-0"></iframe>
+      </section>
+      <section class="container bg-[#F3F5F7] mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:gap-10 lg:grid-cols-4">
+        <div class="px-12 py-16 text-center">
+          <i class="fa-solid fa-truck-fast fa-2x"></i>
+          <h4 class="text-xl font-bold py-3 text-[#141718]">Free Shipping</h4>
+          <p class="text-[#6C7275] text-sm">Order above $200</p>
+        </div>
+        <div class="px-12 py-16 text-center">
+          <i class="fa-regular fa-money-bill-1 fa-2x"></i>          
+          <h4 class="text-xl font-bold py-3 text-[#141718]">Money-back</h4>
+          <p class="text-[#6C7275] text-sm">30 days guarantee</p>
+        </div>
+        <div class="px-12 py-16 text-center">
+          <i class="fa-solid fa-lock fa-2x"></i>          
+          <h4 class="text-xl font-bold py-3 text-[#141718]">Secure Payments</h4>
+          <p class="text-[#6C7275] text-sm">Secured by Stripe</p>
+        </div>
+        <div class="px-12 py-16 text-center">
+          <i class="fa-solid fa-phone fa-2x"></i>          
+          <h4 class="text-xl font-bold py-3 text-[#141718]">24/7 Support</h4>
+          <p class="text-[#6C7275] text-sm">Phone and Email support</p>
+        </div>
+      </section>
+      <footer class="text-white bg-black pb-14 px-6 text-center md:text-left">
+        <div class="container mx-auto lg:flex lg:justify-between lg:items-center py-20">
+          <div class="lg:flex lg:items-center lg:gap-10">
+            <a href="" class="text-xl font-semibold md:text-2xl md:font-normal"
+          >3legant.</a
+        > | <p class="text-[#E8ECEF] ">Gift & Decoration Store</p>
+          </div>
+          <nav>
+            <ul
+            class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]"
+          >
+            <li class="md:border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+              <a href="" class="text-[#FEFEFE] text-md md:text-md "
+                >Home</a
+              >
+            </li>
+            <li
+              class="shop md:border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0 cursor-pointer text-[#FEFEFE]"
+              onclick="showModal()"
+            >
+              Shop
+              <!-- <a href="" class="text-[#141718] text-md md:text-md text-black"
+                >Shop</a -->
+              <i class="fa-solid fa-chevron-down text-[#377DFF]"></i>
+              <!-- <i class="fa-solid fa-chevron-up hidden"></i> -->
+              <ul class="drop-down bg-black text-white p-4 absolute hidden">
+                <li class="border-b-2 border-[#cec] pb-2">
+                  <a href="" class="">Furniture</a>
+                </li>
+                <li class="border-b-2 border-[#cec] pb-2">
+                  <a href="" class="">Accessories</a>
+                </li>
+                <li class="border-b-2 border-[#cec] pb-2">
+                  <a href="" class="">Sports</a>
+                </li>
+                <li class="border-b-2 border-[#cec] pb-2">
+                  <a href="" class="">Clothings</a>
+                </li>
+              </ul>
+            </li>
+            <li class="md:border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+              <a href="" class="text-[#FEFEFE] text-md md:text-md"
+                >Product</a
+              >
+            </li>
+            <li class="md:border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+              <a href="" class="text-[#FEFEFE] text-md md:text-md"
+                >Blog</a
+              >
+            </li>
+            <li class="md:border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+              <a href="" class="text-[#FEFEFE] text-md md:text-md"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          </nav>
+        </div>
+        <div class="container mx-auto md:flex md:justify-between md:items-center border-t-2 border-[#6C7275] pt-4 text-[#FEFEFE]">
+          <div class="md:flex md:gap-10">
+            <p class="">Copyright ©2024 3legant. All rights reserved</p>
+            <a href="" class="block my-4 md:inline">Privacy Policy</a>
+            <a href="" class="block my-4 md:inline">Terms of Use</a>
+          </div>
+          <div class="text-center md:flex gap-8">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
