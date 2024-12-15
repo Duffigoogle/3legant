@@ -238,15 +238,15 @@
             </div>
         </div>
       </section>
-      <section class="container mx-auto grid px-3 md:px-0 grid-cols-1 lg:grid-cols-2 lg:gap-6">
+      <section class="container mx-auto grid px-5 lg:px-0 grid-cols-1 lg:grid-cols-2 lg:gap-6">
         <form action="" class="">
           <label for="fullname" class="block mb-2 text-sm font-medium text-[#6C7275]">FULL NAME</label>
           <input type="text" name="fullname" placeholder="Your name" id="fullname" class="block px-2 py-2 mb-4 border border-[#6C7275] rounded-md w-full outline-none">
           <label for="email" class="block mb-2 text-sm font-medium text-[#6C7275]">EMAIL</label>
           <input type="email" name="email" placeholder="Your email" id="email" class="block px-2 py-2 mb-4 border border-[#6C7275] rounded-md w-full outline-none">
          <label for="message" class="block mb-2 text-sm font-medium text-[#6C7275]">MESSAGE</label>
-         <textarea name="message" id="message" class="block px-2 py-2 border border-[#6C7275] rounded-md w-full h-48" placeholder="Your message outline-none"></textarea>
-         <button type="submit" class="bg-black py-2 px-6 text-white rounded-lg mt-6">Send Message</button>
+         <textarea name="message" id="message" class="block px-2 py-2 border border-[#6C7275] rounded-md w-full h-40" placeholder="Your message outline-none"></textarea>
+         <button type="submit" class="block bg-black w-[250px] mx-auto lg:mx-0 py-4 px-8 text-white rounded-lg mt-6">Send Message</button>
         </form>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.790951546073!2d7.006342973650163!3d4.805919595169502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cdd0ae15f0d3%3A0x5633185f2c5e93c9!2sSpar!5e0!3m2!1sen!2sng!4v1734119512460!5m2!1sen!2sng" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full mt-10 lg:m-0"></iframe>
       </section>
@@ -273,23 +273,23 @@
         </div>
       </section>
       <footer class="text-white bg-black pb-14 px-6 text-center md:text-left">
-        <div class="container mx-auto lg:flex lg:justify-between lg:items-center py-20">
-          <div class="lg:flex lg:items-center lg:gap-10">
-            <a href="" class="text-xl font-semibold md:text-2xl md:font-normal"
+        <div class="container mx-auto md:flex md:justify-between md:items-center py-20">
+          <div class="md:flex md:items-center md:gap-10">
+            <a href="" class="text-xl font-semibold md:text-2xl md:font-normal md:pr-8"
           >3legant.</a
-        > | <p class="text-[#E8ECEF] ">Gift & Decoration Store</p>
+        > <p class="text-[#E8ECEF] md:border-l-2 border-white pl-8">Gift & Decoration Store</p>
           </div>
           <nav>
             <ul
             class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]"
           >
-            <li class="md:border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+            <li class="cursor-pointer">
               <a href="" class="text-[#FEFEFE] text-md md:text-md "
                 >Home</a
               >
             </li>
             <li
-              class="shop md:border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0 cursor-pointer text-[#FEFEFE]"
+              class="shop cursor-pointer text-[#FEFEFE]"
               onclick="showModal()"
             >
               Shop
@@ -312,17 +312,17 @@
                 </li>
               </ul>
             </li>
-            <li class="md:border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+            <li class="cursor-pointer">
               <a href="" class="text-[#FEFEFE] text-md md:text-md"
                 >Product</a
               >
             </li>
-            <li class="md:border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+            <li class="cursor-pointer">
               <a href="" class="text-[#FEFEFE] text-md md:text-md"
                 >Blog</a
               >
             </li>
-            <li class="md:border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+            <li class="cursor-pointer">
               <a href="" class="text-[#FEFEFE] text-md md:text-md"
                 >Contact Us</a
               >
@@ -332,14 +332,14 @@
         </div>
         <div class="container mx-auto md:flex md:justify-between md:items-center border-t-2 border-[#6C7275] pt-4 text-[#FEFEFE]">
           <div class="md:flex md:gap-10">
-            <p class="">Copyright ©2024 3legant. All rights reserved</p>
-            <a href="" class="block my-4 md:inline">Privacy Policy</a>
-            <a href="" class="block my-4 md:inline">Terms of Use</a>
+            <p class="">Copyright ©2024 3legant. <span class="block md:inline"> All rights reserved</span></p>
+            <a href="" class="block my-4 md:inline md:my-0">Privacy Policy</a>
+            <a href="" class="block my-4 md:inline md:my-0">Terms of Use</a>
           </div>
           <div class="text-center md:flex gap-8">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram mx-2 md:mx-0"></i>
+            <i class="fa-brands fa-facebook-f mx-2 md:mx-0"></i>
+            <i class="fa-brands fa-youtube mx-2 md:mx-0"></i>
           </div>
         </div>
       </footer>
