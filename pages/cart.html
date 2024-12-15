@@ -3,9 +3,335 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- Font Awesome Icons -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap"
+  rel="stylesheet"
+/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../styles/contact.css" />
+  <title>3Legant | Cart</title>
 </head>
 <body>
-  
+  <header class="">
+    <!-- <div class="">
+    <div class="flex justify-around items-center h-[50px] bg-black">
+      <div class="flex justify-between items-center text-white">
+        <i class="fa-solid fa-ticket text-[22px]"></i>
+        <p class="px-2">30% off storewide — Limited time!</p>
+        <span
+          class="border-b-2 border-[#FFAB00] pb-1 text-[#FFAB00] hidden md:block"
+        >
+          <a href="" class="">Shop Now</a>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </span>
+      </div>
+      <i class="fa-solid fa-xmark text-white"></i>
+    </div>
+  </div> -->
+    <div
+      class="bg-white flex justify-between items-center h-[100px] px-8 relative shadow-lg z-10 md:h-[70px]"
+    >
+      <nav class="w-full flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-bars text-[25px] md:hidden" id="ham-menu"></i>
+          <a href="" class="text-xl font-semibold md:text-2xl md:font-normal"
+            >3legant.</a
+          >
+        </div>
+        <div
+          id="nav-menu"
+          class="duration-500 absolute left-[-100%] top-[100%] w-full md:static md:w-auto px-8 pb-4 pt-2 md:py-0 md:px-0"
+        >
+          <form
+            action=""
+            class="flex gap-2 items-center border border-[#6C7275] px-4 py-3 rounded-lg md:hidden"
+          >
+            <button
+              type="submit"
+              class="search-btn bg-transparent"
+              onclick="showSearch()"
+            >
+              <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+            </button>
+            <input
+              type="text"
+              name=""
+              id="search-bar"
+              placeholder="Search..."
+              class="w-full"
+            />
+          </form>
+          <ul
+            class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]"
+          >
+            <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+              <a
+                href="../index.html"
+                class="text-[#141718] text-md md:text-md text-black"
+                >Home</a
+              >
+            </li>
+            <li
+              class="shop border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0 cursor-pointer"
+              onclick="showModal()"
+            >
+              Shop
+              <!-- <a href="" class="text-[#141718] text-md md:text-md text-black"
+            >Shop</a -->
+              <i class="fa-solid fa-chevron-down text-[#377DFF]"></i>
+              <!-- <i class="fa-solid fa-chevron-up hidden"></i> -->
+              <ul class="drop-down bg-black text-white p-4 absolute hidden">
+                <li class="border-b-2 border-[#cec] pb-2">
+                  <a href="../index.html" class="">Furniture</a>
+                </li>
+                <li class="border-b-2 border-[#cec] pb-2">
+                  <a href="./accessories.html" class="">Accessories</a>
+                </li>
+                <li class="border-b-2 border-[#cec] pb-2">
+                  <a href="" class="">Sports</a>
+                </li>
+                <li class="border-b-2 border-[#cec] pb-2">
+                  <a href="" class="">Clothings</a>
+                </li>
+              </ul>
+            </li>
+            <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+              <a href="" class="text-[#141718] text-md md:text-md text-black"
+                >Product</a
+              >
+            </li>
+            <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+              <a
+                href="contact.html"
+                class="text-[#141718] text-md md:text-md text-black"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <div class="mt-72 md:hidden">
+            <ul class="flex flex-col gap-4">
+              <li
+                class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
+              >
+                <a href="" class="text-[#6C7275] text-lg">Cart</a>
+                <i class="fa-solid fa-bag-shopping text-[26px]"></i>
+              </li>
+              <li
+                class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
+              >
+                <a href="" class="text-[#6C7275] text-lg">Wishlist</a>
+                <i class="fa-regular fa-heart text-[26px]"></i>
+              </li>
+            </ul>
+            <button
+              class="bg-black w-full text-white rounded-md py-3 cursor-pointer mt-8 mb-4 text-lg"
+            >
+              Sign In
+            </button>
+            <div class="flex items-center gap-6 mt-4">
+              <a href="" class="cursor-pointer">
+                <i class="fa-brands fa-instagram text-[26px]"></i>
+              </a>
+              <a href="" class="cursor-pointer">
+                <i
+                  class="fa-brands fa-facebook-f text-[26px]"
+                  style="color: blue"
+                ></i>
+              </a>
+              <a href="" class="cursor-pointer">
+                <i
+                  class="fa-brands fa-youtube text-[26px]"
+                  style="color: red"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-3 items-center duration-500">
+          <form
+            action=""
+            class="flex gap-2 items-center rounded-xl md:border-none md:py-2 md:px-4 md:border md:border-black"
+          >
+            <button
+              type="submit"
+              class="search-btn bg-transparent"
+              onclick="showSearch()"
+            >
+              <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+            </button>
+            <input
+              type="text"
+              name=""
+              id="search-bar"
+              placeholder="Search..."
+              class="w-full hidden"
+            />
+          </form>
+          <a href="">
+            <i class="fa-solid fa-circle-user text-[25px]" id="user-icon"></i>
+          </a>
+          <a href="cart.html">
+            <i class="fa-solid fa-bag-shopping text-[25px]" id="bag-icon"></i>
+           </a>
+          <i class="fa-solid fa-xmark text-[25px] hidden" id="close-icon"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h3>Cart</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-[50%] mx-auto mt-8">
+        <div class="flex items-center flex-start gap-4 border-b-2 border-[#23262F] rounded-md p-4">
+          <p class="w-[40px] h-[40px] rounded-full bg-[#23262F] flex justify-center items-center text-white">1</p>
+          <p class="">Shopping cart</p>
+        </div>
+        <div class="flex items-center flex-start gap-4  rounded-md p-4">
+          <p class="w-[40px] h-[40px] rounded-full bg-[#B1B5C3] flex justify-center items-center text-white">2</p>
+          <p class="text-[#B1B5C3]">Checkout details</p>
+        </div>
+        <div class="flex items-center flex-start gap-4  rounded-md p-4">
+          <p class="w-[40px] h-[40px] rounded-full bg-[#B1B5C3] flex justify-center items-center text-white">3</p>
+          <p class="text-[#B1B5C3]">Order complete</p>
+        </div>
+      </div>
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[70%_30%] gap-4 w-[60%] mx-auto mt-8">
+      <table class="table-auto">
+        <thead class="">
+          <tr class="border-b-2 border-[#B1B5C3]">
+            <th class="text-left py-3">Product</th>
+            <th class="text-left py-3">Quantity</th>
+            <th class="text-left py-3">Price</th>
+            <th class="text-right py-3">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b-2 border-[#E8ECEF]">
+            <td>
+              <img src="" alt="">
+              <div>
+                <h6>Tray Table</h6>
+                <p>color: black</p>
+                <button class="text-xs flex items-center gap-2">
+                  <i class="fa-solid fa-xmark text-white"></i>
+                  Remove</button>
+              </div>
+            </td>
+            <td>
+              <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
+                <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
+                <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
+                <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
+              </div>
+            </td>
+            <td class="price">$19.00</td>
+            <td class="subtotal">
+              <!-- $19.00 -->
+
+            </td>
+          </tr>
+          <tr class="border-b-2 border-[#E8ECEF]">
+            <td>
+              <img src="" alt="">
+              <div>
+                <h6>Tray Table</h6>
+                <p>color: Red</p>
+                <button class="text-xs flex items-center gap-2">
+                  <i class="fa-solid fa-xmark text-white"></i>
+                  Remove</button>
+              </div>
+            </td>
+            <td>
+              <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
+                <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
+                <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
+                <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
+              </div>
+            </td>
+            <td class="price">$15.00</td>
+            <td class="subtotal">
+              <!-- $15.00 -->
+            </td>
+          </tr>
+          <tr class="border-b-2 border-[#E8ECEF]">
+            <td>
+              <img src="" alt="">
+              <div>
+                <h6>Table Lamp</h6>
+                <p>color: Gold</p>
+                <button class="text-xs flex items-center gap-2">
+                  <i class="fa-solid fa-xmark text-white"></i>
+                  Remove</button>
+              </div>
+            </td>
+            <td>
+              <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
+                <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
+                <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
+                <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
+              </div>
+            </td>
+            <td class="price">$39.00</td>
+            <td class="subtotal">
+              <!-- $39.00 -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <aside class="w-[400px] p-5 border border-[#6C7275]">
+        <h6>Cart Summary</h6>
+        <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
+          <div class="flex items-center gap-4">
+            <input type="radio" name="payment" id="Free-shipping" value="Free shipping" class="w-[18px] accent-black">
+            <label for="Free-shipping" class="text-[#141718] text-lg">Free shipping</label>
+          </div>
+          <p class="text-[#141718] text-lg">$0.00</p>
+        </div>
+        <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
+          <div class="flex items-center gap-4">
+            <input type="radio" name="payment" id="Express-shipping" value="Express shipping" class="w-[18px] accent-black">
+            <label for="Express-shipping" class="text-[#141718] text-lg">Express shipping</label>
+          </div>
+          <p class="text-[#141718] text-lg">+$15.00</p>
+        </div>
+        <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
+          <div class="flex items-center gap-4">
+            <input type="radio" name="payment" id="Pick-up" value="Pick Up" class="w-[18px] accent-black">
+            <label for="Pick-up" class="text-[#141718] text-lg">Pick Up</label>
+          </div>
+          <p class="text-[#141718] text-lg">%21.00</p>
+        </div>
+
+        <div class="flex justify-between items-center border-b-2 border-[#B1B5C3] py-4">
+          <p class="text-lg font-semibold text-[#141718]">Sub-Total</p>
+          <p class="sub-total-summary text-lg font-semibold text-[#141718]">$1234.00</p>
+        </div>
+        <div class="flex justify-between items-center py-4">
+          <p class="text-xl font-bold">Total</p>
+          <p class="total-summary text-xl font-bold">$1345.00</p>
+        </div>
+        <button class="bg-black text-white w-full rounded-md py-3 mt-4 text-lg">Checkout</button>
+      </aside>
+      
+    </section>
+  </main>
+  <script src="../js/script.js"></script>
 </body>
 </html>
