@@ -1,0 +1,69 @@
+{
+  "products": [
+    {
+      "name": "Product 1",
+      "price": 10.99,
+      "description": "This is product 1",
+      "category": "Electronics",
+      "image": "product1.jpg",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "user": "John Doe",
+          "rating": 5,
+          "comment": "Great product!"
+        },
+        {
+          "user": "Jane Smith",
+          "rating": 4,
+          "comment": "I loved it!"
+        }
+      ],
+      "inStock": true,
+      "relatedProducts": [
+        {
+          "name": "Product 2",
+          "price": 15.99,
+          "image": "product2.jpg"
+        },
+        {
+          "name": "Product 3",
+          "price": 20.99,
+          "image": "product3.jpg"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Color",
+          "values": ["Red", "Blue", "Green"]
+        },
+        {
+          "name": "Size",
+          "values": ["Small", "Medium", "Large"]
+        }
+      ],
+      "variants": [
+        {
+          "size": "Small",
+          "color": "Red"
+          },
+          {
+          "size": "Medium",
+          "color": "Blue"
+          },
+          {
+          "size": "Large",
+          "color": "Green"
+          },
+          {
+          "size": "Extra Large",
+          "color": "Yellow"
+          },
+          {
+          "size": "Small",
+          "color": "Purple"
+          }
+      ]
+    }
+  ]
+}
