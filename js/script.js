@@ -224,33 +224,82 @@ function updateCart () {
   });
 
 
-  // // Update cart summary
-  // // Replace with your actual selector
-  // const subTotalSummary = document.querySelector('.sub-total-summary');
+  // Update cart summary
+  // Replace with your actual selector
+  const subTotalSummary = document.querySelector('.sub-total-summary');
 
-  // // Replace with your actual selector
-  // const totalSummary = document.querySelector('.total-summary');
+  // Replace with your actual selector
+  const totalSummary = document.querySelector('.total-summary');
 
-  // // Format as currency
-  // subTotalSummary.textContent = '$' + subtotal.toFixed(2);
+  // Format as currency
+  subTotalSummary.textContent = '$' + subtotal.toFixed(2);
 
-  // // Calculate and update total based on selected shipping method (example logic)
-  // const shippingMethod = document.querySelector('input[name="payment"]:checked');
-  // let shippingCost = 0;
-  // if (shippingMethod) {
-  //   const shippingPrice = shippingMethod.parentElement.nextElementSibling.textContent;
-  //   if (shippingPrice.startsWith('+')) {
-  //     shippingCost = parseFloat(shippingPrice.replace('+$', ''));
+  // Calculate and update total based on selected shipping method (example logic)
+  const shippingMethod = document.querySelector('input[name="payment"]:checked');
+  let shippingCost = 0;
+  if (shippingMethod) {
+    const shippingPrice = shippingMethod.parentElement.nextElementSibling.textContent;
+    console.log(shippingPrice);
+    if (shippingPrice.startsWith('+')) {
+      console.log("express");
+      shippingCost = parseFloat(shippingPrice.replace('+$', ''));
+      shippingCost += 15.00;
+    }
+    else if(shippingPrice.startsWith('%')){
+      console.log("express");
+      shippingCost = parseFloat(shippingPrice.replace('%', ''));
+      let pickUpPercent = 21/100;
+      percentIncrease = subtotal * pickUpPercent;
+      shippingCost += subtotal * percentIncrease;
+    }
+    else {
+      shippingCost = parseFloat(shippingPrice.replace('$', ''));
+    }
 
-  //   }
-  //   else {
-  //     shippingCost = parseFloat(shippingPrice.replace('$', ''));
-  //   }
+  }
 
-  // }
+  total = subtotal + shippingCost;
+  totalSummary.textContent = '$' + total.toFixed(2);
 
-  // total = subtotal + shippingCost;
-  // totalSummary.textContent = '$' + total.toFixed(2);
+};
 
 
-}
+// Change Tabs and Display Corresponding Section
+
+// const steps = document.querySelectorAll('.steps-section > div');
+const displaySections = document.querySelectorAll(".main > .page");
+console.log(displaySections);
+const tabButtons = document.querySelectorAll('.steps-section > button'); 
+console.log(tabButtons);
+// Select the tab buttons
+
+
+// Hide all steps initially except the first one
+displaySections.forEach((sectionPage, index) => {
+  if (index > 0) {
+    sectionPage.style.display = 'none';
+    // step.classList.add('bg-red-300');
+  }
+});
+
+
+
+// Add click event listeners to tab buttons
+tabButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    // Hide all steps
+    displaySections.forEach(sectionPage => {
+      sectionPage.style.display = 'none';
+    });
+
+    // Show the selected step
+    displaySections[index].style.display = 'block';
+
+    // Update active tab styling (optional - but good UX)
+    tabButtons.forEach(btn => {
+      btn.classList.remove('active-tab');  // Remove 'active' class from all tabs
+    });
+    button.classList.add('active-tab'); // Add 'active' class to the clicked tab
+  });
+});
+

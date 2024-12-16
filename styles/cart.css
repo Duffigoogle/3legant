@@ -1,0 +1,13 @@
+.steps-section > button > span {
+  background-color: #23262F;
+}
+
+.active-tab {
+  border-bottom: 3px solid #d2aa1a; 
+  font-weight: bold; 
+  color: #d2aa1a;    
+}
+
+.steps-section > .active-tab > span {
+  background-color: #d2aa1a;
+}

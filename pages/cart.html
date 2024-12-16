@@ -21,7 +21,7 @@
 />
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="../styles/contact.css" />
+<link rel="stylesheet" href="../styles/cart.css" />
   <title>3Legant | Cart</title>
 </head>
 <body>
@@ -191,147 +191,433 @@
       </nav>
     </div>
   </header>
-  <main>
-    <section>
-      <h3>Cart</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-[50%] mx-auto mt-8">
-        <div class="flex items-center flex-start gap-4 border-b-2 border-[#23262F] rounded-md p-4">
-          <p class="w-[40px] h-[40px] rounded-full bg-[#23262F] flex justify-center items-center text-white">1</p>
+  <main class="main container mx-auto">
+    <section class="container my-6">
+      <h3 class="text-center text-[54px] font-[Poppins]">Cart</h3>
+      <div class="steps-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-[50%] mx-auto mt-8">
+        <button class="flex items-center flex-start gap-4 p-4 active-tab">
+          <span class="w-[40px] h-[40px] rounded-full bg-[#23262F] flex justify-center items-center text-white">1</span>
           <p class="">Shopping cart</p>
-        </div>
-        <div class="flex items-center flex-start gap-4  rounded-md p-4">
-          <p class="w-[40px] h-[40px] rounded-full bg-[#B1B5C3] flex justify-center items-center text-white">2</p>
-          <p class="text-[#B1B5C3]">Checkout details</p>
-        </div>
-        <div class="flex items-center flex-start gap-4  rounded-md p-4">
-          <p class="w-[40px] h-[40px] rounded-full bg-[#B1B5C3] flex justify-center items-center text-white">3</p>
-          <p class="text-[#B1B5C3]">Order complete</p>
-        </div>
+        </button>
+        <button class="flex items-center flex-start gap-4  p-4">
+          <span class="w-[40px] h-[40px] rounded-full bg-[#B1B5C3] flex justify-center items-center text-white">2</span>
+          <p class="">Checkout details</p>
+        </button>
+        <button class="flex items-center flex-start gap-4  p-4">
+          <span class="w-[40px] h-[40px] rounded-full bg-[#B1B5C3] flex justify-center items-center text-white">3</span>
+          <p class="">Order complete</p>
+        </button>
       </div>
     </section>
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[70%_30%] gap-4 w-[60%] mx-auto mt-8">
-      <table class="table-auto">
-        <thead class="">
-          <tr class="border-b-2 border-[#B1B5C3]">
-            <th class="text-left py-3">Product</th>
-            <th class="text-left py-3">Quantity</th>
-            <th class="text-left py-3">Price</th>
-            <th class="text-right py-3">Subtotal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-b-2 border-[#E8ECEF]">
-            <td>
-              <img src="" alt="">
-              <div>
-                <h6>Tray Table</h6>
-                <p>color: black</p>
-                <button class="text-xs flex items-center gap-2">
-                  <i class="fa-solid fa-xmark text-white"></i>
-                  Remove</button>
-              </div>
-            </td>
-            <td>
-              <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
-                <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
-                <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
-                <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
-              </div>
-            </td>
-            <td class="price">$19.00</td>
-            <td class="subtotal">
-              <!-- $19.00 -->
-
-            </td>
-          </tr>
-          <tr class="border-b-2 border-[#E8ECEF]">
-            <td>
-              <img src="" alt="">
-              <div>
-                <h6>Tray Table</h6>
-                <p>color: Red</p>
-                <button class="text-xs flex items-center gap-2">
-                  <i class="fa-solid fa-xmark text-white"></i>
-                  Remove</button>
-              </div>
-            </td>
-            <td>
-              <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
-                <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
-                <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
-                <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
-              </div>
-            </td>
-            <td class="price">$15.00</td>
-            <td class="subtotal">
-              <!-- $15.00 -->
-            </td>
-          </tr>
-          <tr class="border-b-2 border-[#E8ECEF]">
-            <td>
-              <img src="" alt="">
-              <div>
-                <h6>Table Lamp</h6>
-                <p>color: Gold</p>
-                <button class="text-xs flex items-center gap-2">
-                  <i class="fa-solid fa-xmark text-white"></i>
-                  Remove</button>
-              </div>
-            </td>
-            <td>
-              <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
-                <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
-                <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
-                <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
-              </div>
-            </td>
-            <td class="price">$39.00</td>
-            <td class="subtotal">
-              <!-- $39.00 -->
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <aside class="w-[400px] p-5 border border-[#6C7275]">
-        <h6>Cart Summary</h6>
-        <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
-          <div class="flex items-center gap-4">
-            <input type="radio" name="payment" id="Free-shipping" value="Free shipping" class="w-[18px] accent-black">
-            <label for="Free-shipping" class="text-[#141718] text-lg">Free shipping</label>
+    <section class="page">
+      <div class="grid grid-cols-1 md:grid-cols-[50%_30%] gap-20 w-fit mx-auto mt-8">
+        <table class="table-auto">
+          <thead class="">
+            <tr class="border-b-2 border-[#B1B5C3]">
+              <th class="text-left py-3 text-lg">Product</th>
+              <th class="text-left py-3 text-lg">Quantity</th>
+              <th class="text-left py-3 text-lg">Price</th>
+              <th class="text-right py-3 text-lg">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b-2 border-[#E8ECEF]">
+              <td class="flex items-center gap-2">
+                <img src="../assets/images/singleProducts/tray-table/tray-table-black.png" alt="">
+                <div>
+                  <h6 class="text-base font-semibold text-[#141718]">Tray Table</h6>
+                  <p class="text-[#6C7275]">color: black</p>
+                  <button class="text-sm flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                    Remove</button>
+                </div>
+              </td>
+              <td>
+                <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
+                  <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
+                  <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
+                  <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
+                </div>
+              </td>
+              <td class="price text-lg flex">$19.00</td>
+              <td class="subtotal text-right text-lg font-bold">
+                <!-- $19.00 -->
+  
+              </td>
+            </tr>
+            <tr class="border-b-2 border-[#E8ECEF]">
+              <td class="flex items-center gap-2">
+                <img src="../assets/images/singleProducts/tray-table/tray-table-red.png" alt="">
+                <div>
+                  <h6 class="text-base font-semibold text-[#141718]">Tray Table</h6>
+                  <p class="text-[#6C7275]">color: Red</p>
+                  <button class="text-sm flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                    Remove</button>
+                </div>
+              </td>
+              <td>
+                <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
+                  <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
+                  <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
+                  <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
+                </div>
+              </td>
+              <td class="price text-lg">$15.00</td>
+              <td class="subtotal text-right text-lg font-bold">
+                <!-- $15.00 -->
+              </td>
+            </tr>
+            <tr class="border-b-2 border-[#E8ECEF]">
+              <td class="flex items-center gap-2">
+                <img src="../assets/images/singleProducts/lamp/lamp-1.png" alt="">
+                <div>
+                  <h6 class="text-base font-semibold text-[#141718]">Table Lamp</h6>
+                  <p class="text-[#6C7275]">color: Gold</p>
+                  <button class="text-sm flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                    Remove</button>
+                </div>
+              </td>
+              <td>
+                <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
+                  <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
+                  <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
+                  <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
+                </div>
+              </td>
+              <td class="price text-lg">$39.00</td>
+              <td class="subtotal text-right text-lg font-bold">
+                <!-- $39.00 -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="w-[400px] p-5 border border-[#6C7275]">
+          <h6 class="text-2xl font-semibold text-[#141718]">Cart Summary</h6>
+          <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
+            <div class="flex items-center gap-4">
+              <input type="radio" name="payment" id="Free-shipping" value="Free shipping" class="w-[18px] accent-black">
+              <label for="Free-shipping" class="text-[#141718] text-lg">Free shipping</label>
+            </div>
+            <p class="text-[#141718] text-lg">$0.00</p>
           </div>
-          <p class="text-[#141718] text-lg">$0.00</p>
-        </div>
-        <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
-          <div class="flex items-center gap-4">
-            <input type="radio" name="payment" id="Express-shipping" value="Express shipping" class="w-[18px] accent-black">
-            <label for="Express-shipping" class="text-[#141718] text-lg">Express shipping</label>
+          <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
+            <div class="flex items-center gap-4">
+              <input type="radio" name="payment" id="Express-shipping" value="Express shipping" class="w-[18px] accent-black">
+              <label for="Express-shipping" class="text-[#141718] text-lg">Express shipping</label>
+            </div>
+            <p class="text-[#141718] text-lg">+$15.00</p>
           </div>
-          <p class="text-[#141718] text-lg">+$15.00</p>
-        </div>
-        <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
-          <div class="flex items-center gap-4">
-            <input type="radio" name="payment" id="Pick-up" value="Pick Up" class="w-[18px] accent-black">
-            <label for="Pick-up" class="text-[#141718] text-lg">Pick Up</label>
+          <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
+            <div class="flex items-center gap-4">
+              <input type="radio" name="payment" id="Pick-up" value="Pick Up" class="w-[18px] accent-black">
+              <label for="Pick-up" class="text-[#141718] text-lg">Pick Up</label>
+            </div>
+            <p class="text-[#141718] text-lg">%21.00</p>
           </div>
-          <p class="text-[#141718] text-lg">%21.00</p>
+  
+          <div class="flex justify-between items-center border-b-2 border-[#B1B5C3] py-4">
+            <p class="text-lg font-semibold text-[#141718]">Sub-Total</p>
+            <p class="sub-total-summary text-lg font-semibold text-[#141718]">$1234.00</p>
+          </div>
+          <div class="flex justify-between items-center py-4">
+            <p class="text-xl font-bold">Total</p>
+            <p class="total-summary text-xl font-bold">$1345.00</p>
+          </div>
+          <button class="bg-black text-white w-full rounded-md py-3 mt-4 text-lg">Checkout</button>
+        </aside>
+      </div>
+      <section class="conainer my-24">
+        <h3 class="font-bold text-2xl">Have a coupon?</h3>
+        <p class="py-2 text-md text-[#6C7275]">Add your code for an instant cart discount</p>
+        <div class="border p-3 w-[400px] flex items-center justify-between rounded-md">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-ticket fa-2x text-[#6C7275]"></i>
+            <input type="text" name="coupon" id="" class="px-3 outline-none text-lg" placeholder="Coupon Code">
+          </div>
+          <button class="px-4">Apply</button>
         </div>
-
-        <div class="flex justify-between items-center border-b-2 border-[#B1B5C3] py-4">
-          <p class="text-lg font-semibold text-[#141718]">Sub-Total</p>
-          <p class="sub-total-summary text-lg font-semibold text-[#141718]">$1234.00</p>
+      </section>
+    </section>
+    <section class="page">
+        <div class="container grid grid-cols-1 lg:grid-cols-[800px_300px] gap-20 w-fit mx-auto mt-8 py-4">
+          <form action="" method="post" class="font-[Inter]">
+            <div class="w-full border border-[#6C7275] rounded-md block mt-10 py-10 px-10">
+              <fieldset class="">
+                <legend class="text-2xl">Contact Information</legend>
+                <div class="flex gap-10">
+                  <div class="block w-full">
+                    <label for="first_name" class="text-[#6C7275] font-bold pb-2 pt-5 block">FIRST NAME</label>
+                    <input type="text" name="first_name" id="" placeholder="First name" class="border border-[#6C7275] p-2 rounded-lg w-full">
+                  </div>
+                  <div class="block w-full">
+                    <label for="last_name" class="text-[#6C7275] font-bold pb-2 pt-5 block">LAST NAME</label>
+                    <input type="text" name="last_name" id="" placeholder="Last name" class="border border-[#6C7275] p-2 rounded-lg w-full">
+                  </div>
+                </div>
+                <div>
+                  <label for="phone" class="text-[#6C7275] font-bold pb-2 pt-5 block">PHONE NUMBER</label>
+                  <input type="number" name="phone" id="phone" placeholder="Phone number" class="block w-full border border-[#6C7275] p-2 rounded-lg w-full">
+                </div>
+                <div>
+                  <label for="email" class="w-full text-[#6C7275] font-bold pb-2 pt-5 block">EMAIL ADDRESS</label>
+                  <input type="email" name="" id="email" placeholder="Your Email" class="block w-full border border-[#6C7275] p-2 rounded-lg w-full">
+                </div>
+              </fieldset>
+            </div>
+            <div class="w-full border border-[#6C7275] rounded-md block mt-10 py-10 px-10">
+              <fieldset class="">
+                <legend class="text-2xl">Shipping Information</legend>
+                <div>
+                  <label for="address" class="text-[#6C7275] font-bold pb-2 pt-5 block">ADDRESS</label>
+                  <input type="text" name="address" id="address" placeholder="Address" class="block w-full border border-[#6C7275] p-2 rounded-lg">
+                </div>
+                <div>
+                  <label for="country" class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block">COUNTRY</label>
+                  <input type="text" name="country" id="country" placeholder="Country" class="block border border-[#6C7275] p-2 rounded-lg w-full">
+                </div>
+                <div>
+                  <label for="city" class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block">TOWN/CITY</label>
+                  <input type="text" name="city" id="city" placeholder="City" class="block border border-[#6C7275] p-2 rounded-lg w-full">
+                </div>
+               <div class="flex justify-between gap-10">
+                <div class="w-full">
+                  <label for="state" class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block">STATE</label>
+                  <input type="text" name="state" id="state" placeholder="State" class="block border border-[#6C7275] p-2 rounded-lg w-full">
+                </div>
+                <div class="w-full">
+                  <label for="zip_code" class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block">ZIP CODE</label>
+                  <input type="number" name="zip_code" id="zip_code" placeholder="Zip Code" class="block border border-[#6C7275] p-2 rounded-lg w-full">
+                </div>
+               </div>
+               <div class="flex items-center gap-2 my-6">
+                <input type="checkbox" name="" id="" class="w-[20px] h-[20px] accent-black block">
+               <label for="" class="text-[#6C7275] font-bold block">Use a different billing address (optional)</label>
+               </div>
+              </fieldset>
+            </div>
+            <div class="w-full border border-[#6C7275] rounded-md block mt-10 py-10 px-10">
+              <fieldset class="">
+                <legend class="text-2xl">Payment method</legend>
+                <div class="flex justify-between border border-[#6C7275] p-3 my-3">
+                  <div class="flex items-center gap-2">
+                    <input type="radio" name="payment_method" id="card_credit" value="credit card" class="w-[18px] h-[18px] accent-black">
+                    <label for="card_credit">Pay by Card Credit</label>
+                  </div>
+                  <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <div class="flex flex-start gap-2 border border-[#6C7275] p-3 my-3">
+                  <input type="radio" name="payment_method" id="paypal" class="w-[18px] h-[18px] accent-black">
+                  <label for="paypal">Paypal</label>
+                </div>
+                <hr class="my-4">
+                <div>
+                  <label for="card_number" class="block w-full text-[#6C7275] font-bold pb-2 pt-5 block">CARD NUMBER</label>
+                  <input type="number" name="card_number" id="card_number" placeholder="1234 5678 9012" class="block w-full border border-[#6C7275] p-2 rounded-lg">
+                </div>
+                <div class="flex gap-10">
+                  <div class="w-full">
+                    <label for="expiration_date" class="block w-full text-[#6C7275] font-bold pb-2 pt-5 block">EXPIRATION DATE</label>
+                    <input type="month" name="expiration_date" id="expiration_date" class="block w-full border border-[#6C7275] p-2 rounded-lg" value="MM/YY">
+                  </div>
+                  <div class="w-full">
+                    <label for="cvv" class="block w-full text-[#6C7275] font-bold pb-2 pt-5 block">CVV</label>
+                    <input type="number" name="cvv" id="cvv" placeholder="123" class="block w-full border border-[#6C7275] p-2 rounded-lg">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <button class="bg-black text-white w-full rounded-md py-3 mt-6 text-lg">Place Order</button>
+          </form>
+          <aside class="w-[400px] p-5 border border-[#6C7275] h-min">
+            <h6 class="text-2xl font-semibold text-[#141718] mb-2">Order Summary</h6>
+            
+            <div class="flex justify-between my-8 border-b-2 border-[#E8ECEF] py-8">
+              <div class="flex items-center gap-2">
+                <img src="../assets/images/singleProducts/tray-table/tray-table-black.png" alt="">
+                <div>
+                  <h6 class="text-base font-semibold text-[#141718]">Tray Table</h6>
+                  <p class="text-[#6C7275]">color: black</p>
+                  <div class="border w-min flex items-center justify-center gap-2 rounded-md overflow-hidden shadow-sm">
+                    <button class="minus-btn px-2 py-1 cursor-pointer text-lg">-</button>
+                    <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-8 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                    [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
+                    <button class="plus-btn px-2 cursor-pointer text-lg">+</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="price text-lg">$39.00</p>
+                <button class="text-sm flex items-center gap-2 cursor-pointer md:hidden">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between my-8 border-b-2 border-[#E8ECEF py-8">
+              <div class="flex items-center gap-2">
+                <img src="../assets/images/singleProducts/tray-table/tray-table-red.png" alt="">
+                <div>
+                  <h6 class="text-base font-semibold text-[#141718]">Tray Table</h6>
+                  <p class="text-[#6C7275]">color: black</p>
+                  <div class="border w-min flex items-center justify-center gap-2 rounded-md overflow-hidden shadow-sm">
+                    <button class="minus-btn px-2 py-1 cursor-pointer text-lg">-</button>
+                    <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-8 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                    [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
+                    <button class="plus-btn px-2 cursor-pointer text-lg">+</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="price text-lg">$39.00</p>
+                <button class="text-sm flex items-center gap-2 cursor-pointer md:hidden">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between my-8 border-b-2 border-[#E8ECEF py-8">
+              <div class="flex items-center gap-2">
+                <img src="../assets/images/singleProducts/lamp/lamp-1.png" alt="">
+                <div>
+                  <h6 class="text-base font-semibold text-[#141718]">Table Lamp</h6>
+                  <p class="text-[#6C7275]">color: Gold</p>
+                  <div class="border w-min flex items-center justify-center gap-2 rounded-md overflow-hidden shadow-sm">
+                    <button class="minus-btn px-2 py-1 cursor-pointer text-lg">-</button>
+                    <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-8 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                    [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
+                    <button class="plus-btn px-2 cursor-pointer text-lg">+</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="price text-lg">$39.00</p>
+                <button class="text-sm flex items-center gap-2 cursor-pointer md:hidden">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-between border-b-2 border-[#E8ECEF] py-3 my-3">
+              <p class="text-lg font-semibold text-[#141718]">Shipping</p>
+              <p class="text-lg font-semibold text-[#141718]">Free</p>
+            </div>
+            <div class="flex justify-between items-center border-b-2 border-[#E8ECEF] py-4">
+              <p class="text-lg font-semibold text-[#141718]">Sub-Total</p>
+              <p class="sub-total-summary text-lg font-semibold text-[#141718]">$1234.00</p>
+            </div>
+            <div class="flex justify-between items-center py-4">
+              <p class="text-xl font-bold">Total</p>
+              <p class="total-summary text-xl font-bold">$1345.00</p>
+            </div>
+          </aside>
         </div>
-        <div class="flex justify-between items-center py-4">
-          <p class="text-xl font-bold">Total</p>
-          <p class="total-summary text-xl font-bold">$1345.00</p>
+    </section>
+    <section class="page">
+      <div class="flex flex-col items-center justify-center border w-[600px] shadow-lg mx-auto my-20 rounded-lg">
+        <p class="text-center text-2xl mt-12">Thank you!</p>
+        <h3 class="text-center text-4xl font-semibold py-6">Your order has been <br> placed successfully</h3>
+        <div class="flex mx-auto gap-10 mt-10 w-fit">
+          <div class="relative">
+            <img src="../assets/images/singleProducts/tray-table/tray-table-black.png" alt="">
+            <span class="w-[25px] h-[25px] block absolute top-0 right-0 rounded-full flex items-center justify-center bg-black text-white block">2</span>
+          </div>
+          <div class="relative">
+            <img src="../assets/images/singleProducts/tray-table/tray-table-red.png" alt="">
+            <span class="w-[25px] h-[25px] block absolute top-0 right-0 rounded-full flex items-center justify-center bg-black text-white block">2</span>
+          </div>
+          <div class="relative">
+            <img src="../assets/images/singleProducts/lamp/lamp-1.png" alt="">
+            <span class="w-[25px] h-[25px] block absolute top-0 right-0 rounded-full flex items-center justify-center bg-black text-white block">1</span>
+          </div>
         </div>
-        <button class="bg-black text-white w-full rounded-md py-3 mt-4 text-lg">Checkout</button>
-      </aside>
-      
+        <div class="mt-6 grid grid-cols-2 gap-4">
+          <p class="text-[#6C7275]">Order code:</p>
+          <p class="text-xl text-justify"> #0123_45678</p>
+          <p class="text-[#6C7275]">Date:</p>
+          <p class="text-xl">October 19, 2023</p>
+          <p class="text-[#6C7275]">Total:</p>
+          <p class="text-xl">$1,345.00</p>
+          <p class="text-[#6C7275]">Payment method:</p>
+          <p class="text-xl">Credit Card</p>
+        </div>
+        <button class="bg-black block text-white w-[200px] rounded-full py-3 mt-12 mb-12 text-lg mx-auto">Purchase history</button>
+      </div>
     </section>
   </main>
+
+  <footer class="text-white bg-black pb-14 px-6 text-center md:text-left">
+    <div class="container mx-auto md:flex md:justify-between md:items-center py-20">
+      <div class="md:flex md:items-center md:gap-10">
+        <a href="" class="text-xl font-semibold md:text-2xl md:font-normal md:pr-8"
+      >3legant.</a
+    > <p class="text-[#E8ECEF] md:border-l-2 border-white pl-8">Gift & Decoration Store</p>
+      </div>
+      <nav>
+        <ul
+        class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]"
+      >
+        <li class="cursor-pointer">
+          <a href="" class="text-[#FEFEFE] text-md md:text-md "
+            >Home</a
+          >
+        </li>
+        <li
+          class="shop cursor-pointer text-[#FEFEFE]"
+          onclick="showModal()"
+        >
+          Shop
+          <!-- <a href="" class="text-[#141718] text-md md:text-md text-black"
+            >Shop</a -->
+          <i class="fa-solid fa-chevron-down text-[#377DFF]"></i>
+          <!-- <i class="fa-solid fa-chevron-up hidden"></i> -->
+          <ul class="drop-down bg-black text-white p-4 absolute hidden">
+            <li class="border-b-2 border-[#cec] pb-2">
+              <a href="" class="">Furniture</a>
+            </li>
+            <li class="border-b-2 border-[#cec] pb-2">
+              <a href="" class="">Accessories</a>
+            </li>
+            <li class="border-b-2 border-[#cec] pb-2">
+              <a href="" class="">Sports</a>
+            </li>
+            <li class="border-b-2 border-[#cec] pb-2">
+              <a href="" class="">Clothings</a>
+            </li>
+          </ul>
+        </li>
+        <li class="cursor-pointer">
+          <a href="" class="text-[#FEFEFE] text-md md:text-md"
+            >Product</a
+          >
+        </li>
+        <li class="cursor-pointer">
+          <a href="" class="text-[#FEFEFE] text-md md:text-md"
+            >Blog</a
+          >
+        </li>
+        <li class="cursor-pointer">
+          <a href="" class="text-[#FEFEFE] text-md md:text-md"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+      </nav>
+    </div>
+    <div class="container mx-auto md:flex md:justify-between md:items-center border-t-2 border-[#6C7275] pt-4 text-[#FEFEFE]">
+      <div class="md:flex md:gap-10">
+        <p class="">Copyright ©2024 3legant. <span class="block md:inline"> All rights reserved</span></p>
+        <a href="" class="block my-4 md:inline md:my-0">Privacy Policy</a>
+        <a href="" class="block my-4 md:inline md:my-0">Terms of Use</a>
+      </div>
+      <div class="text-center md:flex gap-8">
+        <i class="fa-brands fa-instagram mx-2 md:mx-0"></i>
+        <i class="fa-brands fa-facebook-f mx-2 md:mx-0"></i>
+        <i class="fa-brands fa-youtube mx-2 md:mx-0"></i>
+      </div>
+    </div>
+  </footer>
   <script src="../js/script.js"></script>
 </body>
 </html>
