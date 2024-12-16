@@ -132,6 +132,13 @@ function updateIndicators() {
 
 
 // COUNTDOWN SCRIPT
+let countdownDaysElem = document.getElementById("days");
+let countdownHoursElem = document.getElementById("hours");
+let countdownMinutesElem = document.getElementById("minutes");
+let countdownSecondsElem = document.getElementById("seconds");
+let countdownElement = document.getElementById("countdown");
+
+
 const targetDate = new Date('2025-01-01T00:00:00Z').getTime();
 
 const updateCountdown = () => {
@@ -144,16 +151,21 @@ const updateCountdown = () => {
   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   // countdownElement.innerHTML = `${days}d ${hours.toString().padStart(2, '0')}h ${minutes.toString().padStart(2, '0')}m ${seconds.toString().padStart(2, '0')}s`;
-  countdownDaysElem.innerHTML = `${days}d `;
-  countdownHoursElem.innerHTML = `${hours.toString().padStart(2, '0')}h`;
-  countdownMinutesElem.innerHTML = `${minutes.toString().padStart(2, '0')}m`;
-  countdownSecondsElem.innerHTML = `${seconds.toString().padStart(2, '0')}s`;
+  countdownDaysElem.innerHTML = `${days} `;
+  countdownHoursElem.innerHTML = `${hours.toString().padStart(2, '0')}`;
+  countdownMinutesElem.innerHTML = `${minutes.toString().padStart(2, '0')}`;
+  countdownSecondsElem.innerHTML = `${seconds.toString().padStart(2, '0')}`;
 
   if (timeLeft <= 0) {
     clearInterval(intervalId);
     countdownElement.innerHTML = 'Countdown ended!';
   }
 };
+
+
+const intervalId = setInterval(updateCountdown, 1000);
+updateCountdown();
+
 
 
 
