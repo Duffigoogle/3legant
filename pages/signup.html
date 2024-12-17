@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Font Awesome Icons -->
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+ />
+ <!-- Google Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link
+   href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+   rel="stylesheet"
+ />
+ <link
+   href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap"
+   rel="stylesheet"
+ />
+ <!-- Tailwind CSS -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <!-- <link rel="stylesheet" href="../styles/accessories.css" /> -->
+  <title>Sign Up | Elegant</title>
+</head>
+<body>
+  <main class="grid grid-cols-2">
+    <section class="bg-[#F3F5F7] h-[100vh] bg-cover bg-center bg-no-repeat border"
+    style="background-image: url('../assets/images/sign_login/chair-with-bg.png')">
+    <p class="text-center text-4xl font-[Poppins] py-4 font-medium">3legant.</p>
+    </section>
+    <section class="flex justify-center items-center">
+      <form action="" class="flex flex-col justify-center items-start w-[70%]">
+        <h1 class="text-5xl font-medium">Sign up</h1>
+        <p class="text-md font-normal py-5 text-[#6C7275]">Already have an account? 
+          <a href="./login.html" class="text-[#38CB89] font-bold"> Sign in</a>
+        </p>
+        <input type="text" name="" id="fullname" placeholder="Your name" class="block border-b-2 border-[#E8ECEF] w-full py-3 text-lg outline-none">
+        <input type="text" name="" id="usename" placeholder="Username" class="block border-b-2 border-[#E8ECEF] w-full py-3 text-lg outline-none">
+        <input type="email" name="" id="email" placeholder="Email address" class="block border-b-2 border-[#E8ECEF] w-full py-3 text-lg outline-none">
+        <div class="flex justify-between items-center w-full border-b-2 border-[#E8ECEF]">
+          <input type="password" name="" id="password" placeholder="Password" class="block w-full py-3 text-lg outline-none">
+          <i class="fa-solid fa-eye text-[#6C7275] p-3"></i>
+          <i class="fa-solid fa-eye-slash text-[#6C7275] hidden p-3"></i>
+        </div>
+        <div class="flex justify-between items-center w-full border-b-2 border-[#E8ECEF]">
+          <input type="password" name="" id="confirm-password" placeholder="Confirm password" class="block w-full py-3 text-lg outline-none">
+          <i class="fa-solid fa-eye text-[#6C7275] p-3"></i>
+          <i class="fa-solid fa-eye-slash text-[#6C7275] hidden p-3" id="eye-slash-icon"></i>
+        </div>
+        <div class="flex items-center gap-3 mt-5">
+          <input type="checkbox" name="" id="" class="w-5 h-5 accent-black outline-none">
+          <label for="" class="text-lg font-normal py-3">I agree with <a href="" class="text-black font-bold">Privacy Policy</a> and <a href="" class="text-black font-bold">Terms of Use</a></label>
+        </div>
+        <button type="submit" class="w-full py-3 bg-black text-white rounded-lg text-lg my-6 shadow-md">Sign up</button>
+      </form>
+    </section>
+  </main>
+  <script src="../js/reviews.js"></script>
+</body>
+</html>

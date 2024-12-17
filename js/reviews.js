@@ -82,7 +82,54 @@ const reviews = [
     text:
       "humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry.I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman ",
   },
-]
+];
+
+
+
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirm-password');
+const eyeIcon = document.querySelector('.fa-eye');  // Select the first eye icon
+const eyeSlashIcon = document.querySelector('.fa-eye-slash'); // Select the first eye-slash icon
+
+
+eyeIcon.addEventListener('click', () => {
+  // console.log("clicked");
+  passwordInput.type = 'text'; // Show password
+  confirmPasswordInput.type = 'text';
+  eyeIcon.classList.add('hidden');
+  eyeSlashIcon.classList.remove('hidden');
+});
+
+
+eyeSlashIcon.addEventListener('click', () => {
+    passwordInput.type = 'password'; // Hide password
+    confirmPasswordInput.type = 'password';
+    eyeIcon.classList.remove('hidden');
+    eyeSlashIcon.classList.add('hidden');
+
+  });
+
+
+// Duplicate the above code for the confirm password field
+const confirmPasswordEyeIcon = document.querySelector('#confirm-password + .fa-eye');
+const confirmPasswordEyeSlashIcon = document.getElementById('eye-slash-icon');
+// console.log(confirmPasswordEyeSlashIcon);
+
+confirmPasswordEyeIcon.addEventListener('click', () => {
+  confirmPasswordInput.type = 'text';
+  confirmPasswordEyeIcon.style.display = 'none';
+  confirmPasswordEyeSlashIcon.style.display = 'inline-block'; // or block
+});
+
+confirmPasswordEyeSlashIcon.addEventListener('click', () => {
+  // console.log("hide!")
+  confirmPasswordInput.type = 'password';
+  confirmPasswordEyeIcon.style.display = 'inline-block'; // or block
+  confirmPasswordEyeSlashIcon.style.display = 'none';
+});
+
+
+
 
 
 function displayLikes(noOfLikes) {
@@ -114,3 +161,4 @@ reviews.map((item) => {
             </div>
   `
 })
+
