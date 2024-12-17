@@ -41,4 +41,3 @@ setInterval(nextSlide, 3000); // Change 3000 (3 seconds) to adjust interval
 createIndicators(); // Call this to create indicators initially
 updateIndicators(); // And make sure the first indicator is active
 
-

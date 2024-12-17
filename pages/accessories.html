@@ -190,6 +190,7 @@
       </div>
     </header>
     <main>
+      <!-- HERO SECTION -->
       <section
         class="mx-auto h-[100vh] bg-cover bg-center bg-no-repeat flex justify-end items-center border"
         style="background-image: url('../assets/images/accessories/hero.png')"
@@ -209,6 +210,7 @@
           </button>
         </div>
       </section>
+      <!-- LOGO SECTION -->
       <section class="container mx-auto py-10">
         <div class="flex w-fit mx-auto gap-4">
           <img src="../assets/images/accessories/logo-1.png" alt="" />
@@ -219,6 +221,7 @@
           <img src="../assets/images/accessories/logo-6.png" alt="" />
         </div>
       </section>
+      <!-- NEW ARRIVALS SECTION -->
       <section class="container mx-auto">
         <div class="flex justify-between items-end py-10">
           <h2
@@ -232,9 +235,9 @@
           <div
             class="slider flex transition-transform duration-500 ease-in-out"
           >
-            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+            <div class="product-card relative overflow-hidden w-[260px] m-2.5 border text-center shrink-0 box-border">
               <div
-                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                class="product-info h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
                 style="
                   background-image: url('../assets/images/accessories/headset-1.png');
                 "
@@ -248,12 +251,9 @@
                       class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
                     ></i>
                   </div>
-                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
-                    -50%
-                  </p>
                 </div>
                 <button
-                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                  class="add-to=cart-btn absolute bottom-4 w-full bg-black text-white text-center rounded-lg py-3 group-hover:block transition-all duration-300"
                 >
                   Add to cart
                 </button>
@@ -273,7 +273,7 @@
                 </p>
               </div>
             </div>
-            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+            <div class="product-card w-[260px] m-2.5 border text-center shrink-0 box-border">
               <div
                 class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
                 style="
@@ -289,9 +289,7 @@
                       class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
                     ></i>
                   </div>
-                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
-                    -50%
-                  </p>
+                 
                 </div>
                 <button
                   class="w-full bg-black text-white text-center rounded-lg py-3"
@@ -314,7 +312,7 @@
                 </p>
               </div>
             </div>
-            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+            <div class="product-card w-[260px] m-2.5 border text-center shrink-0 box-border">
               <div
                 class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
                 style="
@@ -330,9 +328,6 @@
                       class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
                     ></i>
                   </div>
-                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
-                    -50%
-                  </p>
                 </div>
                 <button
                   class="w-full bg-black text-white text-center rounded-lg py-3"
@@ -355,7 +350,7 @@
                 </p>
               </div>
             </div>
-            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+            <div class="product-card w-[260px] m-2.5 border text-center shrink-0 box-border">
               <div
                 class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
                 style="
@@ -371,9 +366,6 @@
                       class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
                     ></i>
                   </div>
-                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
-                    -50%
-                  </p>
                 </div>
                 <button
                   class="w-full bg-black text-white text-center rounded-lg py-3"
@@ -396,7 +388,7 @@
                 </p>
               </div>
             </div>
-            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+            <div class="product-card w-[260px] m-2.5 border text-center shrink-0 box-border">
               <div
                 class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
                 style="
@@ -412,9 +404,6 @@
                       class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
                     ></i>
                   </div>
-                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
-                    -50%
-                  </p>
                 </div>
                 <button
                   class="w-full bg-black text-white text-center rounded-lg py-3"
@@ -437,7 +426,7 @@
                 </p>
               </div>
             </div>
-            <div class="w-[260px] m-2.5 border text-center shrink-0 box-border">
+            <div class="product-card w-[260px] m-2.5 border text-center shrink-0 box-border">
               <div
                 class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
                 style="
@@ -495,18 +484,355 @@
           </div>
         </div>
       </section>
-      
-      <!-- <section>
-        <div class="review-top">
-          <h2><span>11</span>reviews</h2>
-          <select name="reviews" id="">
-            <option value="new">newest</option>
-            <option value="old">oldest</option>
-          </select>
+      <!-- SHOP COLLECTION -->
+      <section class="container mx-auto">
+          <h2
+            class="text-[#141718] text-4xl leading-[76px] tracking-[2px] font-medium mt-20 mb-10"
+          >
+            Shop Collection
+          </h2>
+        <div class="flex gap-10">
+          <div class="relative w-1/2">
+            <div class="absolute bottom-10 left-12">
+              <h3
+                class="text-[#121212] text-4xl font-medium tracking-wider leading-[60px]"
+              >
+                Headband
+              </h3>
+              <a
+                href=""
+                class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-lg"
+                >Collection <i class="fa-solid fa-arrow-right-long"></i
+              ></a>
+            </div>
+            <img src="../assets/images/accessories/collection-1.png" alt="headset" class="w-full" />
+          </div>
+          <div class="flex flex-col justify-between w-1/2">
+            <div class="relative">
+              <div class="absolute bottom-12 left-12">
+                <h3
+                  class="text-[#121212] text-4xl font-medium tracking-wider leading-[60px]"
+                >
+                  Earbuds
+                </h3>
+                <a
+                  href=""
+                  class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-lg"
+                  >Collection <i class="fa-solid fa-arrow-right-long"></i
+                ></a>
+              </div>
+              <img
+                src="../assets/images/accessories/collection-2.png"
+                alt="chair"
+                class="w-full"
+              />
+            </div>
+            <div class="relative">
+              <div class="absolute bottom-12 left-12">
+                <h3
+                  class="text-[#121212] text-4xl font-medium tracking-wider leading-[60px]"
+                >
+                  Accessories
+                </h3>
+                <a
+                  href=""
+                  class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-lg"
+                  >Collection <i class="fa-solid fa-arrow-right-long"></i
+                ></a>
+              </div>
+              <img
+                src="../assets/images/accessories/collection-3.png"
+                alt="chair"
+                class="w-full"
+              />
+            </div>
+          </div>
         </div>
-        <div class="review-container" id="review-container">
+      </section>
+      <!-- BEST SELLER -->
+      <section class="container mx-auto">
+        <h2
+        class="text-[#141718] text-4xl leading-[76px] tracking-[2px] font-medium mt-20 mb-10"
+      >
+        Best Seller
+      </h2>
+      <div class="grid-cols-4 grid gap-8">
+        <div class="">
+          <div class="h-[500px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/accessories/collection-1.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+        
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Sony - WH-1000XM5 Wireless <br> Noise Canceling
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $299.00
+              <span class="pl-4 text-[#6C7275] line-through">$400.00</span>
+            </p>
+          </div>
         </div>
-      </section> -->
+        <div class="">
+          <div class="h-[500px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/accessories/headset-2.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+        
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Beats <br> Studio Pro
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $349.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[500px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/accessories/headset-3.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Sony - WH-CH720N Wireless <br> Noise Canceling </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $24.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[500px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/accessories/headset-4.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Skullcandy - Rail True Wireless <br> Earbuds
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $24.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[500px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/accessories/pod-1.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Beats <br> Studio Pro
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $265.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[500px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/accessories/pod-2.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              JBL Reflect Flow Pro+ Bluetooth <br> Truly Wireless Sports
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $187.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[500px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/accessories/headset-5.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i>
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Bose <br> QuietComfort Headphones
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $299.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[500px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/accessories/headset-6.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i>
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              AKG <br> Y600NC Wireless
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $349.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
+      <!-- PROMOTION SECTION -->
       <section class="grid grid-cols-2 my-20">
         <div class="w-full">
           <img src="../assets/images/accessories/sample-human.png" alt="Sales furniture" class="w-full">
@@ -544,6 +870,7 @@
 
         </div>
       </section>
+      <!-- FEATURES SECTION -->
       <section class="container mx-auto py-20 grid-cols-4 grid gap-10 w-fit">
         <div class="bg-[#F3F5F7] px-12 py-16">
           <i class="fa-solid fa-truck-fast fa-2x"></i>
@@ -566,6 +893,7 @@
           <p class="text-[#6C7275] text-sm">Phone and Email support</p>
         </div>
       </section>
+      <!-- INSTAGRAM SECTION -->
       <section class="container mx-auto py-10 text-center">
         <p class="text-md font-bold mb-4 text-[#6C7275]">NEWSFEED</p>
         <h3 class="text-4xl font-bold mb-4">Instagram</h3>
@@ -578,6 +906,7 @@
           <img src="../assets/images/accessories/insta-4.png" alt="">
         </div>
       </section>
+      <!-- SUBSCRIBE SECTION -->
       <section class="container mx-auto text-center py-20 bg-cover bg-center bg-no-repeat"
       style="background-image: url('../assets/images/newsletter/newsletter-bg-accessories.png')">
         <h4 class="text-4xl font-medium">Join Our Newsletter</h4>

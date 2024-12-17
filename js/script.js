@@ -130,11 +130,35 @@ function updateIndicators() {
 
 // document.addEventListener('DOMContentLoaded', createIndicators());
 
+// // const productCard = document.querySelector(".product-card");
+// const productCards = document.querySelectorAll(".slider > div");
+// console.log(productCard);
+
+// // Add click event listeners to tab buttons
+// productCards.forEach((card, index) => {
+//   card.addEventListener('onmouseover', () => {
+//     // Hide all steps
+//     displaySections.forEach(addCartElem => {
+//       addCartElem.style.display = 'none';
+//     });
+
+//     // Show the selected step
+//     displaySections[index].style.display = 'block';
+
+//     // Update active tab styling (optional - but good UX)
+//     tabButtons.forEach(btn => {
+//       btn.classList.remove('active-tab');  // Remove 'active' class from all tabs
+//     });
+//     button.classList.add('active-tab'); // Add 'active' class to the clicked tab
+//   });
+// });
+
 //
 // CART SCRIPTS
 
-
+//
 // counter
+//
 
 // Find all quantity inputs
 const quantityInputs = document.querySelectorAll('tbody input[type="number"]');
@@ -272,3 +296,5 @@ tabButtons.forEach((button, index) => {
     button.classList.add('active-tab'); // Add 'active' class to the clicked tab
   });
 });
+
+
