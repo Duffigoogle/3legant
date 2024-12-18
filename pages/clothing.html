@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/accessories.css" />
+    <title>3Legant | Clothings</title>
+  </head>
+  <body>
+    <header class="">
+      <div class="">
+        <div class="flex justify-around items-center h-[50px] bg-[#377DFF]">
+          <div class="flex justify-between items-center text-white">
+            <i class="fa-solid fa-ticket text-[22px]"></i>
+            <p class="px-2">30% off storewide — Limited time!</p>
+            <span
+              class="border-b-2 border-black pb-1 text-black cursor-pointer hidden md:block"
+            >
+              <a href="" class="">Shop Now</a>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
+          </div>
+          <i class="fa-solid fa-xmark text-white"></i>
+        </div>
+      </div>
+      <div
+        class="bg-white flex justify-between items-center h-[100px] px-8 relative shadow-lg z-10 md:h-[70px]"
+      >
+        <nav class="w-full flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-bars text-[25px] md:hidden" id="ham-menu"></i>
+            <a href="" class="text-xl font-semibold md:text-2xl md:font-normal"
+              >3legant.</a
+            >
+          </div>
+          <div
+            id="nav-menu"
+            class="duration-500 absolute left-[-100%] top-[100%] w-full md:static md:w-auto px-8 pb-4 pt-2 md:py-0 md:px-0"
+          >
+            <form
+              action=""
+              class="flex gap-2 items-center border border-[#6C7275] px-4 py-3 rounded-lg md:hidden"
+            >
+              <button
+                type="submit"
+                class="search-btn bg-transparent"
+                onclick="showSearch()"
+              >
+                <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+              </button>
+              <input
+                type="text"
+                name=""
+                id="search-bar"
+                placeholder="Search..."
+                class="w-full"
+              />
+            </form>
+            <ul
+              class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]"
+            >
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a
+                  href="../index.html"
+                  class="text-[#141718] text-md md:text-md text-black"
+                  >Home</a
+                >
+              </li>
+              <li
+                class="shop border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0 cursor-pointer"
+                onclick="showModal()"
+              >
+                Shop
+                <!-- <a href="" class="text-[#141718] text-md md:text-md text-black"
+                >Shop</a -->
+                <i class="fa-solid fa-chevron-down text-[#377DFF]"></i>
+                <!-- <i class="fa-solid fa-chevron-up hidden"></i> -->
+                <ul class="drop-down bg-black text-white p-4 absolute hidden">
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="../index.html" class="">Furniture</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="./accessories.html" class="">Accessories</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="./sports.html" class="">Sports</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] pb-2">
+                    <a href="./clothing.html" class="">Clothings</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a href="" class="text-[#141718] text-md md:text-md text-black"
+                  >Product</a
+                >
+              </li>
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a
+                  href="./contact.html"
+                  class="text-[#141718] text-md md:text-md text-black"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <div class="mt-72 md:hidden">
+              <ul class="flex flex-col gap-4">
+                <li
+                  class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
+                >
+                  <a href="" class="text-[#6C7275] text-lg">Cart</a>
+                  <i class="fa-solid fa-bag-shopping text-[26px]"></i>
+                </li>
+                <li
+                  class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
+                >
+                  <a href="" class="text-[#6C7275] text-lg">Wishlist</a>
+                  <i class="fa-regular fa-heart text-[26px]"></i>
+                </li>
+              </ul>
+              <button
+                class="bg-black w-full text-white rounded-md py-3 cursor-pointer mt-8 mb-4 text-lg"
+              >
+                Sign In
+              </button>
+              <div class="flex items-center gap-6 mt-4">
+                <a href="" class="cursor-pointer">
+                  <i class="fa-brands fa-instagram text-[26px]"></i>
+                </a>
+                <a href="" class="cursor-pointer">
+                  <i
+                    class="fa-brands fa-facebook-f text-[26px]"
+                    style="color: blue"
+                  ></i>
+                </a>
+                <a href="" class="cursor-pointer">
+                  <i
+                    class="fa-brands fa-youtube text-[26px]"
+                    style="color: red"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center duration-500">
+            <form
+              action=""
+              class="flex gap-2 items-center rounded-xl md:border-none md:py-2 md:px-4 md:border md:border-black"
+            >
+              <button
+                type="submit"
+                class="search-btn bg-transparent"
+                onclick="showSearch()"
+              >
+                <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+              </button>
+              <input
+                type="text"
+                name=""
+                id="search-bar"
+                placeholder="Search..."
+                class="w-full hidden"
+              />
+            </form>
+            <a href="">
+              <i class="fa-solid fa-circle-user text-[25px]" id="user-icon"></i>
+            </a>
+            <a href="./cart.html">
+              <i class="fa-solid fa-bag-shopping text-[25px]" id="bag-icon"></i>
+            </a>
+            <i class="fa-solid fa-xmark text-[25px] hidden" id="close-icon"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- HERO SECTION -->
+      <section>
+        <div class="container mx-auto h-[100vh] grid grid-cols-2">
+          <div
+            class="h-[100vh] bg-cover bg-center bg-no-repeat"
+            style="
+              background-image: url('../assets/images/clothings/hero-image.png');
+            "
+          ></div>
+          <div
+            class="bg-[#171D28] flex flex-col justify-center items-start px-16"
+          >
+            <h1
+              class="w-[500px] text-[72px] text-white font-medium leading-[80px] tracking-[-2px] font-[Poppins]"
+            >
+              Bring the <br />
+              warmth.
+            </h1>
+            <p class="text-white font-[inter] text-xl w-[370px]">
+              Everyone needs a good winter jacket. Find yours with our
+              collection and more.
+            </p>
+            <button class="bg-[#377DFF] px-6 py-3 rounded-md text-white mt-8">
+              Shopping Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOGO SECTION -->
+      <section class="py-10">
+        <div class="container flex w-fit mx-auto gap-4">
+          <img src="../assets/images/accessories/logo-1.png" alt="" />
+          <img src="../assets/images/accessories/logo-2.png" alt="" />
+          <img src="../assets/images/accessories/logo-3.png" alt="" />
+          <img src="../assets/images/accessories/logo-4.png" alt="" />
+          <img src="../assets/images/accessories/logo-5.png" alt="" />
+          <img src="../assets/images/accessories/logo-6.png" alt="" />
+        </div>
+      </section>
+      <!-- FEATURED SECTION -->
+      <section class="container mx-auto">
+        <div class="flex justify-between items-end py-10">
+          <h2
+            class="text-[#141718] text-5xl leading-[44px] tracking-[0.4px] font-medium"
+          >
+            Just In
+          </h2>
+          <div class="slider-indicators flex justify-center mt-8"></div>
+        </div>
+        <div class="w-[90%] mx-auto my-5 overflow-hidden relative">
+          <div
+            class="slider flex transition-transform duration-500 ease-in-out"
+          >
+            <div
+              class="product-card relative overflow-hidden w-[260px] m-2.5 border text-center shrink-0 box-border"
+            >
+              <div
+                class="product-info h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/sports/golf-gloves-1-categories-7.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      HOT
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                </div>
+                <!-- <button
+                  class="add-to=cart-btn absolute bottom-4 w-full bg-black text-white text-center rounded-lg py-3 group-hover:block transition-all duration-300"
+                >
+                  Add to cart
+                </button> -->
+              </div>
+              <div class="py-2">
+                <div class="flex flex-start">
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                </div>
+                <p class="text-[#141718] font-normal text-xl py-1 text-left">
+                  Shark - Men's cabretta white golf glove
+                </p>
+                <p
+                  class="text-[#121212] text-md font-[Inter] font-bold text-left"
+                >
+                  $19.00
+                  <span class="pl-4 text-[#6C7275] line-through">$100.00</span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="product-card w-[260px] m-2.5 border text-center shrink-0 box-border"
+            >
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/sports/golf-clothes-categories-4.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      HOT
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                </div>
+                <!-- <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button> -->
+              </div>
+              <div class="py-2">
+                <div class="flex flex-start">
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                </div>
+                <p class="text-[#141718] font-normal text-xl py-1 text-left">
+                  Greg Norman - Men's Shark Logo Golf Polo Shirt
+                </p>
+                <p
+                  class="text-[#121212] text-md font-[Inter] font-bold text-left"
+                >
+                  $24.99
+                  <span class="pl-4 text-[#6C7275] line-through">$400.00</span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="product-card w-[260px] m-2.5 border text-center shrink-0 box-border"
+            >
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/sports/golf-gloves-categories-6.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      HOT
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                </div>
+                <!-- <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button> -->
+              </div>
+              <div class="py-2">
+                <div class="flex flex-start">
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                </div>
+                <p class="text-[#141718] font-normal text-xl py-1 text-left">
+                  G/FORE - Mens Left Glove Snow 2023
+                </p>
+                <p
+                  class="text-[#121212] text-md font-[Inter] font-bold text-left"
+                >
+                  $24.99
+                  <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+                </p>
+              </div>
+            </div>
+            <div
+              class="product-card w-[260px] m-2.5 border text-center shrink-0 box-border"
+            >
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/sports/golf-double-strap-bag.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      HOT
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                </div>
+                <!-- <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button> -->
+              </div>
+              <div class="py-2">
+                <div class="border flex flex-start">
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                  <span class="text-2xl font-bold">&#9733;</span>
+                </div>
+                <p class="text-[#141718] font-normal text-xl py-1 text-left">
+                  Utility Rover-R Double Strap Bag All Black - 2023
+                </p>
+                <p
+                  class="text-[#121212] text-md font-[Inter] font-bold text-left"
+                >
+                  $24.99
+                  <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+                </p>
+              </div>
+            </div>
+            <div
+              class="product-card w-[260px] m-2.5 border text-center shrink-0 box-border"
+            >
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/accessories/headset-5.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      NEW
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                </div>
+                <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button>
+              </div>
+              <div class="py-2">
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <p class="text-[#141718] font-normal text-xl py-1">
+                  Bamboo basket
+                </p>
+                <p class="text-[#121212] text-md font-[Inter] font-bold">
+                  $24.99
+                  <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+                </p>
+              </div>
+            </div>
+            <div
+              class="product-card w-[260px] m-2.5 border text-center shrink-0 box-border"
+            >
+              <div
+                class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+                style="
+                  background-image: url('../assets/images/accessories/headset-6.png');
+                "
+              >
+                <div class="">
+                  <div class="flex justify-between items-center">
+                    <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                      NEW
+                    </p>
+                    <i
+                      class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                    ></i>
+                  </div>
+                  <p class="bg-green-500 py-1 px-4 text-white w-fit rounded-md">
+                    -50%
+                  </p>
+                </div>
+                <button
+                  class="w-full bg-black text-white text-center rounded-lg py-3"
+                >
+                  Add to cart
+                </button>
+              </div>
+              <div class="py-2">
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <span class="text-2xl font-bold">&#9733;</span>
+                <p class="text-[#141718] font-normal text-xl py-1">
+                  Bamboo basket
+                </p>
+                <p class="text-[#121212] text-md font-[Inter] font-bold">
+                  $24.99
+                  <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between absolute z-10 top-[50%] w-full">
+            <button
+              class="p-4 bg-orange-400 rounded-3xl text-white shadow-2xl"
+              onclick="slideLeft()"
+            >
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button
+              class="p-4 bg-orange-400 rounded-3xl text-white shadow-2xl"
+              onclick="slideRight()"
+            >
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOP BY CATEGORIES -->
+      <section class="container mx-auto">
+        <h2
+          class="text-[#141718] text-4xl leading-[76px] tracking-[2px] font-medium mt-20 mb-10 text-center font-[Poppins]"
+        >
+          Shop by Categories
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="flex flex-col items-center font-normal text-lg">
+            <img
+              src="../assets/images/clothings/clothes-category-1.png"
+              class="rounded-full border overflow-hidden"
+              alt=""
+            />
+            <p class="mt-4 font-normal">Puffers</p>
+          </div>
+          <div class="flex flex-col items-center font-normal text-lg">
+            <img
+              src="../assets/images/clothings/clothes-category-2.png"
+              class="rounded-full border overflow-hidden"
+              alt=""
+            />
+            <p class="mt-4 font-normal">Bombers</p>
+          </div>
+          <div class="flex flex-col items-center font-normal text-lg">
+            <img
+              src="../assets/images/clothings/clothes-category-3.png"
+              class="rounded-full border overflow-hidden"
+              alt=""
+            />
+            <p class="mt-4 font-normal">Lightweight Jackets</p>
+          </div>
+          <div class="flex flex-col items-center font-normal text-lg">
+            <img
+              src="../assets/images/clothings/clothes-category-4.png"
+              class="rounded-full border overflow-hidden"
+              alt=""
+            />
+            <p class="mt-4 font-normal">Gilets</p>
+          </div>
+          <div class="flex flex-col items-center font-normal text-lg">
+            <img
+              src="../assets/images/clothings/clothes-category-5.png"
+              class="rounded-full border overflow-hidden"
+              alt=""
+            />
+            <p class="mt-4 font-normal">Coats</p>
+          </div>
+          <div class="flex flex-col items-center font-normal text-lg">
+            <img
+              src="../assets/images/clothings/clothes-category-6.png"
+              class="rounded-full border overflow-hidden"
+              alt=""
+            />
+            <p class="mt-4 font-normal">Rain wears</p>
+          </div>
+        </div>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-28">
+          <!-- SHOP COLLECTION -->
+              <div class="relative">
+                <div class="absolute bottom-12 left-12">
+                  <h3
+                    class="text-white text-4xl font-medium tracking-wider leading-[60px]"
+                  >
+                    November Outfits
+                  </h3>
+                  <a
+                    href=""
+                    class="border-b-2 border-white text-white pr-1 pb-1 text-lg"
+                    >Collection <i class="fa-solid fa-arrow-right-long"></i
+                  ></a>
+                </div>
+                <img
+                  src="../assets/images/clothings/clothes-collection-1.png"
+                  alt="chair"
+                  class="w-full"
+                />
+              </div>
+              <div class="relative">
+                <div class="absolute bottom-12 left-12">
+                  <h3
+                    class="text-white text-4xl font-medium tracking-wider leading-[60px]"
+                  >
+                    Cashmere Set
+                  </h3>
+                  <a
+                    href=""
+                    class="border-b-2 border-white text-white pr-1 pb-1 text-lg"
+                    >Collection <i class="fa-solid fa-arrow-right-long"></i
+                  ></a>
+                </div>
+                <img
+                  src="../assets/images/clothings/clothes-collection-2.png"
+                  alt="chair"
+                  class="w-full"
+                />
+              </div>
+              <div class="relative">
+                <div class="absolute bottom-12 left-12">
+                  <h3
+                    class="text-white text-4xl font-medium tracking-wider leading-[60px]"
+                  >
+                  The New Nordic
+                  </h3>
+                  <a
+                    href=""
+                    class="border-b-2 border-white text-white pr-1 pb-1 text-lg"
+                    >Collection <i class="fa-solid fa-arrow-right-long"></i
+                  ></a>
+                </div>
+                <img
+                  src="../assets/images/clothings/clothes-collection-3.png"
+                  alt="chair"
+                  class="w-full"
+                />
+              </div>
+              <div class="relative">
+                <div class="absolute bottom-12 left-12">
+                  <h3
+                    class="text-white text-4xl font-medium tracking-wider leading-[60px]"
+                  >
+                    The Leather
+                  </h3>
+                  <a
+                    href=""
+                    class="border-b-2 border-white text-white pr-1 pb-1 text-lg"
+                    >Collection <i class="fa-solid fa-arrow-right-long"></i
+                  ></a>
+                </div>
+                <img
+                  src="../assets/images/clothings/clothes-collection-4.png"
+                  alt="chair"
+                  class="w-full"
+                />
+              </div>
+        </div>
+      </section>
+
+      <!-- BEST SELLERS -->
+      <section class="container mx-auto">
+        <h2
+        class="text-[#141718] text-4xl leading-[76px] tracking-[2px] font-medium mt-20 mb-10 font-[Poppins]"
+      >
+        Best Seller
+      </h2>
+      <div class="grid-cols-4 grid gap-8">
+        <div class="">
+          <div class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/clothings/carousel-clothing-4.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+        
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Freestyle Crew Racer leather jacket
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $595.00
+              <span class="pl-4 text-[#6C7275] line-through">$1000.00</span>
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/clothings/carousel-clothing-3.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+        
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              1996 Retro Nuptse Cashmere Jacket in Gray
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $149.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/clothings/carousel-clothing-2.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Chilliwack black Bomber HUMANATURE</p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $1195.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/clothings/carousel-clothing-5.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              96 Nuptse Dip Dye bomber Jacket
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $400.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/clothings/carousel-clothing-6.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Oversized real leather harrington jacket in black
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $249.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/clothings/carousel-clothing-1.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Men's Diamond Quilted Bomber Hoody
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $199.95
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/clothings/clothes-category-5.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Paradigm Chilliwack coat Black Label
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $1495.99
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="background-image: url('../assets/images/clothings/clothes-category-6.png')">
+            <div class="">
+              <div class="flex justify-between items-center">
+                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">
+                  HOT
+                </p>
+                <!-- <i
+                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+                ></i> -->
+              </div>
+            </div>
+            <!-- <button
+              class="w-full bg-black text-white text-center rounded-lg py-3"
+            >
+              Add to cart
+            </button> -->
+          </div>
+          <div class="py-2">
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <p class="text-[#141718] font-normal text-xl py-1">
+              Men's Torrentshell 3L Rain Jacket in Brown
+            </p>
+            <p class="text-[#121212] text-md font-[Inter] font-bold">
+              $149.00
+              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- PROMOTION SECTION -->
+      <section class="grid grid-cols-2 my-28">
+        <div class="w-full">
+          <img src="../assets/images/clothings/promotion-banner.png" alt="Clothing Sales" class="w-full">
+        </div>
+        <div class="bg-[#F3F5F7] flex flex-col justify-center pl-20 pr-30">
+          <p class="font bold text-blue-500 text-base font-[Inter] py-2">SALE UP TO 35% OFF</p>
+          <h4 class="text-[#141718] text-4xl font-normal">HUNDREDS of <br>
+            New lower prices!</h4>
+            <p class="pt-3 pb-6 text-xl font-[Inter] font-normal">Hurry up!!! Winter is coming!</p>
+            <a
+                  href=""
+                  class="border-b-2 border-[#121212] text-[#141718] pr-1 pb-1 text-lg w-fit cursor-pointer"
+                  >Shop Now <i class="fa-solid fa-arrow-right-long"></i
+                ></a>
+
+        </div>
+      </section>
+
+      <!-- WINTER COLLECTIONS -->
+      <section>
+        <div class="container mx-auto text-center">
+          <p class="font bold text-blue-500 text-base font-[Inter] py-2">PROMOTION</p>
+          <h4 class="text-[#141718] text-4xl font-normal">Winter Collections</h4>
+            <p class="pt-3 pb-6 text-md font-[Inter] font-normal">Introducing the new winter jackets.
+            </p>
+            <div class="w-fit mx-auto rounded-2xl overflow-hidden shadow-2xl">
+              <iframe width="1120" height="544" src="https://www.youtube.com/embed/2U_R6_t6-go?si=J1i6rV2gDa8KKFTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+      </section>
+
+      <!-- LATEST ARTICLES -->
+      <section class="container mx-auto">
+        <div class="flex justify-between items-center mt-24 mb-10">
+          <h2
+            class="text-[#141718] text-4xl leading-[76px] tracking-[2px] font-medium font-[Poppins]"
+          >
+            Latest Articles
+          </h2>
+          <a
+            href=""
+            class="text-[#141718] text-lg block underline underline-offset-8"
+            >View More
+            <i
+              class="fa-solid fa-arrow-right-long underline underline-offset-8"
+            ></i
+          ></a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="articles">
+            <div>
+              <img src="../assets/images/clothings/clothing-article-1.png" alt="" />
+            </div>
+            <h6 class="font-medium text-lg py-2">
+              2024 Holiday Gift Guide
+            </h6>
+            <a
+              href=""
+              class="text-[#141718] block underline underline-offset-8 text-sm"
+              >Read More
+              <i
+                class="fa-solid fa-arrow-right-long underline underline-offset-8"
+              ></i
+            ></a>
+          </div>
+          <div class="articles">
+            <div>
+              <img src="../assets/images/clothings/clothing-article-2.png" alt="" />
+            </div>
+            <h6 class="font-medium text-lg py-2">
+              Best Stylish Outfits for men
+            </h6>
+            <a
+              href=""
+              class="text-[#141718] block underline underline-offset-8 text-sm"
+              >Read More
+              <i
+                class="fa-solid fa-arrow-right-long underline underline-offset-8"
+              ></i
+            ></a>
+          </div>
+          <div class="articles">
+            <div>
+              <img src="../assets/images/clothings/clothing-article-3.png" alt="" />
+            </div>
+            <h6 class="font-medium text-lg py-2">Winter Clothing Guides</h6>
+            <a
+              href=""
+              class="text-[#141718] block underline underline-offset-8 text-sm"
+              >Read More
+              <i
+                class="fa-solid fa-arrow-right-long underline underline-offset-8"
+              ></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- INSTAGRAM SECTION -->
+      <section class="">
+        <div class="container mx-auto text-center">
+          <p class="text-md font-bold mb-4 text-[#6C7275]">NEWSFEED</p>
+          <h3 class="text-4xl font-normal mb-4">Instagram</h3>
+          <p class="text-[#6C7275] mb-4 text-md">
+            Follow us on social media for more discount & promotions
+          </p>
+          <a href="" class="text-[#6C7275] text-lg font-bold mb-4"
+            >@3legant_official</a
+          >
+          <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 w-fit mx-auto">
+            <img src="../assets/images/clothings/instagram-1.png" alt="" />
+            <img src="../assets/images/clothings/instagram-2.png" alt="" />
+            <img src="../assets/images/clothings/instagram-3.png" alt="" />
+            <img src="../assets/images/clothings/instagram-4.png" alt="" />
+        </div>
+      </section>
+
+      <!-- FEATURES SECTION -->
+      <section class="container mx-auto py-20 grid-cols-4 grid gap-10 w-fit">
+        <div class="bg-[#F3F5F7] px-12 py-16">
+          <i class="fa-solid fa-truck-fast fa-2x"></i>
+          <h4 class="text-xl font-bold py-3 text-[#141718]">Free Shipping</h4>
+          <p class="text-[#6C7275] text-sm">Order above $200</p>
+        </div>
+        <div class="bg-[#F3F5F7] px-12 py-16">
+          <i class="fa-regular fa-money-bill-1 fa-2x"></i>          
+          <h4 class="text-xl font-bold py-3 text-[#141718]">Money-back</h4>
+          <p class="text-[#6C7275] text-sm">30 days guarantee</p>
+        </div>
+        <div class="bg-[#F3F5F7] px-12 py-16">
+          <i class="fa-solid fa-lock fa-2x"></i>          
+          <h4 class="text-xl font-bold py-3 text-[#141718]">Secure Payments</h4>
+          <p class="text-[#6C7275] text-sm">Secured by Stripe</p>
+        </div>
+        <div class="bg-[#F3F5F7] px-12 py-16">
+          <i class="fa-solid fa-phone fa-2x"></i>          
+          <h4 class="text-xl font-bold py-3 text-[#141718]">24/7 Support</h4>
+          <p class="text-[#6C7275] text-sm">Phone and Email support</p>
+        </div>
+      </section>
+
+    </main>
+    <footer class="text-black bg-[#E8ECEF] pb-14">
+      <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 py-20">
+        <div class="flex flex-col gap-6 justify-start">
+          <a
+            href=""
+            class="text-xl block font-semibold md:text-2xl md:font-normal"
+            >3legant.</a
+          >
+          <p class="py-3 text-sm md:text-md">
+            43111 Hai Trieu street, <br />
+            District 1, HCMC <br />
+            Lagos, Nigeria. <br />
+          </p>
+          <p>813-0344-873</p>
+          <div class="flex gap-8">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+          <div class="pages">
+            <h4 class="font-semibold mb-4">Page</h4>
+            <ul>
+              <li class="py-2">
+                <a href="index.html" class="text-sm md:text-md"
+                  >Home</a
+                >
+              </li>
+              <li class="py-2">
+                <a href="shop.html" class="text-sm md:text-md"
+                  >Shop</a
+                >
+              </li>
+              <li class="py-2">
+                <a
+                  href="product.html"
+                  class="text-sm md:text-md"
+                  >Product</a
+                >
+              </li>
+              <li class="py-2">
+                <a href="blog.html" class="text-sm md:text-md"
+                  >Blog</a
+                >
+              </li>
+              <li class="py-2">
+                <a
+                  href="contact.html"
+                  class="text-sm md:text-md"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="info">
+            <h4 class="font-semibold mb-4">Info</h4>
+            <ul>
+              <li class="py-2">
+                <a href="index.html" class="text-sm md:text-md"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li class="py-2">
+                <a href="shop.html" class="text-sm md:text-md"
+                  >Return & Refund</a
+                >
+              </li>
+              <li class="py-2">
+                <a
+                  href="product.html"
+                  class="text-sm md:text-md"
+                  >Support</a
+                >
+              </li>
+              <li class="py-2">
+                <a href="blog.html" class="text-sm md:text-md"
+                  >FAQs</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="office">
+            <h4 class="font-semibold mb-4">Join Newsletter</h4>
+            <p class="">Subscribe our newsletter to get more deals, new products and promotions</p>
+           <form method="post" class="flex justify-between items-center mt-6 border border-[#6C7275] rounded-full py-3 px-4">
+            <input type="email" name="" id="" class="bg-transparent" placeholder="Enter your email">
+            <button type="submit" class="outline-none border-none cursor-pointer bg-transparent">
+              <i class="fa-solid fa-circle-arrow-right text-blue-500 fa-2x"></i>
+            </button>
+           </form>
+          </div>
+      </div>
+      <div
+        class="container mx-auto flex justify-between items-center border-t-2 border-[#6C7275] pt-4"
+      >
+        <div class="flex gap-10">
+          <p class="border-r-2 pr-10">
+            Copyright ©2024 3legant. All rights reserved
+          </p>
+          <a href="" class="">Privacy Policy</a>
+          <a href="" class="">Terms & Conditions</a>
+        </div>
+        <div class="flex gap-2">
+          <img src="../assets/images/payment-logo/visa.png" alt="visa" />
+          <img
+            src="../assets/images/payment-logo/american-express.png"
+            alt="american-express"
+          />
+          <img
+            src="../assets/images/payment-logo/mastercard.png"
+            alt="mastercard"
+          />
+          <img src="../assets/images/payment-logo/stripe.png" alt="stripe" />
+          <img src="../assets/images/payment-logo/paypal.png" alt="paypal" />
+          <img
+            src="../assets/images/payment-logo/apple-pay.png"
+            alt="apple-pay"
+          />
+        </div>
+      </div>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/reviews.js"></script>
+    <script src="../js/countdown.js"></script>
+  </body>
+</html>
