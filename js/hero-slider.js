@@ -1,7 +1,7 @@
 const carouselSlide = document.querySelector('.carousel-slide');
 const slides = Array.from(carouselSlide.children);
 let counter = 0;
-const imageWidth = 1400; // Match container width
+const imageWidth = 1440; // Match container width
 const maxSlides = slides.length;
 
 carouselSlide.style.width = `${maxSlides * imageWidth}px`; // Set carousel width
