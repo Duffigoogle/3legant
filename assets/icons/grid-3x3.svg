@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" id="grid">
+  <g fill="#34485c" fill-rule="evenodd">
+    <path d="M1 1h3v3H1zM6 1h3v3H6zM11 1h3v3h-3zM1 6h3v3H1zM6 6h3v3H6zM11 6h3v3h-3zM1 11h3v3H1zM6 11h3v3H6zM11 11h3v3h-3z"></path>
+  </g>
+</svg>

@@ -1,0 +1,112 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Off-white Pillow",
+      "price": 7.99,
+      "description": "Super-soft cushion cover in off-white with a tactile pattern that enhances the different tones in the pile and base.",
+      "category": "living room",
+      "image": "../assets/images/shop/pillow-shop.png",
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Table Lamp",
+      "price": 39.99,
+      "description": "Like small jewels in shiny brass and gray clear glass, pread a soft mood light that creates exciting shadows on walls and ceilings",
+      "category": "living room",
+      "image": "../assets/images/shop/Table-Lamp-1.png",
+      "rating": 3.5
+    },
+    {
+      "id": 3,
+      "name": "White Drawer unit",
+      "price": 89.99,
+      "description": "Super-soft cushion cover in off-white with a tactile pattern that enhances the different tones in the pile and base.",
+      "category": "bedroom",
+      "image": "../assets/images/shop/office-rack.png",
+      "rating": 2.5
+    },
+    {
+      "id": 4,
+      "name": "Cozy Sofa",
+      "price": 299.99,
+      "description": "Easy transportation was the goal when we created this comfy loveseat with durable beige polyester fabric.",
+      "category": "living room",
+      "image": "../assets/images/shop/Cozy-sofa.png",
+      "rating": 3
+    },
+    {
+      "id": 5,
+      "name": "Bamboo Basket",
+      "price": 9.99,
+      "description": "With its soft shape and color, this spacious basket is just as decorative wherever you choose to put it.",
+      "category": "kitchen",
+      "image": "../assets/images/shop/basket.png",
+      "rating": 3
+    },
+    {
+      "id": 6,
+      "name": "Black Tray table",
+      "price": 19.19,
+      "description": "Easy to love at a price that’s hard to resist. Buy one or buy a few and make every space where you sit more convenient.",
+      "category": "living room",
+      "image": "../assets/images/shop/basket.png",
+      "rating": 3
+    },
+    {
+      "id": 7,
+      "name": "Lamp",
+      "price": 39.00,
+      "description": "Easy to love at a price that’s hard to resist. Buy one or buy a few and make every space where you sit more convenient.",
+      "category": "bedroom",
+      "image": "../assets/images/shop/Lamp.png",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "name": "Loveseat Sofa",
+      "price": 3.99,
+      "description": "Easy to love at a price that’s hard to resist. Buy one or buy a few and make every space where you sit more convenient.",
+      "category": "living room",
+      "image": "../assets/images/shop/Loveseat-Sofa.png",
+      "rating": 2
+    },
+    {
+      "id": 9,
+      "name": "Light Beige Pillow",
+      "price": 3.99,
+      "description": "Easy to love at a price that’s hard to resist. Buy one or buy a few and make every space where you sit more convenient.",
+      "category": "living room",
+      "image": "../assets/images/shop/Light-Beige-Pillow",
+      "rating": 4
+    },
+    {
+      "id": 10,
+      "name": "Luxury Sofa",
+      "price": 299.99,
+      "description": "Easy to love at a price that’s hard to resist. Buy one or buy a few and make every space where you sit more convenient.",
+      "category": "living room",
+      "image": "../assets/images/shop/Luxury-Sofa.png",
+      "rating": 5
+    },
+    {
+      "id": 11,
+      "name": "Black Brow Side table",
+      "price": 16.99,
+      "description": "Easy to love at a price that’s hard to resist. Buy one or buy a few and make every space where you sit more convenient.",
+      "category": "living room",
+      "image": "../assets/images/shop/Black-Brow-Side-table.png",
+      "rating": 4
+    },
+    {
+      "id": 12,
+      "name": "Table Lamp",
+      "price": 19.00,
+      "description": "Easy to love at a price that’s hard to resist. Buy one or buy a few and make every space where you sit more convenient.",
+      "category": "living room",
+      "image": "../assets/images/shop/Table-lamp.png",
+      "rating": 5
+    }
+  ]
+}
