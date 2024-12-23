@@ -1,7 +1,8 @@
 let products = []; // Initialize as an empty array
 // Your array of product objects
 
-let currentView = 'grid-4x4'; // Set a default view; 'grid-4x4', 'grid-3x3', 'grid-2x2', 'list' 
+let currentView = 'grid-3x3'; // Set a default view; 'grid-4x4', 'grid-3x3', 'grid-2x2', 'list' 
+const cardContainer = document.getElementById("card-container");
 
 // Get references to the grid container, view buttons, and sort dropdown
 const productGrid = document.getElementById('product-grid');
@@ -10,6 +11,9 @@ const grid4x4Btn = document.getElementById('grid-4x4');
 const grid2x2Btn = document.getElementById('grid-2x2');
 const listViewBtn = document.getElementById('list-view');
 const sortSelect = document.getElementById('sort-select');
+const filterHeading = document.getElementById('filter-heading');
+const categoryHeading = document.getElementById('category-heading');
+const asideMenu = document.getElementById('aside_menu');
 
 
 const categoryCheckboxes = document.querySelectorAll('.category-item input[type="checkbox"]');
@@ -55,6 +59,9 @@ function displayProducts(productsToDisplay, view) {
   // Check if productsToDisplay is actually an array and not empty:
   if (!Array.isArray(productsToDisplay) || productsToDisplay.length === 0) {
     productGrid.innerHTML = '<p>No products to display.</p>'; // Or handle it differently
+    // console.log(!Array.isArray(productsToDisplay));
+    // console.log(productsToDisplay.length === 0);
+    // console.log(!Array.isArray(productsToDisplay) || productsToDisplay.length === 0)
     return; // Important: Stop the function execution here
   };
 
@@ -71,12 +78,13 @@ function displayProducts(productsToDisplay, view) {
                       <h3 class="text-lg font-medium">${product.name}</h3>
                       <p class="text-gray-600">$${product.price}</p>
                       <p>${product.description}</p> 
-                      <button>Add to Cart</button> 
+                      <button class="px-8 bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md">Add to Cart</button> 
                     </div> 
               </div> 
             `;
     } else { // Grid view
       productHTML = `
+            <div id="card-container" class="">
               <div class="border h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
                 style="background-image: url(${product.image});">
                 <div class="">
@@ -106,21 +114,53 @@ function displayProducts(productsToDisplay, view) {
                   <i class="fa-regular fa-heart fa-2x"></i> Wishlist
                 </button>
               </div>
+            </div>
           `;
     }
 
     productGrid.innerHTML += productHTML;
   });
 
-  // applyGridLayout(view);
+  applyGridLayout(view); // apply default view
 };
 
 function updateViewButtonStyles(activeButton) {
   const viewButtons = [grid3x3Btn, grid4x4Btn, grid2x2Btn, listViewBtn];
   viewButtons.forEach((button) => {
-    button.classList.remove("active-view bg-[#377dff] text-white"); // Remove from all
+    button.classList.remove("active-view");  // Remove only "active-view"
+    button.classList.remove("bg-[#377dff]"); // Remove background color class
+    button.classList.remove("text-white");  // Remove text color class
+    console.log("Remove,:", button)
   });
-  activeButton.classList.add("active-view bg-[#377dff] text-white"); // Add to the active one
+  activeButton.classList.add("active-view"); // Add active-view class
+  activeButton.classList.add("bg-[#377dff]"); // Add background color class
+  activeButton.classList.add("text-white");   // Add text color class
+};
+
+console.log(asideMenu)
+
+function applyGridLayout(view) {
+  if (view === 'grid-3x3') {
+    productGrid.classList = 'grid grid-cols-3 gap-4'; // Tailwind classes for 3x3 grid
+  } else if (view === 'grid-4x4') {
+    productGrid.classList = 'grid grid-cols-4 gap-4'; // Tailwind classes for 4x4 grid
+    asideMenu.classList.remove("hidden");
+  } else if (view === 'grid-2x2') {
+    productGrid.classList = 'grid grid-cols-2 gap-4'; // Tailwind classes for 2x2 grid
+    cardContainer.classList.add("grid grid-cols-2 gap-2");
+    asideMenu.classList.add("hidden");
+  }
+  else if (view === 'list') {
+    productGrid.classList = 'grid grid-cols-1 gap-4'; // Or no grid classes if you prefer
+    asideMenu.classList.add("hidden");
+
+  };
+
+  // if (view === 'grid-3x3') {
+  //   asideMenu.classList.remove("hidden");
+  // } else { // Hide asideMenu for all other views
+  //   asideMenu.classList.add("hidden");
+  // };
 }
 
 // Fetch the shop.json file
@@ -133,11 +173,16 @@ fetch('../products/shop.json')
   })
   .then(data => {
     console.log(data);
+    console.log(data.products);
     // Update the products array with fetched data
-    products = data; // Assign the fetched data to products. NO push
+    products = data.products; // Assign the fetched data to products. NO push
+
 
     // Display products using the current view or a default
     displayProducts(products, currentView);
+    console.log("DEFAULT VIEW : ", currentView, products);
+    // updateViewButtonStyles(grid3x3Btn); // Or whichever button corresponds to your 'currentView' default
+
 
     // Convert NodeList to Array using Array.from()
     const categoryCheckboxArray = Array.from(categoryCheckboxes); 
@@ -145,6 +190,7 @@ fetch('../products/shop.json')
     categoryCheckboxArray.forEach(checkbox => {
       checkbox.addEventListener('change', filterProducts); // Call filterProducts function whenever checkboxes change
      });
+
 
     // Now after fetching, add event listeners
     // Ensure the displayProducts function is defined before this

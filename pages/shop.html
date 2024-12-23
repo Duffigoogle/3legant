@@ -206,7 +206,15 @@
       </section>
       <section class="py-12">
         <div class="grid grid-cols-1 lg:grid-cols-2 container mx-auto">
-          <div class="top-left flex gap-8">
+          <div class="flex items-center gap-60" id="filter-heading">
+            <!-- icon -->
+            <div class="flex gap-2 items-center">
+              <i class="fa-solid fa-filter"></i>              
+              <label for="sort-select" class="cursor-pointer block py-1 font-bold leading-[26px] font-[Inter] text-lg">Filter</label>
+            </div>
+            <p id="" class="font-bold leading-[26px] font-[Inter] text-lg">Selected Categories</p>
+          </div>
+          <div class="top-left flex gap-8 hidden" id="category-deading">
             <div class="">
               <label
                 for="categories"
@@ -309,619 +317,241 @@
           </div>
         </div>
       </section>
-      <aside>
-        <div class="categories-container mb-8">
-          <label for="categories" class="font-semibold pb-4 font-[Inter]"
-            >CATEGORIES</label
-          >
-          <ul id="categories">
-            <li
-              class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
-            >
-              <label for="all-rooms">All Rooms</label>
-              <input
-                type="checkbox"
-                name="categories"
-                id="all-rooms"
-                value="all"
-                class="accent-black w-[20px] h-[20px] hidden"
-              />
-            </li>
-            <li
-              class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
-            >
-              <label for="living-room">Living Room</label>
-              <input
-                type="checkbox"
-                name="categories"
-                id="living-room"
-                value="living-room"
-                class="accent-black w-[20px] h-[20px] hidden"
-              />
-            </li>
-            <li
-              class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
-            >
-              <label for="bedroom">Bedroom</label>
-              <input
-                type="checkbox"
-                name="categories"
-                id="bedroom"
-                value="bedroom"
-                class="accent-black w-[20px] h-[20px] hidden"
-              />
-            </li>
-            <li
-              class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
-            >
-              <label for="kitchen">Kitchen</label
-              ><input
-                type="checkbox"
-                name="categories"
-                id="kitchen"
-                value="kitchen"
-                class="accent-black w-[20px] h-[20px] hidden"
-              />
-            </li>
-            <li
-              class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
-            >
-              <label for="bathroom">Bathroom</label>
-              <input
-                type="checkbox"
-                name="categories"
-                id="bathroom"
-                value="bathroom"
-                class="accent-black w-[20px] h-[20px] hidden"
-              />
-            </li>
-            <li
-              class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
-            >
-              <label for="dining">Dining</label>
-              <input
-                type="checkbox"
-                name="categories"
-                id="dining"
-                value="dining"
-                class="accent-black w-[20px] h-[20px] hidden"
-              />
-            </li>
-            <li
-              class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
-            >
-              <label for="outdoor">Outdoor</label>
-              <input
-                type="checkbox"
-                name="categories"
-                id="outdoor"
-                value="outdoor"
-                class="accent-black w-[20px] h-[20px] hidden"
-              />
-            </li>
-          </ul>
-        </div>
-        <div class="price-container">
-          <label for="prices" class="font-semibold pb-4 font-[Inter]"
-            >PRICE</label
-          >
-          <ul>
-            <li
-              class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
-            >
-              <label
-                for="all-prices"
-                class="font-[Inter] font-bold leading-[22px] text-md"
-                >All Prices</label
-              >
-              <input
-                type="checkbox"
-                name="prices"
-                id="all-prices"
-                class="accent-black w-[20px] h-[20px]"
-                value="All Prices"
-              />
-            </li>
-            <li
-              class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
-            >
-              <label
-                for="all-prices"
-                class="font-[Inter] font-bold leading-[22px] text-md"
-                >$0.00 - 99.99</label
-              >
-              <input
-                type="checkbox"
-                name="prices"
-                id="all-prices"
-                value="0.00 - 99.99"
-                class="accent-black w-[20px] h-[20px]"
-              />
-            </li>
-            <li
-              class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
-            >
-              <label
-                for="all-prices"
-                class="font-[Inter] font-bold leading-[22px] text-md"
-                >$100.00 - 199.99</label
-              >
-              <input
-                type="checkbox"
-                name="prices"
-                id="all-prices"
-                value="100.00 - 199.99"
-                class="accent-black w-[20px] h-[20px]"
-              />
-            </li>
-            <li
-              class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
-            >
-              <label
-                for="all-prices"
-                class="font-[Inter] font-bold leading-[22px] text-md"
-                >$200.00 - 299.99</label
-              >
-              <input
-                type="checkbox"
-                name="prices"
-                id="all-prices"
-                value="200.00 - 299.99"
-                class="accent-black w-[20px] h-[20px]"
-              />
-            </li>
-            <li
-              class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
-            >
-              <label
-                for="all-prices"
-                class="font-[Inter] font-bold leading-[22px] text-md"
-                >$300.00 - 399.99</label
-              >
-              <input
-                type="checkbox"
-                name="prices"
-                id="all-prices"
-                value="300.00 - 399.99"
-                class="accent-black w-[20px] h-[20px]"
-              />
-            </li>
-            <li
-              class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
-            >
-              <label
-                for="all-prices"
-                class="font-[Inter] font-bold leading-[22px] text-md"
-                >$400.00 - 499.99</label
-              >
-              <input
-                type="checkbox"
-                name="prices"
-                id="all-prices"
-                value="400.00 - 499.99"
-                class="accent-black w-[20px] h-[20px]"
-              />
-            </li>
-            <li
-              class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
-            >
-              <label
-                for="all-prices"
-                class="font-[Inter] font-bold leading-[22px] text-md"
-                >$500.00 - 599.99</label
-              >
-              <input
-                type="checkbox"
-                name="prices"
-                id="all-prices"
-                value="500.00 - 599.99"
-                class="accent-black w-[20px] h-[20px]"
-              />
-            </li>
-            <li
-              class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
-            >
-              <label
-                for="all-prices"
-                class="font-[Inter] font-bold leading-[22px] text-md"
-                >$600.00+</label
-              >
-              <input
-                type="checkbox"
-                name="prices"
-                id="all-prices"
-                value="600.00+"
-                class="accent-black w-[20px] h-[20px]"
-              />
-            </li>
-          </ul>
-        </div>
-      </aside>
-      <section id="product-grid"></section>
-      <div class="grid-cols-2 grid gap-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
-          <div
-            class="border h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
-            style="
-              background-image: url('../assets/images/shop/pillow-shop.png');
-            "
-          >
-            <div class="">
-              <div class="flex justify-between items-center">
-                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">NEW</p>
-                <!-- <i
-                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
-                ></i> -->
-              </div>
-            </div>
-            <!-- <button
-              class="w-full bg-black text-white text-center rounded-lg py-3"
-            >
-              Add to cart
-            </button> -->
-          </div>
-          <div class="py-2 flex flex-col justify-around">
-            <div>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-            </div>
-            <p class="text-[#141718] font-normal text-xl py-1">
-              Off-white Pillow
-            </p>
-            <p class="text-[#121212] text-md font-[Inter] font-bold">
-              $7.99
-              <span class="pl-4 text-[#6C7275] line-through">$13.00</span>
-            </p>
-            <p class="">
-              Super-soft cushion cover in off-white with a tactile pattern that
-              enhances the different tones in the pile and base.
-            </p>
-            <button
-              class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
-            >
-              Add to cart
-            </button>
-            <button
-              class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
-            >
-              <i class="fa-regular fa-heart fa-2x"></i> Wishlist
-            </button>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
-          <div
-            class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
-            style="
-              background-image: url('../assets/images/shop/Table-lamp.png');
-            "
-          >
-            <div class="">
-              <div class="flex justify-between items-center">
-                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
-                <!-- <i
-                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
-                ></i> -->
-              </div>
-            </div>
-            <!-- <button
-              class="w-full bg-black text-white text-center rounded-lg py-3"
-            >
-              Add to cart
-            </button> -->
-          </div>
-          <div class="py-2 flex flex-col justify-around">
-            <div>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-            </div>
-            <p class="text-[#141718] font-normal text-xl py-1">
-              Table Lamp
-            </p>
-            <p class="text-[#121212] text-md font-[Inter] font-bold">
-              $39.99
-              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
-            </p>
-            <p>
-              Like small jewels in shiny brass and gray clear glass, pread a
-              soft mood light that creates exciting shadows on walls and
-              ceilings
-            </p>
-            <button
-              class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
-            >
-              Add to cart
-            </button>
-            <button
-              class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
-            >
-              <i class="fa-regular fa-heart fa-2x"></i> Wishlist
-            </button>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
-          <div
-            class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
-            style="
-              background-image: url('../assets/images/shop/office-rack.png');
-            "
-          >
-            <div class="">
-              <div class="flex justify-between items-center">
-                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
-                <!-- <i
-                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
-                ></i> -->
-              </div>
-            </div>
-            <!-- <button
-              class="w-full bg-black text-white text-center rounded-lg py-3"
-            >
-              Add to cart
-            </button> -->
-          </div>
-          <div class="py-2 flex flex-col justify-around">
-            <div>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-            </div>
-            <p class="text-[#141718] font-normal text-xl py-1">
-              White Drawer unit
-            </p>
-            <p class="text-[#121212] text-md font-[Inter] font-bold">
-              $89.99
-              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
-            </p>
-            <p>
-              Super-soft cushion cover in off-white with a tactile pattern that enhances the different tones in the pile and base.
-            </p>
-            <button
-              class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
-            >
-              Add to cart
-            </button>
-            <button
-              class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
-            >
-              <i class="fa-regular fa-heart fa-2x"></i> Wishlist
-            </button>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
-          <div
-            class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
-            style="
-              background-image: url('../assets/images/shop/Cozy-sofa.png');
-            "
-          >
-            <div class="">
-              <div class="flex justify-between items-center">
-                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
-                <!-- <i
-                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
-                ></i> -->
-              </div>
-            </div>
-            <!-- <button
-              class="w-full bg-black text-white text-center rounded-lg py-3"
-            >
-              Add to cart
-            </button> -->
-          </div>
-          <div class="py-2 flex flex-col justify-around">
-            <div>
-              <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            </div>
-            <p class="text-[#141718] font-normal text-xl py-1">
-              Cozy Sofa
-            </p>
-            <p class="text-[#121212] text-md font-[Inter] font-bold">
-              $299.00
-              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
-            </p>
-            <p>
-              Easy transportation was the goal when we created this comfy loveseat with durable beige polyester fabric.            </p>
-            <button
-              class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
-            >
-              Add to cart
-            </button>
-            <button
-              class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
-            >
-              <i class="fa-regular fa-heart fa-2x"></i> Wishlist
-            </button>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
-          <div
-            class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
-            style="
-              background-image: url('../assets/images/shop/basket.png');
-            "
-          >
-            <div class="">
-              <div class="flex justify-between items-center">
-                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
-                <!-- <i
-                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
-                ></i> -->
-              </div>
-            </div>
-            <!-- <button
-              class="w-full bg-black text-white text-center rounded-lg py-3"
-            >
-              Add to cart
-            </button> -->
-          </div>
-          <div class="py-2 flex flex-col justify-around">
-              <div>
-                <span class="text-2xl font-bold">&#9733;</span>
-                <span class="text-2xl font-bold">&#9733;</span>
-                <span class="text-2xl font-bold">&#9733;</span>
-                <span class="text-2xl font-bold">&#9733;</span>
-                <span class="text-2xl font-bold">&#9733;</span>
-              </div>
-            <p class="text-[#141718] font-normal text-xl py-1">
-              Bamboo Basket
-            </p>
-            <p class="text-[#121212] text-md font-[Inter] font-bold">
-              $9.99
-              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
-            </p>
-            <p>
-              With its soft shape and color, this spacious basket is just as decorative wherever you choose to put it.   
-            <p>         
-              <button
-              class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
-            >
-              Add to cart
-            </button>
-            <button
-              class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
-            >
-              <i class="fa-regular fa-heart fa-2x"></i> Wishlist
-            </button>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
-          <div
-            class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
-            style="
-              background-image: url('../assets/images/shop/tray-table.png');
-            "
-          >
-            <div class="">
-              <div class="flex justify-between items-center">
-                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
-                <!-- <i
-                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
-                ></i> -->
-              </div>
-            </div>
-            <!-- <button
-              class="w-full bg-black text-white text-center rounded-lg py-3"
-            >
-              Add to cart
-            </button> -->
-          </div>
-          <div class="py-2 flex flex-col justify-around">
-            <div>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>
-              <span class="text-2xl font-bold">&#9733;</span>   
-            </div>
-            <p class="text-[#141718] font-normal text-xl py-1">
-              Black Tray Table
-            </p>
-            <p class="text-[#121212] text-md font-[Inter] font-bold">
-              $19.19
-              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
-            </p>
-            <p>
-              Easy to love at a price that’s hard to resist. Buy one or buy a few and make every space where you sit more convenient. </p>         
-              <button
-              class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
-            >
-              Add to cart
-            </button>
-            <button
-              class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
-            >
-              <i class="fa-regular fa-heart fa-2x"></i> Wishlist
-            </button>
-          </div>
-        </div>
-        <div class="">
-          <div
-            class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
-            style="
-              background-image: url('../assets/images/accessories/headset-5.png');
-            "
-          >
-            <div class="">
-              <div class="flex justify-between items-center">
-                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
-                <!-- <i
-                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
-                ></i> -->
-              </div>
-            </div>
-            <!-- <button
-              class="w-full bg-black text-white text-center rounded-lg py-3"
-            >
-              Add to cart
-            </button> -->
-          </div>
-          <div class="py-2">
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <p class="text-[#141718] font-normal text-xl py-1">
-              Bose <br />
-              QuietComfort Headphones
-            </p>
-            <p class="text-[#121212] text-md font-[Inter] font-bold">
-              $299.99
-              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
-            </p>
-          </div>
-        </div>
-        <div class="">
-          <div
-            class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
-            style="
-              background-image: url('../assets/images/accessories/headset-6.png');
-            "
-          >
-            <div class="">
-              <div class="flex justify-between items-center">
-                <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
-                <!-- <i
-                  class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
-                ></i> -->
-              </div>
-            </div>
-            <!-- <button
-              class="w-full bg-black text-white text-center rounded-lg py-3"
-            >
-              Add to cart
-            </button> -->
-          </div>
-          <div class="py-2">
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <span class="text-2xl font-bold">&#9733;</span>
-            <p class="text-[#141718] font-normal text-xl py-1">
-              AKG <br />
-              Y600NC Wireless
-            </p>
-            <p class="text-[#121212] text-md font-[Inter] font-bold">
-              $349.99
-              <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
-            </p>
-          </div>
-        </div>
-      </div>
 
+      <section class="container mx-auto flex gap-8">
+        <aside id="aside_menu" class="">
+          <div class="categories-container mb-8">
+            <label for="categories" class="font-semibold pb-4 font-[Inter]"
+              >CATEGORIES</label
+            >
+            <ul id="categories">
+              <li
+                class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
+              >
+                <label for="all-rooms">All Rooms</label>
+                <input
+                  type="checkbox"
+                  name="categories"
+                  id="all-rooms"
+                  value="all"
+                  class="accent-black w-[20px] h-[20px] hidden"
+                />
+              </li>
+              <li
+                class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
+              >
+                <label for="living-room">Living Room</label>
+                <input
+                  type="checkbox"
+                  name="categories"
+                  id="living-room"
+                  value="living-room"
+                  class="accent-black w-[20px] h-[20px] hidden"
+                />
+              </li>
+              <li
+                class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
+              >
+                <label for="bedroom">Bedroom</label>
+                <input
+                  type="checkbox"
+                  name="categories"
+                  id="bedroom"
+                  value="bedroom"
+                  class="accent-black w-[20px] h-[20px] hidden"
+                />
+              </li>
+              <li
+                class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
+              >
+                <label for="kitchen">Kitchen</label
+                ><input
+                  type="checkbox"
+                  name="categories"
+                  id="kitchen"
+                  value="kitchen"
+                  class="accent-black w-[20px] h-[20px] hidden"
+                />
+              </li>
+              <li
+                class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
+              >
+                <label for="bathroom">Bathroom</label>
+                <input
+                  type="checkbox"
+                  name="categories"
+                  id="bathroom"
+                  value="bathroom"
+                  class="accent-black w-[20px] h-[20px] hidden"
+                />
+              </li>
+              <li
+                class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
+              >
+                <label for="dining">Dining</label>
+                <input
+                  type="checkbox"
+                  name="categories"
+                  id="dining"
+                  value="dining"
+                  class="accent-black w-[20px] h-[20px] hidden"
+                />
+              </li>
+              <li
+                class="category-item py-1 hover:bg-[#F3F5F7] hover:underline underline-offset-8 w-fit flex items-center"
+              >
+                <label for="outdoor">Outdoor</label>
+                <input
+                  type="checkbox"
+                  name="categories"
+                  id="outdoor"
+                  value="outdoor"
+                  class="accent-black w-[20px] h-[20px] hidden"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="price-container">
+            <label for="prices" class="font-semibold pb-4 font-[Inter]"
+              >PRICE</label
+            >
+            <ul>
+              <li
+                class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
+              >
+                <label
+                  for="all-prices"
+                  class="font-[Inter] font-bold leading-[22px] text-md"
+                  >All Prices</label
+                >
+                <input
+                  type="checkbox"
+                  name="prices"
+                  id="all-prices"
+                  class="accent-black w-[20px] h-[20px]"
+                  value="All Prices"
+                />
+              </li>
+              <li
+                class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
+              >
+                <label
+                  for="all-prices"
+                  class="font-[Inter] font-bold leading-[22px] text-md"
+                  >$0.00 - 99.99</label
+                >
+                <input
+                  type="checkbox"
+                  name="prices"
+                  id="all-prices"
+                  value="0.00 - 99.99"
+                  class="accent-black w-[20px] h-[20px]"
+                />
+              </li>
+              <li
+                class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
+              >
+                <label
+                  for="all-prices"
+                  class="font-[Inter] font-bold leading-[22px] text-md"
+                  >$100.00 - 199.99</label
+                >
+                <input
+                  type="checkbox"
+                  name="prices"
+                  id="all-prices"
+                  value="100.00 - 199.99"
+                  class="accent-black w-[20px] h-[20px]"
+                />
+              </li>
+              <li
+                class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
+              >
+                <label
+                  for="all-prices"
+                  class="font-[Inter] font-bold leading-[22px] text-md"
+                  >$200.00 - 299.99</label
+                >
+                <input
+                  type="checkbox"
+                  name="prices"
+                  id="all-prices"
+                  value="200.00 - 299.99"
+                  class="accent-black w-[20px] h-[20px]"
+                />
+              </li>
+              <li
+                class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
+              >
+                <label
+                  for="all-prices"
+                  class="font-[Inter] font-bold leading-[22px] text-md"
+                  >$300.00 - 399.99</label
+                >
+                <input
+                  type="checkbox"
+                  name="prices"
+                  id="all-prices"
+                  value="300.00 - 399.99"
+                  class="accent-black w-[20px] h-[20px]"
+                />
+              </li>
+              <li
+                class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
+              >
+                <label
+                  for="all-prices"
+                  class="font-[Inter] font-bold leading-[22px] text-md"
+                  >$400.00 - 499.99</label
+                >
+                <input
+                  type="checkbox"
+                  name="prices"
+                  id="all-prices"
+                  value="400.00 - 499.99"
+                  class="accent-black w-[20px] h-[20px]"
+                />
+              </li>
+              <li
+                class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
+              >
+                <label
+                  for="all-prices"
+                  class="font-[Inter] font-bold leading-[22px] text-md"
+                  >$500.00 - 599.99</label
+                >
+                <input
+                  type="checkbox"
+                  name="prices"
+                  id="all-prices"
+                  value="500.00 - 599.99"
+                  class="accent-black w-[20px] h-[20px]"
+                />
+              </li>
+              <li
+                class="price-list w-[250px] flex justify-between text-[#6C7275] py-2 hover:bg-[#F3F5F7]"
+              >
+                <label
+                  for="all-prices"
+                  class="font-[Inter] font-bold leading-[22px] text-md"
+                  >$600.00+</label
+                >
+                <input
+                  type="checkbox"
+                  name="prices"
+                  id="all-prices"
+                  value="600.00+"
+                  class="accent-black w-[20px] h-[20px]"
+                />
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <div id="product-grid" class="container mx-auto">
+  
+        </div>
+      </section>
+      
       <section
         class="text-center py-20 bg-cover bg-center bg-no-repeat"
         style="
@@ -1018,6 +648,390 @@
         </div>
       </div>
     </footer>
+
+    <div class="grid-cols-2 grid gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
+        <div
+          class="border h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="
+            background-image: url('../assets/images/shop/pillow-shop.png');
+          "
+        >
+          <div class="">
+            <div class="flex justify-between items-center">
+              <p class="py-1 px-4 bg-white text-[#141718] rounded-md">NEW</p>
+              <!-- <i
+                class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+              ></i> -->
+            </div>
+          </div>
+          <!-- <button
+            class="w-full bg-black text-white text-center rounded-lg py-3"
+          >
+            Add to cart
+          </button> -->
+        </div>
+        <div class="py-2 flex flex-col justify-around">
+          <div>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+          </div>
+          <p class="text-[#141718] font-normal text-xl py-1">
+            Off-white Pillow
+          </p>
+          <p class="text-[#121212] text-md font-[Inter] font-bold">
+            $7.99
+            <span class="pl-4 text-[#6C7275] line-through">$13.00</span>
+          </p>
+          <p class="">
+            Super-soft cushion cover in off-white with a tactile pattern that
+            enhances the different tones in the pile and base.
+          </p>
+          <button
+            class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
+          >
+            Add to cart
+          </button>
+          <button
+            class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
+          >
+            <i class="fa-regular fa-heart fa-2x"></i> Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
+        <div
+          class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="
+            background-image: url('../assets/images/shop/Table-lamp.png');
+          "
+        >
+          <div class="">
+            <div class="flex justify-between items-center">
+              <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
+              <!-- <i
+                class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+              ></i> -->
+            </div>
+          </div>
+          <!-- <button
+            class="w-full bg-black text-white text-center rounded-lg py-3"
+          >
+            Add to cart
+          </button> -->
+        </div>
+        <div class="py-2 flex flex-col justify-around">
+          <div>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+          </div>
+          <p class="text-[#141718] font-normal text-xl py-1">
+            Table Lamp
+          </p>
+          <p class="text-[#121212] text-md font-[Inter] font-bold">
+            $39.99
+            <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+          </p>
+          <p>
+            Like small jewels in shiny brass and gray clear glass, pread a
+            soft mood light that creates exciting shadows on walls and
+            ceilings
+          </p>
+          <button
+            class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
+          >
+            Add to cart
+          </button>
+          <button
+            class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
+          >
+            <i class="fa-regular fa-heart fa-2x"></i> Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
+        <div
+          class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="
+            background-image: url('../assets/images/shop/office-rack.png');
+          "
+        >
+          <div class="">
+            <div class="flex justify-between items-center">
+              <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
+              <!-- <i
+                class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+              ></i> -->
+            </div>
+          </div>
+          <!-- <button
+            class="w-full bg-black text-white text-center rounded-lg py-3"
+          >
+            Add to cart
+          </button> -->
+        </div>
+        <div class="py-2 flex flex-col justify-around">
+          <div>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+          </div>
+          <p class="text-[#141718] font-normal text-xl py-1">
+            White Drawer unit
+          </p>
+          <p class="text-[#121212] text-md font-[Inter] font-bold">
+            $89.99
+            <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+          </p>
+          <p>
+            Super-soft cushion cover in off-white with a tactile pattern that enhances the different tones in the pile and base.
+          </p>
+          <button
+            class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
+          >
+            Add to cart
+          </button>
+          <button
+            class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
+          >
+            <i class="fa-regular fa-heart fa-2x"></i> Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
+        <div
+          class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="
+            background-image: url('../assets/images/shop/Cozy-sofa.png');
+          "
+        >
+          <div class="">
+            <div class="flex justify-between items-center">
+              <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
+              <!-- <i
+                class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+              ></i> -->
+            </div>
+          </div>
+          <!-- <button
+            class="w-full bg-black text-white text-center rounded-lg py-3"
+          >
+            Add to cart
+          </button> -->
+        </div>
+        <div class="py-2 flex flex-col justify-around">
+          <div>
+            <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          </div>
+          <p class="text-[#141718] font-normal text-xl py-1">
+            Cozy Sofa
+          </p>
+          <p class="text-[#121212] text-md font-[Inter] font-bold">
+            $299.00
+            <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+          </p>
+          <p>
+            Easy transportation was the goal when we created this comfy loveseat with durable beige polyester fabric.            </p>
+          <button
+            class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
+          >
+            Add to cart
+          </button>
+          <button
+            class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
+          >
+            <i class="fa-regular fa-heart fa-2x"></i> Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
+        <div
+          class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="
+            background-image: url('../assets/images/shop/basket.png');
+          "
+        >
+          <div class="">
+            <div class="flex justify-between items-center">
+              <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
+              <!-- <i
+                class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+              ></i> -->
+            </div>
+          </div>
+          <!-- <button
+            class="w-full bg-black text-white text-center rounded-lg py-3"
+          >
+            Add to cart
+          </button> -->
+        </div>
+        <div class="py-2 flex flex-col justify-around">
+            <div>
+              <span class="text-2xl font-bold">&#9733;</span>
+              <span class="text-2xl font-bold">&#9733;</span>
+              <span class="text-2xl font-bold">&#9733;</span>
+              <span class="text-2xl font-bold">&#9733;</span>
+              <span class="text-2xl font-bold">&#9733;</span>
+            </div>
+          <p class="text-[#141718] font-normal text-xl py-1">
+            Bamboo Basket
+          </p>
+          <p class="text-[#121212] text-md font-[Inter] font-bold">
+            $9.99
+            <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+          </p>
+          <p>
+            With its soft shape and color, this spacious basket is just as decorative wherever you choose to put it.   
+          <p>         
+            <button
+            class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
+          >
+            Add to cart
+          </button>
+          <button
+            class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
+          >
+            <i class="fa-regular fa-heart fa-2x"></i> Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 h-fit lg:gap-4">
+        <div
+          class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="
+            background-image: url('../assets/images/shop/tray-table.png');
+          "
+        >
+          <div class="">
+            <div class="flex justify-between items-center">
+              <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
+              <!-- <i
+                class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+              ></i> -->
+            </div>
+          </div>
+          <!-- <button
+            class="w-full bg-black text-white text-center rounded-lg py-3"
+          >
+            Add to cart
+          </button> -->
+        </div>
+        <div class="py-2 flex flex-col justify-around">
+          <div>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>
+            <span class="text-2xl font-bold">&#9733;</span>   
+          </div>
+          <p class="text-[#141718] font-normal text-xl py-1">
+            Black Tray Table
+          </p>
+          <p class="text-[#121212] text-md font-[Inter] font-bold">
+            $19.19
+            <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+          </p>
+          <p>
+            Easy to love at a price that’s hard to resist. Buy one or buy a few and make every space where you sit more convenient. </p>         
+            <button
+            class="w-full bg-black text-white text-center rounded-lg py-3 cursor-pointer shadow-md"
+          >
+            Add to cart
+          </button>
+          <button
+            class="w-full bg-white text-black text-center rounded-lg py-2 flex items-center justify-center gap-2 shadow-md cursor-pointer text-md mt-4"
+          >
+            <i class="fa-regular fa-heart fa-2x"></i> Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="">
+        <div
+          class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="
+            background-image: url('../assets/images/accessories/headset-5.png');
+          "
+        >
+          <div class="">
+            <div class="flex justify-between items-center">
+              <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
+              <!-- <i
+                class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+              ></i> -->
+            </div>
+          </div>
+          <!-- <button
+            class="w-full bg-black text-white text-center rounded-lg py-3"
+          >
+            Add to cart
+          </button> -->
+        </div>
+        <div class="py-2">
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <p class="text-[#141718] font-normal text-xl py-1">
+            Bose <br />
+            QuietComfort Headphones
+          </p>
+          <p class="text-[#121212] text-md font-[Inter] font-bold">
+            $299.99
+            <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+          </p>
+        </div>
+      </div>
+      <div class="">
+        <div
+          class="h-[450px] bg-cover bg-center bg-no-repeat flex flex-col justify-between p-4"
+          style="
+            background-image: url('../assets/images/accessories/headset-6.png');
+          "
+        >
+          <div class="">
+            <div class="flex justify-between items-center">
+              <p class="py-1 px-4 bg-white text-[#141718] rounded-md">HOT</p>
+              <!-- <i
+                class="fa-regular fa-heart fa-2x p-2 bg-white rounded-3xl shadow-xl shadow-white"
+              ></i> -->
+            </div>
+          </div>
+          <!-- <button
+            class="w-full bg-black text-white text-center rounded-lg py-3"
+          >
+            Add to cart
+          </button> -->
+        </div>
+        <div class="py-2">
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <span class="text-2xl font-bold">&#9733;</span>
+          <p class="text-[#141718] font-normal text-xl py-1">
+            AKG <br />
+            Y600NC Wireless
+          </p>
+          <p class="text-[#121212] text-md font-[Inter] font-bold">
+            $349.99
+            <!-- <span class="pl-4 text-[#6C7275] line-through">$400.00</span> -->
+          </p>
+        </div>
+      </div>
+    </div>
 
     <!-- <script>
       console.log("Hello World!");
