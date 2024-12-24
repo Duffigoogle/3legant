@@ -122,6 +122,7 @@ function displayProducts(productsToDisplay, view) {
   });
 
   applyGridLayout(view); // apply default view
+  updateViewButtonStyles(grid3x3Btn); // update default view button styles
 };
 
 function updateViewButtonStyles(activeButton) {
