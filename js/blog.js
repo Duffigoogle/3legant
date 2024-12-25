@@ -79,7 +79,7 @@ if (allBlogButton) {
     // allBlogButton.classList.add("font-bold");
     // allBlogButton.classList.add("underline");
     // allBlogButton.classList.add("underline-offset-8");
-}
+} 
 
 
 // Function to render the product grid OR list

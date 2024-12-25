@@ -136,6 +136,7 @@ function updateViewButtonStyles(activeButton) {
   activeButton.classList.add("active-view"); // Add active-view class
   activeButton.classList.add("bg-[#377dff]"); // Add background color class
   activeButton.classList.add("text-white");   // Add text color class
+  activeButton.classList.add("p-2");   // Add padding
 };
 
 console.log(asideMenu)

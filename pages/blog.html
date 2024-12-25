@@ -199,9 +199,10 @@
           Our Blog
         </h1>
         <p class="text-[#121212] text-2xl font-[Inter] leading-[32px] py-8">
-          Home ideas and design inspiration        </p>
+          Home ideas and design inspiration        
+        </p>
       </section>
-      <section class="container mx-auto px-16">
+      <section class="container mx-auto">
           <div class="container mx-auto flex gap-8 justify-between items-center py-12">
             <div class="flex gap-10">
               <button class="text-lg font-semibold font-[Inter] text-[#807E7E]" id="all_blogs">All Blogs</button>
@@ -267,8 +268,20 @@
             </div>
           </div>
           <div id="blog-container">
-
+            <button>Show More</button>
           </div>
+      </section>
+      <section class="text-center py-20 bg-cover bg-center bg-no-repeat mt-14"
+      style="background-image: url('../assets/images/newsletter/newsletter-bg.png')">
+        <h4 class="text-4xl font-medium">Join Our Newsletter</h4>
+        <p class="font-[Inter] py-2">Sign up for deals, new products and promotions</p>
+        <div class="border-b-2 border-[#6C7275] my-6 w-96 mx-auto flex justify-between items-center text-[#6C7275] py-3">
+          <div class="flex gap-2 items-center">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="text" placeholder="Email address" class="w-full bg-transparent outline-transparent">
+          </div>
+          <button class="text-[#6C7275]">Signup</button>
+        </div>
       </section>
     </main>
     <footer class="text-white bg-black pb-14">
@@ -342,12 +355,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- <script>
-      console.log("Hello World!");
-      let searchInput = document.getElementById("search-bar");
-      window.alert("Hello Desire!");
-    </script> -->
     <script src="./js/script.js"></script>
     <script src="../js/blog.js"></script>
   </body>
