@@ -1,0 +1,58 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "7 ways to decor your home like a professional",
+      "image": "../assets/images/blog/blog-article-1.png",
+      "date": "October 18, 2023"
+    },
+    {
+      "id": 2,
+      "title": "Inside a beautiful kitchen organization",
+      "image": "../assets/images/blog/blog-article-2.png",
+      "date": "October 18, 2023"
+    },
+    {
+      "id": 3,
+      "title": "Decor your bedroom for your children",
+      "image": "../assets/images/blog/blog-article-3.png",
+      "date": "October 18, 2023"
+    },
+    {
+      "id": 4,
+      "title": "Modern texas home is beautiful and completely kid-friendly",
+      "image": "../assets/images/blog/blog-article-4.png",
+      "date": "October 18, 2023"
+    },
+    {
+      "id": 5,
+      "title": "Modern texas home is beautiful and completely kid-friendly",
+      "image": "../assets/images/blog/blog-article-5.png",
+      "date": "October 18, 2023"
+    },
+    {
+      "id": 6,
+      "title": "Modern texas home is beautiful and completely kid-friendly",
+      "image": "../assets/images/blog/blog-article-6.png",
+      "date": "October 18, 2023"
+    },
+    {
+      "id": 7,
+      "title": "Modern texas home is beautiful and completely kid-friendly",
+      "image": "../assets/images/blog/blog-article-7.png",
+      "date": "October 18, 2023"
+    },
+    {
+      "id": 8,
+      "title": "Modern texas home is beautiful and completely kid-friendly",
+      "image": "../assets/images/blog/blog-article-8.png",
+      "date": "October 18, 2023"
+    },
+    {
+      "id": 9,
+      "title": "Modern texas home is beautiful and completely kid-friendly",
+      "image": "../assets/images/blog/blog-article-9.png",
+      "date": "October 18, 2023"
+    }
+  ]
+}

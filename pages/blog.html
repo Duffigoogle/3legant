@@ -189,7 +189,87 @@
       </div>
     </header>
     <main>
-      <h1>Blog page</h1>
+      <section
+        class="container mx-auto h-[70vh] w-full bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center"
+        style="background-image: url('../assets/images/blog/hero-image.png')"
+      >
+        <h1
+          class="text-7xl font-medium font-[Poppins] leading-[58px] tracking-[-1px]"
+        >
+          Our Blog
+        </h1>
+        <p class="text-[#121212] text-2xl font-[Inter] leading-[32px] py-8">
+          Home ideas and design inspiration        </p>
+      </section>
+      <section class="container mx-auto px-16">
+          <div class="container mx-auto flex gap-8 justify-between items-center py-12">
+            <div class="flex gap-10">
+              <button class="text-lg font-semibold font-[Inter] text-[#807E7E]" id="all_blogs">All Blogs</button>
+              <button class="text-lg font-semibold font-[Inter] text-[#807E7E]" id="featured">Featured</button>
+            </div>
+            <div class="top-right flex justify-end items-end gap-10">
+              <div class="sort-by">
+                <label
+                  for="sort-select"
+                  class="text-[#6C7275] font-semibold leading-[26px] font-[Inter]"
+                  >Sort By</label
+                >
+                <select
+                  id="sort-select"
+                  class="border border-black py-2 px-2 rounded-lg outline-none"
+                >
+                  <option value="no value"></option>
+                  <option value="featured">Featured</option>
+                  <option value="oldest">Oldest</option>
+                  <option value="hot-sales">a-b</option>
+                  <option value="newest">Newest</option>
+                  <!-- Add more sorting options as needed -->
+                </select>
+              </div>
+              <div class="views flex justify-between items-center gap-2">
+                <button
+                  id="grid-3x3"
+                  class="border p-2 hover:bg-gray-300 cursor-pointer"
+                >
+                  <img
+                    src="../assets/icons/grid-3x3.svg"
+                    alt="grid-3x3-icon"
+                    width="19px"
+                  />
+                </button>
+                <button
+                  id="grid-4x4"
+                  class="border p-2 hover:bg-gray-300 cursor-pointer"
+                >
+                  <img
+                    src="../assets/icons/square-grid-2x2.svg"
+                    alt="grid-4x4-icon"
+                    width="19px"
+                  />
+                </button>
+                <button
+                  id="grid-2x2"
+                  class="border p-2 hover:bg-gray-300 cursor-pointer"
+                >
+                  <img
+                    src="../assets/icons/row-horizontal.svg"
+                    alt="grid-2x2-icon"
+                    width="19px"
+                  />
+                </button>
+                <button
+                  id="list-view"
+                  class="border p-2 hover:bg-gray-300 cursor-pointer"
+                >
+                  <i class="fa-solid fa-list"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="blog-container">
+
+          </div>
+      </section>
     </main>
     <footer class="text-white bg-black pb-14">
       <div class="container mx-auto flex justify-between items-center py-20">
@@ -269,6 +349,6 @@
       window.alert("Hello Desire!");
     </script> -->
     <script src="./js/script.js"></script>
-    <script src="./js/hero-slider.js"></script>
+    <script src="../js/blog.js"></script>
   </body>
 </html>
