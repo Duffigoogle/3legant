@@ -149,14 +149,14 @@ function updateViewButtonStyles(activeButton) {
 
 function applyGridLayout(view) {
   if (view === 'grid-3x3') {
-    blogGrid.classList = 'grid grid-cols-3 gap-4'; // Tailwind classes for 3x3 grid
+    blogGrid.classList = 'grid grid-cols-3 gap-8'; // Tailwind classes for 3x3 grid
   } else if (view === 'grid-4x4') {
-    blogGrid.classList = 'grid grid-cols-4 gap-4'; // Tailwind classes for 4x4 grid
+    blogGrid.classList = 'grid grid-cols-4 gap-14'; // Tailwind classes for 4x4 grid
   } else if (view === 'grid-2x2') {
-    blogGrid.classList = 'grid grid-cols-2 gap-4'; // Tailwind classes for 2x2 grid
+    blogGrid.classList = 'grid grid-cols-2 gap-20'; // Tailwind classes for 2x2 grid
   }
   else if (view === 'list') {
-    blogGrid.classList = 'grid grid-cols-1 gap-4'; // Or no grid classes if you prefer
+    blogGrid.classList = 'grid grid-cols-1 gap-8'; // Or no grid classes if you prefer
 
   };
 }
