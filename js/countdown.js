@@ -10,7 +10,7 @@ let countdownSecondsElem = document.getElementById("seconds");
 let countdownElement = document.getElementById("countdown");
 
 
-const targetDate = new Date('2025-01-01T00:00:00Z').getTime();
+const targetDate = new Date('2025-12-01T00:00:00Z').getTime();
 
 const updateCountdown = () => {
   const now = new Date().getTime();
