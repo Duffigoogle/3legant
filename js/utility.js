@@ -1,7 +1,6 @@
 //
 // COUNTDOWN SCRIPT
 //
-
 // COUNTDOWN SCRIPT
 let countdownDaysElem = document.getElementById("days");
 let countdownHoursElem = document.getElementById("hours");
@@ -33,6 +32,37 @@ const updateCountdown = () => {
   }
 };
 
-
 const intervalId = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+
+
+// function closeElement(elementId, closeIconId) {
+//   const element = document.getElementById(elementId);
+//   const closeIcon = document.getElementById(closeIconId);
+
+//   if (element && closeIcon) {
+//     closeIcon.addEventListener('click', () => {
+//       element.style.display = 'none'; // Or element.classList.add("hidden") if using a hidden class
+//     });
+//   } else {
+//     console.error("Element or close icon not found."); // Handle cases where elements aren't found
+//   }
+// }
+
+
+
+/*************/
+// CLOSE BANNER FUNCTION
+/*************/
+
+function closeBanner(elementId) {
+  const element = document.getElementById(elementId);
+  // const closeIcon = document.getElementById(closeIconId);
+
+  if (element) {
+      element.style.display = 'none'; // Or element.classList.add("hidden") if using a hidden class
+  } else {
+    console.error("Element or close icon not found."); // Handle cases where elements aren't found
+  }
+}

@@ -26,7 +26,7 @@
   </head>
   <body>
     <header class="">
-      <div class="">
+      <div class="" id="accessories-banner">
         <div class="flex justify-around items-center h-[50px] bg-black">
           <div class="flex justify-between items-center text-white">
             <i class="fa-solid fa-ticket text-[22px]"></i>
@@ -38,7 +38,7 @@
               <i class="fa-solid fa-arrow-right-long"></i>
             </span>
           </div>
-          <i class="fa-solid fa-xmark text-white"></i>
+          <i class="fa-solid fa-xmark text-white cursor-pointer" onclick="closeBanner('accessories-banner')"></i>
         </div>
       </div>
       <div
@@ -847,19 +847,19 @@
               <div id="countdown" class="flex gap-6">
                 <div class="">
                   <p class="text-[#6C7275] font-bold">Days</p>
-                  <p id="days" class="text-5xl font-bold bg-white w-[80px] h-[80px] rounded-lg flex items-center justify-center"></p>
+                  <p id="days" class="text-5xl font-bold bg-white w-[100px] h-[80px] rounded-lg flex items-center justify-center"></p>
                 </div>
                 <div class="">
                   <p class="text-[#6C7275] font-bold">Hours</p>
-                  <p id="hours" class="text-5xl font-bold bg-white w-[80px] h-[80px] rounded-lg flex items-center justify-center"></p>
+                  <p id="hours" class="text-5xl font-bold bg-white w-[100px] h-[80px] rounded-lg flex items-center justify-center"></p>
                 </div>
                 <div class="">
                   <p class="text-[#6C7275] font-bold">Minutes</p>
-                  <p id="minutes" class="text-5xl font-bold bg-white w-[80px] h-[80px] rounded-lg flex items-center justify-center"></p>
+                  <p id="minutes" class="text-5xl font-bold bg-white w-[100px] h-[80px] rounded-lg flex items-center justify-center"></p>
                 </div>
                 <div class="">
                   <p class="text-[#6C7275] font-bold">Seconds</p>
-                  <p id="seconds" class="text-5xl font-bold bg-white w-[80px] h-[80px] rounded-lg flex items-center justify-center"></p>
+                  <p id="seconds" class="text-5xl font-bold bg-white w-[100px] h-[80px] rounded-lg flex items-center justify-center"></p>
                 </div>
               </div>
             </div>
@@ -993,6 +993,6 @@
     </main>
     <script src="../js/script.js"></script>
     <script src="../js/reviews.js"></script>
-    <script src="../js/countdown.js"></script>
+    <script src="../js/utility.js"></script>
   </body>
 </html>

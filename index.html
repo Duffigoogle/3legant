@@ -28,7 +28,7 @@
   <body>
     <header class="">
       <div class="">
-        <div class="flex justify-around items-center h-[50px] bg-[#F3F5F7]">
+        <div class="flex justify-around items-center h-[50px] bg-[#F3F5F7]" id="banner">
           <div class="flex justify-between items-center">
             <i class="fa-solid fa-ticket text-[22px]"></i>
             <p class="px-2">30% off storewide — Limited time!</p>
@@ -39,7 +39,7 @@
               <i class="fa-solid fa-arrow-right-long"></i>
             </span>
           </div>
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark cursor-pointer" onclick="closeBanner('banner')"></i>
         </div>
       </div>
       <div
@@ -623,5 +623,6 @@
     </script> -->
     <script src="./js/script.js"></script>
     <script src="./js/hero-slider.js"></script>
+    <script src="./js/utility.js"></script>
   </body>
 </html>

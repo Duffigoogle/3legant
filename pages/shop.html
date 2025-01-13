@@ -27,7 +27,7 @@
   </head>
   <body>
     <header class="">
-      <div class="">
+      <div class="" id="shop-banner">
         <div class="flex justify-around items-center h-[50px] bg-[#F3F5F7]">
           <div class="flex justify-between items-center">
             <i class="fa-solid fa-ticket text-[22px]"></i>
@@ -39,7 +39,7 @@
               <i class="fa-solid fa-arrow-right-long"></i>
             </span>
           </div>
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark cursor-pointer" onclick="closeBanner('shop-banner')"></i>
         </div>
       </div>
       <div
@@ -1040,5 +1040,6 @@
     </script> -->
     <script src="./js/script.js"></script>
     <script src="../js/product_views.js"></script>
+    <script src="../js/utility.js"></script>
   </body>
 </html>
