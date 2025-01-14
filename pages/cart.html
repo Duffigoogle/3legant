@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Font Awesome Icons -->
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap"
-  rel="stylesheet"
-/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="../styles/cart.css" />
-  <title>3Legant | Cart</title>
-</head>
-<body>
-  <header class="">
-    <!-- <div class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/cart.css" />
+    <title>3Legant | Cart</title>
+  </head>
+  <body>
+    <header class="">
+      <!-- <div class="">
     <div class="flex justify-around items-center h-[50px] bg-black">
       <div class="flex justify-between items-center text-white">
         <i class="fa-solid fa-ticket text-[22px]"></i>
@@ -41,51 +41,813 @@
       <i class="fa-solid fa-xmark text-white"></i>
     </div>
   </div> -->
-    <div
-      class="bg-white flex justify-between items-center h-[100px] px-8 relative shadow-lg z-10 md:h-[70px]"
-    >
-      <nav class="w-full flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <i class="fas fa-bars text-[25px] md:hidden" id="ham-menu"></i>
-          <a href="" class="text-xl font-semibold md:text-2xl md:font-normal"
+      <div
+        class="bg-white flex justify-between items-center h-[100px] px-8 relative shadow-lg z-10 md:h-[70px]"
+      >
+        <nav class="w-full flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-bars text-[25px] md:hidden" id="ham-menu"></i>
+            <a href="" class="text-xl font-semibold md:text-2xl md:font-normal"
+              >3legant.</a
+            >
+          </div>
+          <div
+            id="nav-menu"
+            class="duration-500 absolute left-[-100%] top-[100%] w-full md:static md:w-auto px-8 pb-4 pt-2 md:py-0 md:px-0"
+          >
+            <form
+              action=""
+              class="flex gap-2 items-center border border-[#6C7275] px-4 py-3 rounded-lg md:hidden"
+            >
+              <button
+                type="submit"
+                class="search-btn bg-transparent"
+                onclick="showSearch()"
+              >
+                <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+              </button>
+              <input
+                type="text"
+                name=""
+                id="search-bar"
+                placeholder="Search..."
+                class="w-full"
+              />
+            </form>
+            <ul
+              class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]"
+            >
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a
+                  href="../index.html"
+                  class="text-[#141718] text-md md:text-md text-black"
+                  >Home</a
+                >
+              </li>
+              <li
+                class="shop border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0 cursor-pointer"
+                onclick="showModal()"
+              >
+                Shop
+                <!-- <a href="" class="text-[#141718] text-md md:text-md text-black"
+            >Shop</a -->
+                <i class="fa-solid fa-chevron-down text-[#377DFF]"></i>
+                <!-- <i class="fa-solid fa-chevron-up hidden"></i> -->
+                <ul class="drop-down bg-black text-white p-4 absolute hidden">
+                  <li class="border-b-2 border-[#cec] py-2">
+                    <a href="../index.html" class="">Furniture</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] py-2">
+                    <a href="./accessories.html" class="">Accessories</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] py-2">
+                    <a href="" class="">Sports</a>
+                  </li>
+                  <li class="border-b-2 border-[#cec] py-2">
+                    <a href="" class="">Clothings</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a href="" class="text-[#141718] text-md md:text-md text-black"
+                  >Product</a
+                >
+              </li>
+              <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
+                <a
+                  href="contact.html"
+                  class="text-[#141718] text-md md:text-md text-black"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <div class="mt-72 md:hidden">
+              <ul class="flex flex-col gap-4">
+                <li
+                  class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
+                >
+                  <a href="" class="text-[#6C7275] text-lg">Cart</a>
+                  <i class="fa-solid fa-bag-shopping text-[26px]"></i>
+                </li>
+                <li
+                  class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
+                >
+                  <a href="" class="text-[#6C7275] text-lg">Wishlist</a>
+                  <i class="fa-regular fa-heart text-[26px]"></i>
+                </li>
+              </ul>
+              <button
+                class="bg-black w-full text-white rounded-md py-3 cursor-pointer mt-8 mb-4 text-lg"
+              >
+                Sign In
+              </button>
+              <div class="flex items-center gap-6 mt-4">
+                <a href="" class="cursor-pointer">
+                  <i class="fa-brands fa-instagram text-[26px]"></i>
+                </a>
+                <a href="" class="cursor-pointer">
+                  <i
+                    class="fa-brands fa-facebook-f text-[26px]"
+                    style="color: blue"
+                  ></i>
+                </a>
+                <a href="" class="cursor-pointer">
+                  <i
+                    class="fa-brands fa-youtube text-[26px]"
+                    style="color: red"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center duration-500">
+            <form
+              action=""
+              class="flex gap-2 items-center rounded-xl md:border-none md:py-2 md:px-4 md:border md:border-black"
+            >
+              <button
+                type="submit"
+                class="search-btn bg-transparent"
+                onclick="showSearch()"
+              >
+                <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
+              </button>
+              <input
+                type="text"
+                name=""
+                id="search-bar"
+                placeholder="Search..."
+                class="w-full hidden"
+              />
+            </form>
+            <a href="">
+              <i class="fa-solid fa-circle-user text-[25px]" id="user-icon"></i>
+            </a>
+            <a href="cart.html">
+              <i class="fa-solid fa-bag-shopping text-[25px]" id="bag-icon"></i>
+            </a>
+            <i class="fa-solid fa-xmark text-[25px] hidden" id="close-icon"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main container mx-auto">
+      <section class="container my-6">
+        <h3 class="text-center text-[54px] font-[Poppins]">Cart</h3>
+        <div
+          class="steps-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-[50%] mx-auto mt-8"
+        >
+          <button id="shopping-cart-top-tab-btn" class="flex items-center flex-start gap-4 p-4 active-tab">
+            <span
+              class="w-[40px] h-[40px] rounded-full bg-[#23262F] flex justify-center items-center text-white"
+              >1</span
+            >
+            <p class="">Shopping cart</p>
+          </button>
+          <button class="flex items-center flex-start gap-4 p-4">
+            <span
+              class="w-[40px] h-[40px] rounded-full bg-[#B1B5C3] flex justify-center items-center text-white"
+              >2</span
+            >
+            <p class="">Checkout details</p>
+          </button>
+          <button class="flex items-center flex-start gap-4 p-4">
+            <span
+              class="w-[40px] h-[40px] rounded-full bg-[#B1B5C3] flex justify-center items-center text-white"
+              >3</span
+            >
+            <p class="">Order complete</p>
+          </button>
+        </div>
+      </section>
+      <section class="page">
+        <div
+          class="grid grid-cols-1 md:grid-cols-[50%_30%] gap-20 w-fit mx-auto mt-8"
+        >
+          <table class="table-auto">
+            <thead class="">
+              <tr class="border-b-2 border-[#B1B5C3]">
+                <th class="text-left py-3 text-lg">Product</th>
+                <th class="text-left py-3 text-lg">Quantity</th>
+                <th class="text-left py-3 text-lg">Price</th>
+                <th class="text-right py-3 text-lg">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b-2 border-[#E8ECEF]">
+                <td class="flex items-center gap-2">
+                  <img
+                    src="../assets/images/singleProducts/tray-table/tray-table-black.png"
+                    alt=""
+                    class="product-img"
+                  />
+                  <div>
+                    <h6 class="product-name text-base font-semibold text-[#141718]">
+                      Tray Table
+                    </h6>
+                    <p class="text-[#6C7275]">color: black</p>
+                    <button
+                      class="text-sm flex items-center gap-2 cursor-pointer"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                      Remove
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm"
+                  >
+                    <button class="minus-btn px-2 py-1 cursor-pointer text-xl">
+                      -
+                    </button>
+                    <input
+                      type="number"
+                      name="quantity"
+                      id="quantity"
+                      value="1"
+                      min="1"
+                      class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg"
+                    />
+                    <button class="plus-btn px-2 cursor-pointer text-xl">
+                      +
+                    </button>
+                  </div>
+                </td>
+                <td class="price text-lg flex">$19.00</td>
+                <td class="subtotal text-right text-lg font-bold">
+                  <!-- $19.00 -->
+                </td>
+              </tr>
+              <tr class="border-b-2 border-[#E8ECEF]">
+                <td class="flex items-center gap-2">
+                  <img
+                    src="../assets/images/singleProducts/tray-table/tray-table-red.png"
+                    alt=""
+                  />
+                  <div>
+                    <h6 class="text-base font-semibold text-[#141718]">
+                      Tray Table
+                    </h6>
+                    <p class="text-[#6C7275]">color: Red</p>
+                    <button
+                      class="text-sm flex items-center gap-2 cursor-pointer"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                      Remove
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm"
+                  >
+                    <button class="minus-btn px-2 py-1 cursor-pointer text-xl">
+                      -
+                    </button>
+                    <input
+                      type="number"
+                      name="quantity"
+                      id="quantity"
+                      value="1"
+                      min="1"
+                      class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg"
+                    />
+                    <button class="plus-btn px-2 cursor-pointer text-xl">
+                      +
+                    </button>
+                  </div>
+                </td>
+                <td class="price text-lg">$15.00</td>
+                <td class="subtotal text-right text-lg font-bold">
+                  <!-- $15.00 -->
+                </td>
+              </tr>
+              <tr class="border-b-2 border-[#E8ECEF]">
+                <td class="flex items-center gap-2">
+                  <img
+                    src="../assets/images/singleProducts/lamp/lamp-1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h6 class="text-base font-semibold text-[#141718]">
+                      Table Lamp
+                    </h6>
+                    <p class="text-[#6C7275]">color: Gold</p>
+                    <button
+                      class="text-sm flex items-center gap-2 cursor-pointer"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                      Remove
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm"
+                  >
+                    <button class="minus-btn px-2 py-1 cursor-pointer text-xl">
+                      -
+                    </button>
+                    <input
+                      type="number"
+                      name="quantity"
+                      id="quantity"
+                      value="1"
+                      min="1"
+                      class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg"
+                    />
+                    <button class="plus-btn px-2 cursor-pointer text-xl">
+                      +
+                    </button>
+                  </div>
+                </td>
+                <td class="price text-lg">$39.00</td>
+                <td class="subtotal text-right text-lg font-bold">
+                  <!-- $39.00 -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="w-[400px] p-5 border border-[#6C7275]">
+            <h6 class="text-2xl font-semibold text-[#141718]">Cart Summary</h6>
+            <div
+              class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md"
+            >
+              <div class="flex items-center gap-4">
+                <input
+                  type="radio"
+                  name="payment"
+                  id="Free-shipping"
+                  value="Free shipping"
+                  class="w-[18px] accent-black"
+                  checked
+                />
+                <label for="Free-shipping" class="text-[#141718] text-lg"
+                  >Free shipping</label
+                >
+              </div>
+              <p class="text-[#141718] text-lg">$0.00</p>
+            </div>
+            <div
+              class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md"
+            >
+              <div class="flex items-center gap-4">
+                <input
+                  type="radio"
+                  name="payment"
+                  id="Express-shipping"
+                  value="Express shipping"
+                  class="w-[18px] accent-black"
+                />
+                <label for="Express-shipping" class="text-[#141718] text-lg"
+                  >Express shipping</label
+                >
+              </div>
+              <p class="text-[#141718] text-lg">+$15.00</p>
+            </div>
+            <div
+              class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md"
+            >
+              <div class="flex items-center gap-4">
+                <input
+                  type="radio"
+                  name="payment"
+                  id="Pick-up"
+                  value="Pick Up"
+                  class="w-[18px] accent-black"
+                />
+                <label for="Pick-up" class="text-[#141718] text-lg"
+                  >Pick Up</label
+                >
+              </div>
+              <p class="text-[#141718] text-lg">%21.00</p>
+            </div>
+
+            <div
+              class="flex justify-between items-center border-b-2 border-[#B1B5C3] py-4"
+            >
+              <p class="text-lg font-semibold text-[#141718]">Sub-Total</p>
+              <p class="sub-total-summary text-lg font-semibold text-[#141718]">
+                $1234.00
+              </p>
+            </div>
+            <div class="flex justify-between items-center py-4">
+              <p class="text-xl font-bold">Total</p>
+              <p class="total-summary text-xl font-bold">$1345.00</p>
+            </div>
+            <button
+              id="checkout-btn"
+              class="bg-black text-white w-full rounded-md py-3 mt-4 text-lg"
+            >
+              Checkout
+            </button>
+          </aside>
+        </div>
+        <section class="container my-24 px-12">
+          <h3 class="font-bold text-2xl">Have a coupon?</h3>
+          <p class="py-2 text-md text-[#6C7275]">
+            Add your code for an instant cart discount
+          </p>
+          <div
+            class="border p-3 w-[400px] flex items-center justify-between rounded-md"
+          >
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-ticket fa-2x text-[#6C7275]"></i>
+              <input
+                type="text"
+                name="coupon"
+                id=""
+                class="px-3 outline-none text-lg"
+                placeholder="Coupon Code"
+              />
+            </div>
+            <button class="px-4">Apply</button>
+          </div>
+        </section>
+      </section>
+      <section class="page">
+        <div
+          class="container grid grid-cols-1 lg:grid-cols-[800px_300px] gap-20 w-fit mx-auto mt-8 py-4"
+        >
+          <form action="" method="post" class="font-[Inter]">
+            <div
+              class="w-full border border-[#6C7275] rounded-md block mt-10 py-10 px-10"
+            >
+              <fieldset class="">
+                <legend class="text-2xl">Contact Information</legend>
+                <div class="flex gap-10">
+                  <div class="block w-full">
+                    <label
+                      for="first_name"
+                      class="text-[#6C7275] font-bold pb-2 pt-5 block"
+                      >FIRST NAME</label
+                    >
+                    <input
+                      type="text"
+                      name="first_name"
+                      id=""
+                      placeholder="First name"
+                      class="border border-[#6C7275] p-2 rounded-lg w-full"
+                      required
+                    />
+                  </div>
+                  <div class="block w-full">
+                    <label
+                      for="last_name"
+                      class="text-[#6C7275] font-bold pb-2 pt-5 block"
+                      >LAST NAME</label
+                    >
+                    <input
+                      type="text"
+                      name="last_name"
+                      id=""
+                      placeholder="Last name"
+                      class="border border-[#6C7275] p-2 rounded-lg w-full"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="text-[#6C7275] font-bold pb-2 pt-5 block"
+                    >PHONE NUMBER</label
+                  >
+                  <input
+                    type="number"
+                    name="phone"
+                    id="phone"
+                    placeholder="Phone number"
+                    class="block w-full border border-[#6C7275] p-2 rounded-lg w-full"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="w-full text-[#6C7275] font-bold pb-2 pt-5 block"
+                    >EMAIL ADDRESS</label
+                  >
+                  <input
+                    type="email"
+                    name=""
+                    id="email"
+                    placeholder="Your Email"
+                    class="block w-full border border-[#6C7275] p-2 rounded-lg w-full"
+                    required
+                  />
+                </div>
+              </fieldset>
+            </div>
+            <div
+              class="w-full border border-[#6C7275] rounded-md block mt-10 py-10 px-10"
+            >
+              <fieldset class="">
+                <legend class="text-2xl">Shipping Information</legend>
+                <div>
+                  <label
+                    for="address"
+                    class="text-[#6C7275] font-bold pb-2 pt-5 block"
+                    >ADDRESS</label
+                  >
+                  <input
+                    type="text"
+                    name="address"
+                    id="address"
+                    placeholder="Address"
+                    class="block w-full border border-[#6C7275] p-2 rounded-lg"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="country"
+                    class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block"
+                    >COUNTRY</label
+                  >
+                  <input
+                    type="text"
+                    name="country"
+                    id="country"
+                    placeholder="Country"
+                    class="block border border-[#6C7275] p-2 rounded-lg w-full"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="city"
+                    class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block"
+                    >TOWN/CITY</label
+                  >
+                  <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    placeholder="City"
+                    class="block border border-[#6C7275] p-2 rounded-lg w-full"
+                    required
+                  />
+                </div>
+                <div class="flex justify-between gap-10">
+                  <div class="w-full">
+                    <label
+                      for="state"
+                      class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block"
+                      >STATE</label
+                    >
+                    <input
+                      type="text"
+                      name="state"
+                      id="state"
+                      placeholder="State"
+                      class="block border border-[#6C7275] p-2 rounded-lg w-full"
+                      required
+                    />
+                  </div>
+                  <div class="w-full">
+                    <label
+                      for="zip_code"
+                      class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block"
+                      >ZIP CODE</label
+                    >
+                    <input
+                      type="number"
+                      name="zip_code"
+                      id="zip_code"
+                      placeholder="Zip Code"
+                      class="block border border-[#6C7275] p-2 rounded-lg w-full"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 my-6">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    class="w-[20px] h-[20px] accent-black block"
+                  />
+                  <label for="" class="text-[#6C7275] font-bold block"
+                    >Use a different billing address (optional)</label
+                  >
+                </div>
+              </fieldset>
+            </div>
+            <div
+              class="w-full border border-[#6C7275] rounded-md block mt-10 py-10 px-10"
+            >
+              <fieldset class="">
+                <legend class="text-2xl">Payment method</legend>
+                <div
+                  class="flex justify-between border border-[#6C7275] p-3 my-3"
+                >
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name="payment_method"
+                      id="card_credit"
+                      value="credit card"
+                      class="w-[18px] h-[18px] accent-black"
+                      required
+                    />
+                    <label for="card_credit">Pay by Card Credit</label>
+                  </div>
+                  <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <div
+                  class="flex flex-start gap-2 border border-[#6C7275] p-3 my-3"
+                >
+                  <input
+                    type="radio"
+                    name="payment_method"
+                    id="paypal"
+                    class="w-[18px] h-[18px] accent-black"
+                    required
+                  />
+                  <label for="paypal">Paypal</label>
+                </div>
+                <hr class="my-4" />
+                <div id="card_details" style="display: none;">
+                  <div>
+                    <label
+                      for="card_number"
+                      class="block w-full text-[#6C7275] font-bold pb-2 pt-5 block"
+                      >CARD NUMBER</label
+                    >
+                    <input
+                      type="number"
+                      name="card_number"
+                      id="card_number"
+                      placeholder="1234 5678 9012"
+                      class="block w-full border border-[#6C7275] p-2 rounded-lg"
+                      required
+                    />
+                  </div>
+                  <div class="flex gap-10">
+                    <div class="w-full">
+                      <label
+                        for="expiration_date"
+                        class="block w-full text-[#6C7275] font-bold pb-2 pt-5 block"
+                        >EXPIRATION DATE</label
+                      >
+                      <input
+                        type="month"
+                        name="expiration_date"
+                        id="expiration_date"
+                        class="block w-full border border-[#6C7275] p-2 rounded-lg"
+                        value="MM/YY"
+                        required
+                      />
+                    </div>
+                    <div class="w-full">
+                      <label
+                        for="cvv"
+                        class="block w-full text-[#6C7275] font-bold pb-2 pt-5 block"
+                        >CVV</label
+                      >
+                      <input
+                        type="number"
+                        name="cvv"
+                        id="cvv"
+                        placeholder="123"
+                        class="block w-full border border-[#6C7275] p-2 rounded-lg"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <button
+            id="place-order-btn"
+              class="bg-black text-white w-full rounded-md py-3 mt-6 text-lg"
+            >
+              Place Order
+            </button>
+          </form>
+          <aside id="order_summary" class="w-[400px] p-5 border border-[#6C7275] h-min">
+            <h6 class="text-2xl font-semibold text-[#141718] mb-2">
+              Order Summary
+            </h6>
+
+            <table  class="table-auto border-separate border-spacing-y-4">
+              <thead class="hidden">
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+              <tbody>
+                 
+              </tbody>
+            </table>
+            <div
+              class="flex justify-between border-b-2 border-[#E8ECEF] py-3 my-3"
+            >
+              <p class="text-lg font-semibold text-[#141718]">Shipping:</p>
+              <span class="shipping_summary text-lg font-semibold text-[#141718]"></span>
+            </div>
+            <div
+              class="flex justify-between items-center border-b-2 border-[#E8ECEF] py-4"
+            >
+              <p class="text-lg font-semibold text-[#141718]">Sub-Total:</p>
+              <span class="sub-total-summary text-lg font-semibold text-[#141718]">
+               
+              </span>
+            </div>
+            <div class="flex justify-between items-center py-4">
+              <p class="text-xl font-bold">Total:</p>
+              <span class="total-summary text-xl font-bold"></span>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="page">
+        <div
+          class="flex flex-col items-center justify-center border w-[600px] shadow-lg mx-auto my-20 rounded-lg"
+        >
+          <p class="text-center text-2xl mt-12">Thank you!</p>
+          <h3 class="text-center text-4xl font-semibold py-6">
+            Your order has been <br />
+            placed successfully.
+          </h3>
+          <div class="flex mx-auto gap-10 mt-10 w-fit">
+            <div class="relative">
+              <img
+                src="../assets/images/singleProducts/tray-table/tray-table-black.png"
+                alt=""
+              />
+              <span
+                class="w-[25px] h-[25px] block absolute top-0 right-0 rounded-full flex items-center justify-center bg-black text-white block"
+                >2</span
+              >
+            </div>
+            <div class="relative">
+              <img
+                src="../assets/images/singleProducts/tray-table/tray-table-red.png"
+                alt=""
+              />
+              <span
+                class="w-[25px] h-[25px] block absolute top-0 right-0 rounded-full flex items-center justify-center bg-black text-white block"
+                >2</span
+              >
+            </div>
+            <div class="relative">
+              <img
+                src="../assets/images/singleProducts/lamp/lamp-1.png"
+                alt=""
+              />
+              <span
+                class="w-[25px] h-[25px] block absolute top-0 right-0 rounded-full flex items-center justify-center bg-black text-white block"
+                >1</span
+              >
+            </div>
+          </div>
+          <div class="mt-6 grid grid-cols-2 gap-4">
+            <p class="text-[#6C7275]">Order code:</p>
+            <p class="text-xl text-justify">#0123_45678</p>
+            <p class="text-[#6C7275]">Date:</p>
+            <p class="text-xl">October 19, 2023</p>
+            <p class="text-[#6C7275]">Total:</p>
+            <p class="text-xl">$1,345.00</p>
+            <p class="text-[#6C7275]">Payment method:</p>
+            <p class="text-xl" id="display_payment_method">Credit Card</p>
+          </div>
+          <button
+          id="purchase-history-btn"
+            class="bg-black block text-white w-[200px] rounded-full py-3 mt-12 mb-12 text-lg mx-auto"
+          >
+            Purchase history
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-white bg-black pb-14 px-6 text-center md:text-left">
+      <div
+        class="container mx-auto md:flex md:justify-between md:items-center py-20"
+      >
+        <div class="md:flex md:items-center md:gap-10">
+          <a
+            href=""
+            class="text-xl font-semibold md:text-2xl md:font-normal md:pr-8"
             >3legant.</a
           >
+          <p class="text-[#E8ECEF] md:border-l-2 border-white pl-8">
+            Gift & Decoration Store
+          </p>
         </div>
-        <div
-          id="nav-menu"
-          class="duration-500 absolute left-[-100%] top-[100%] w-full md:static md:w-auto px-8 pb-4 pt-2 md:py-0 md:px-0"
-        >
-          <form
-            action=""
-            class="flex gap-2 items-center border border-[#6C7275] px-4 py-3 rounded-lg md:hidden"
-          >
-            <button
-              type="submit"
-              class="search-btn bg-transparent"
-              onclick="showSearch()"
-            >
-              <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
-            </button>
-            <input
-              type="text"
-              name=""
-              id="search-bar"
-              placeholder="Search..."
-              class="w-full"
-            />
-          </form>
-          <ul
-            class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]"
-          >
-            <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
-              <a
-                href="../index.html"
-                class="text-[#141718] text-md md:text-md text-black"
-                >Home</a
-              >
+        <nav>
+          <ul class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]">
+            <li class="cursor-pointer">
+              <a href="" class="text-[#FEFEFE] text-md md:text-md">Home</a>
             </li>
             <li
-              class="shop border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0 cursor-pointer"
+              class="shop cursor-pointer text-[#FEFEFE]"
               onclick="showModal()"
             >
               Shop
@@ -94,530 +856,53 @@
               <i class="fa-solid fa-chevron-down text-[#377DFF]"></i>
               <!-- <i class="fa-solid fa-chevron-up hidden"></i> -->
               <ul class="drop-down bg-black text-white p-4 absolute hidden">
-                <li class="border-b-2 border-[#cec] py-2">
-                  <a href="../index.html" class="">Furniture</a>
+                <li class="border-b-2 border-[#cec] pb-2">
+                  <a href="" class="">Furniture</a>
                 </li>
-                <li class="border-b-2 border-[#cec] py-2">
-                  <a href="./accessories.html" class="">Accessories</a>
+                <li class="border-b-2 border-[#cec] pb-2">
+                  <a href="" class="">Accessories</a>
                 </li>
-                <li class="border-b-2 border-[#cec] py-2">
+                <li class="border-b-2 border-[#cec] pb-2">
                   <a href="" class="">Sports</a>
                 </li>
-                <li class="border-b-2 border-[#cec] py-2">
+                <li class="border-b-2 border-[#cec] pb-2">
                   <a href="" class="">Clothings</a>
                 </li>
               </ul>
             </li>
-            <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
-              <a href="" class="text-[#141718] text-md md:text-md text-black"
-                >Product</a
-              >
+            <li class="cursor-pointer">
+              <a href="" class="text-[#FEFEFE] text-md md:text-md">Product</a>
             </li>
-            <li class="border-b-2 border-[#E8ECEF] pb-3 md:border-0 md:pb-0">
-              <a
-                href="contact.html"
-                class="text-[#141718] text-md md:text-md text-black"
+            <li class="cursor-pointer">
+              <a href="" class="text-[#FEFEFE] text-md md:text-md">Blog</a>
+            </li>
+            <li class="cursor-pointer">
+              <a href="" class="text-[#FEFEFE] text-md md:text-md"
                 >Contact Us</a
               >
             </li>
           </ul>
-          <div class="mt-72 md:hidden">
-            <ul class="flex flex-col gap-4">
-              <li
-                class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
-              >
-                <a href="" class="text-[#6C7275] text-lg">Cart</a>
-                <i class="fa-solid fa-bag-shopping text-[26px]"></i>
-              </li>
-              <li
-                class="border-b-2 border-[#E8ECEF] pb-3 flex items-center justify-between"
-              >
-                <a href="" class="text-[#6C7275] text-lg">Wishlist</a>
-                <i class="fa-regular fa-heart text-[26px]"></i>
-              </li>
-            </ul>
-            <button
-              class="bg-black w-full text-white rounded-md py-3 cursor-pointer mt-8 mb-4 text-lg"
-            >
-              Sign In
-            </button>
-            <div class="flex items-center gap-6 mt-4">
-              <a href="" class="cursor-pointer">
-                <i class="fa-brands fa-instagram text-[26px]"></i>
-              </a>
-              <a href="" class="cursor-pointer">
-                <i
-                  class="fa-brands fa-facebook-f text-[26px]"
-                  style="color: blue"
-                ></i>
-              </a>
-              <a href="" class="cursor-pointer">
-                <i
-                  class="fa-brands fa-youtube text-[26px]"
-                  style="color: red"
-                ></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="flex gap-3 items-center duration-500">
-          <form
-            action=""
-            class="flex gap-2 items-center rounded-xl md:border-none md:py-2 md:px-4 md:border md:border-black"
-          >
-            <button
-              type="submit"
-              class="search-btn bg-transparent"
-              onclick="showSearch()"
-            >
-              <i class="fa-solid fa-magnifying-glass text-[25px]"></i>
-            </button>
-            <input
-              type="text"
-              name=""
-              id="search-bar"
-              placeholder="Search..."
-              class="w-full hidden"
-            />
-          </form>
-          <a href="">
-            <i class="fa-solid fa-circle-user text-[25px]" id="user-icon"></i>
-          </a>
-          <a href="cart.html">
-            <i class="fa-solid fa-bag-shopping text-[25px]" id="bag-icon"></i>
-           </a>
-          <i class="fa-solid fa-xmark text-[25px] hidden" id="close-icon"></i>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <main class="main container mx-auto">
-    <section class="container my-6">
-      <h3 class="text-center text-[54px] font-[Poppins]">Cart</h3>
-      <div class="steps-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-[50%] mx-auto mt-8">
-        <button class="flex items-center flex-start gap-4 p-4 active-tab">
-          <span class="w-[40px] h-[40px] rounded-full bg-[#23262F] flex justify-center items-center text-white">1</span>
-          <p class="">Shopping cart</p>
-        </button>
-        <button class="flex items-center flex-start gap-4  p-4">
-          <span class="w-[40px] h-[40px] rounded-full bg-[#B1B5C3] flex justify-center items-center text-white">2</span>
-          <p class="">Checkout details</p>
-        </button>
-        <button class="flex items-center flex-start gap-4  p-4">
-          <span class="w-[40px] h-[40px] rounded-full bg-[#B1B5C3] flex justify-center items-center text-white">3</span>
-          <p class="">Order complete</p>
-        </button>
+        </nav>
       </div>
-    </section>
-    <section class="page">
-      <div class="grid grid-cols-1 md:grid-cols-[50%_30%] gap-20 w-fit mx-auto mt-8">
-        <table class="table-auto">
-          <thead class="">
-            <tr class="border-b-2 border-[#B1B5C3]">
-              <th class="text-left py-3 text-lg">Product</th>
-              <th class="text-left py-3 text-lg">Quantity</th>
-              <th class="text-left py-3 text-lg">Price</th>
-              <th class="text-right py-3 text-lg">Subtotal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b-2 border-[#E8ECEF]">
-              <td class="flex items-center gap-2">
-                <img src="../assets/images/singleProducts/tray-table/tray-table-black.png" alt="">
-                <div>
-                  <h6 class="text-base font-semibold text-[#141718]">Tray Table</h6>
-                  <p class="text-[#6C7275]">color: black</p>
-                  <button class="text-sm flex items-center gap-2 cursor-pointer">
-                    <i class="fa-solid fa-xmark"></i>
-                    Remove</button>
-                </div>
-              </td>
-              <td>
-                <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
-                  <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
-                  <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                  [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
-                  <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
-                </div>
-              </td>
-              <td class="price text-lg flex">$19.00</td>
-              <td class="subtotal text-right text-lg font-bold">
-                <!-- $19.00 -->
-  
-              </td>
-            </tr>
-            <tr class="border-b-2 border-[#E8ECEF]">
-              <td class="flex items-center gap-2">
-                <img src="../assets/images/singleProducts/tray-table/tray-table-red.png" alt="">
-                <div>
-                  <h6 class="text-base font-semibold text-[#141718]">Tray Table</h6>
-                  <p class="text-[#6C7275]">color: Red</p>
-                  <button class="text-sm flex items-center gap-2 cursor-pointer">
-                    <i class="fa-solid fa-xmark"></i>
-                    Remove</button>
-                </div>
-              </td>
-              <td>
-                <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
-                  <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
-                  <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                  [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
-                  <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
-                </div>
-              </td>
-              <td class="price text-lg">$15.00</td>
-              <td class="subtotal text-right text-lg font-bold">
-                <!-- $15.00 -->
-              </td>
-            </tr>
-            <tr class="border-b-2 border-[#E8ECEF]">
-              <td class="flex items-center gap-2">
-                <img src="../assets/images/singleProducts/lamp/lamp-1.png" alt="">
-                <div>
-                  <h6 class="text-base font-semibold text-[#141718]">Table Lamp</h6>
-                  <p class="text-[#6C7275]">color: Gold</p>
-                  <button class="text-sm flex items-center gap-2 cursor-pointer">
-                    <i class="fa-solid fa-xmark"></i>
-                    Remove</button>
-                </div>
-              </td>
-              <td>
-                <div class="border w-min flex items-center justify-center gap-2 rounded-lg overflow-hidden shadow-sm">
-                  <button class="minus-btn px-2 py-1 cursor-pointer text-xl">-</button>
-                  <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-10 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                  [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
-                  <button class="plus-btn px-2 cursor-pointer text-xl">+</button>
-                </div>
-              </td>
-              <td class="price text-lg">$39.00</td>
-              <td class="subtotal text-right text-lg font-bold">
-                <!-- $39.00 -->
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <aside class="w-[400px] p-5 border border-[#6C7275]">
-          <h6 class="text-2xl font-semibold text-[#141718]">Cart Summary</h6>
-          <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
-            <div class="flex items-center gap-4">
-              <input type="radio" name="payment" id="Free-shipping" value="Free shipping" class="w-[18px] accent-black">
-              <label for="Free-shipping" class="text-[#141718] text-lg">Free shipping</label>
-            </div>
-            <p class="text-[#141718] text-lg">$0.00</p>
-          </div>
-          <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
-            <div class="flex items-center gap-4">
-              <input type="radio" name="payment" id="Express-shipping" value="Express shipping" class="w-[18px] accent-black">
-              <label for="Express-shipping" class="text-[#141718] text-lg">Express shipping</label>
-            </div>
-            <p class="text-[#141718] text-lg">+$15.00</p>
-          </div>
-          <div class="flex justify-between border border-[#6C7275] p-3 my-3 rounded-md">
-            <div class="flex items-center gap-4">
-              <input type="radio" name="payment" id="Pick-up" value="Pick Up" class="w-[18px] accent-black">
-              <label for="Pick-up" class="text-[#141718] text-lg">Pick Up</label>
-            </div>
-            <p class="text-[#141718] text-lg">%21.00</p>
-          </div>
-  
-          <div class="flex justify-between items-center border-b-2 border-[#B1B5C3] py-4">
-            <p class="text-lg font-semibold text-[#141718]">Sub-Total</p>
-            <p class="sub-total-summary text-lg font-semibold text-[#141718]">$1234.00</p>
-          </div>
-          <div class="flex justify-between items-center py-4">
-            <p class="text-xl font-bold">Total</p>
-            <p class="total-summary text-xl font-bold">$1345.00</p>
-          </div>
-          <button class="bg-black text-white w-full rounded-md py-3 mt-4 text-lg">Checkout</button>
-        </aside>
-      </div>
-      <section class="conainer my-24 px-12">
-        <h3 class="font-bold text-2xl">Have a coupon?</h3>
-        <p class="py-2 text-md text-[#6C7275]">Add your code for an instant cart discount</p>
-        <div class="border p-3 w-[400px] flex items-center justify-between rounded-md">
-          <div class="flex items-center gap-2">
-            <i class="fa-solid fa-ticket fa-2x text-[#6C7275]"></i>
-            <input type="text" name="coupon" id="" class="px-3 outline-none text-lg" placeholder="Coupon Code">
-          </div>
-          <button class="px-4">Apply</button>
-        </div>
-      </section>
-    </section>
-    <section class="page">
-        <div class="container grid grid-cols-1 lg:grid-cols-[800px_300px] gap-20 w-fit mx-auto mt-8 py-4">
-          <form action="" method="post" class="font-[Inter]">
-            <div class="w-full border border-[#6C7275] rounded-md block mt-10 py-10 px-10">
-              <fieldset class="">
-                <legend class="text-2xl">Contact Information</legend>
-                <div class="flex gap-10">
-                  <div class="block w-full">
-                    <label for="first_name" class="text-[#6C7275] font-bold pb-2 pt-5 block">FIRST NAME</label>
-                    <input type="text" name="first_name" id="" placeholder="First name" class="border border-[#6C7275] p-2 rounded-lg w-full">
-                  </div>
-                  <div class="block w-full">
-                    <label for="last_name" class="text-[#6C7275] font-bold pb-2 pt-5 block">LAST NAME</label>
-                    <input type="text" name="last_name" id="" placeholder="Last name" class="border border-[#6C7275] p-2 rounded-lg w-full">
-                  </div>
-                </div>
-                <div>
-                  <label for="phone" class="text-[#6C7275] font-bold pb-2 pt-5 block">PHONE NUMBER</label>
-                  <input type="number" name="phone" id="phone" placeholder="Phone number" class="block w-full border border-[#6C7275] p-2 rounded-lg w-full">
-                </div>
-                <div>
-                  <label for="email" class="w-full text-[#6C7275] font-bold pb-2 pt-5 block">EMAIL ADDRESS</label>
-                  <input type="email" name="" id="email" placeholder="Your Email" class="block w-full border border-[#6C7275] p-2 rounded-lg w-full">
-                </div>
-              </fieldset>
-            </div>
-            <div class="w-full border border-[#6C7275] rounded-md block mt-10 py-10 px-10">
-              <fieldset class="">
-                <legend class="text-2xl">Shipping Information</legend>
-                <div>
-                  <label for="address" class="text-[#6C7275] font-bold pb-2 pt-5 block">ADDRESS</label>
-                  <input type="text" name="address" id="address" placeholder="Address" class="block w-full border border-[#6C7275] p-2 rounded-lg">
-                </div>
-                <div>
-                  <label for="country" class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block">COUNTRY</label>
-                  <input type="text" name="country" id="country" placeholder="Country" class="block border border-[#6C7275] p-2 rounded-lg w-full">
-                </div>
-                <div>
-                  <label for="city" class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block">TOWN/CITY</label>
-                  <input type="text" name="city" id="city" placeholder="City" class="block border border-[#6C7275] p-2 rounded-lg w-full">
-                </div>
-               <div class="flex justify-between gap-10">
-                <div class="w-full">
-                  <label for="state" class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block">STATE</label>
-                  <input type="text" name="state" id="state" placeholder="State" class="block border border-[#6C7275] p-2 rounded-lg w-full">
-                </div>
-                <div class="w-full">
-                  <label for="zip_code" class="text-[#6C7275] w-full text-[#6C7275] font-bold pb-2 pt-5 block">ZIP CODE</label>
-                  <input type="number" name="zip_code" id="zip_code" placeholder="Zip Code" class="block border border-[#6C7275] p-2 rounded-lg w-full">
-                </div>
-               </div>
-               <div class="flex items-center gap-2 my-6">
-                <input type="checkbox" name="" id="" class="w-[20px] h-[20px] accent-black block">
-               <label for="" class="text-[#6C7275] font-bold block">Use a different billing address (optional)</label>
-               </div>
-              </fieldset>
-            </div>
-            <div class="w-full border border-[#6C7275] rounded-md block mt-10 py-10 px-10">
-              <fieldset class="">
-                <legend class="text-2xl">Payment method</legend>
-                <div class="flex justify-between border border-[#6C7275] p-3 my-3">
-                  <div class="flex items-center gap-2">
-                    <input type="radio" name="payment_method" id="card_credit" value="credit card" class="w-[18px] h-[18px] accent-black">
-                    <label for="card_credit">Pay by Card Credit</label>
-                  </div>
-                  <i class="fa-solid fa-credit-card"></i>
-                </div>
-                <div class="flex flex-start gap-2 border border-[#6C7275] p-3 my-3">
-                  <input type="radio" name="payment_method" id="paypal" class="w-[18px] h-[18px] accent-black">
-                  <label for="paypal">Paypal</label>
-                </div>
-                <hr class="my-4">
-                <div>
-                  <label for="card_number" class="block w-full text-[#6C7275] font-bold pb-2 pt-5 block">CARD NUMBER</label>
-                  <input type="number" name="card_number" id="card_number" placeholder="1234 5678 9012" class="block w-full border border-[#6C7275] p-2 rounded-lg">
-                </div>
-                <div class="flex gap-10">
-                  <div class="w-full">
-                    <label for="expiration_date" class="block w-full text-[#6C7275] font-bold pb-2 pt-5 block">EXPIRATION DATE</label>
-                    <input type="month" name="expiration_date" id="expiration_date" class="block w-full border border-[#6C7275] p-2 rounded-lg" value="MM/YY">
-                  </div>
-                  <div class="w-full">
-                    <label for="cvv" class="block w-full text-[#6C7275] font-bold pb-2 pt-5 block">CVV</label>
-                    <input type="number" name="cvv" id="cvv" placeholder="123" class="block w-full border border-[#6C7275] p-2 rounded-lg">
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <button class="bg-black text-white w-full rounded-md py-3 mt-6 text-lg">Place Order</button>
-          </form>
-          <aside class="w-[400px] p-5 border border-[#6C7275] h-min">
-            <h6 class="text-2xl font-semibold text-[#141718] mb-2">Order Summary</h6>
-            
-            <div class="flex justify-between my-8 border-b-2 border-[#E8ECEF] py-8">
-              <div class="flex items-center gap-2">
-                <img src="../assets/images/singleProducts/tray-table/tray-table-black.png" alt="">
-                <div>
-                  <h6 class="text-base font-semibold text-[#141718]">Tray Table</h6>
-                  <p class="text-[#6C7275]">color: black</p>
-                  <div class="border w-min flex items-center justify-center gap-2 rounded-md overflow-hidden shadow-sm">
-                    <button class="minus-btn px-2 py-1 cursor-pointer text-lg">-</button>
-                    <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-8 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                    [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
-                    <button class="plus-btn px-2 cursor-pointer text-lg">+</button>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <p class="price text-lg">$39.00</p>
-                <button class="text-sm flex items-center gap-2 cursor-pointer md:hidden">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-            <div class="flex justify-between my-8 border-b-2 border-[#E8ECEF py-8">
-              <div class="flex items-center gap-2">
-                <img src="../assets/images/singleProducts/tray-table/tray-table-red.png" alt="">
-                <div>
-                  <h6 class="text-base font-semibold text-[#141718]">Tray Table</h6>
-                  <p class="text-[#6C7275]">color: black</p>
-                  <div class="border w-min flex items-center justify-center gap-2 rounded-md overflow-hidden shadow-sm">
-                    <button class="minus-btn px-2 py-1 cursor-pointer text-lg">-</button>
-                    <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-8 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                    [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
-                    <button class="plus-btn px-2 cursor-pointer text-lg">+</button>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <p class="price text-lg">$39.00</p>
-                <button class="text-sm flex items-center gap-2 cursor-pointer md:hidden">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-            <div class="flex justify-between my-8 border-b-2 border-[#E8ECEF py-8">
-              <div class="flex items-center gap-2">
-                <img src="../assets/images/singleProducts/lamp/lamp-1.png" alt="">
-                <div>
-                  <h6 class="text-base font-semibold text-[#141718]">Table Lamp</h6>
-                  <p class="text-[#6C7275]">color: Gold</p>
-                  <div class="border w-min flex items-center justify-center gap-2 rounded-md overflow-hidden shadow-sm">
-                    <button class="minus-btn px-2 py-1 cursor-pointer text-lg">-</button>
-                    <input type="number" name="quantity" id="quantity" value="1" min="1" class="outline-none border-none text-center w-8 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                    [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-lg">
-                    <button class="plus-btn px-2 cursor-pointer text-lg">+</button>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <p class="price text-lg">$39.00</p>
-                <button class="text-sm flex items-center gap-2 cursor-pointer md:hidden">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-            <div class="flex justify-between border-b-2 border-[#E8ECEF] py-3 my-3">
-              <p class="text-lg font-semibold text-[#141718]">Shipping</p>
-              <p class="text-lg font-semibold text-[#141718]">Free</p>
-            </div>
-            <div class="flex justify-between items-center border-b-2 border-[#E8ECEF] py-4">
-              <p class="text-lg font-semibold text-[#141718]">Sub-Total</p>
-              <p class="sub-total-summary text-lg font-semibold text-[#141718]">$1234.00</p>
-            </div>
-            <div class="flex justify-between items-center py-4">
-              <p class="text-xl font-bold">Total</p>
-              <p class="total-summary text-xl font-bold">$1345.00</p>
-            </div>
-          </aside>
-        </div>
-    </section>
-    <section class="page">
-      <div class="flex flex-col items-center justify-center border w-[600px] shadow-lg mx-auto my-20 rounded-lg">
-        <p class="text-center text-2xl mt-12">Thank you!</p>
-        <h3 class="text-center text-4xl font-semibold py-6">Your order has been <br> placed successfully</h3>
-        <div class="flex mx-auto gap-10 mt-10 w-fit">
-          <div class="relative">
-            <img src="../assets/images/singleProducts/tray-table/tray-table-black.png" alt="">
-            <span class="w-[25px] h-[25px] block absolute top-0 right-0 rounded-full flex items-center justify-center bg-black text-white block">2</span>
-          </div>
-          <div class="relative">
-            <img src="../assets/images/singleProducts/tray-table/tray-table-red.png" alt="">
-            <span class="w-[25px] h-[25px] block absolute top-0 right-0 rounded-full flex items-center justify-center bg-black text-white block">2</span>
-          </div>
-          <div class="relative">
-            <img src="../assets/images/singleProducts/lamp/lamp-1.png" alt="">
-            <span class="w-[25px] h-[25px] block absolute top-0 right-0 rounded-full flex items-center justify-center bg-black text-white block">1</span>
-          </div>
-        </div>
-        <div class="mt-6 grid grid-cols-2 gap-4">
-          <p class="text-[#6C7275]">Order code:</p>
-          <p class="text-xl text-justify"> #0123_45678</p>
-          <p class="text-[#6C7275]">Date:</p>
-          <p class="text-xl">October 19, 2023</p>
-          <p class="text-[#6C7275]">Total:</p>
-          <p class="text-xl">$1,345.00</p>
-          <p class="text-[#6C7275]">Payment method:</p>
-          <p class="text-xl">Credit Card</p>
-        </div>
-        <button class="bg-black block text-white w-[200px] rounded-full py-3 mt-12 mb-12 text-lg mx-auto">Purchase history</button>
-      </div>
-    </section>
-  </main>
-
-  <footer class="text-white bg-black pb-14 px-6 text-center md:text-left">
-    <div class="container mx-auto md:flex md:justify-between md:items-center py-20">
-      <div class="md:flex md:items-center md:gap-10">
-        <a href="" class="text-xl font-semibold md:text-2xl md:font-normal md:pr-8"
-      >3legant.</a
-    > <p class="text-[#E8ECEF] md:border-l-2 border-white pl-8">Gift & Decoration Store</p>
-      </div>
-      <nav>
-        <ul
-        class="mt-8 md:mt-0 flex flex-col gap-8 md:flex-row md:gap-[2vw]"
+      <div
+        class="container mx-auto md:flex md:justify-between md:items-center border-t-2 border-[#6C7275] pt-4 text-[#FEFEFE]"
       >
-        <li class="cursor-pointer">
-          <a href="" class="text-[#FEFEFE] text-md md:text-md "
-            >Home</a
-          >
-        </li>
-        <li
-          class="shop cursor-pointer text-[#FEFEFE]"
-          onclick="showModal()"
-        >
-          Shop
-          <!-- <a href="" class="text-[#141718] text-md md:text-md text-black"
-            >Shop</a -->
-          <i class="fa-solid fa-chevron-down text-[#377DFF]"></i>
-          <!-- <i class="fa-solid fa-chevron-up hidden"></i> -->
-          <ul class="drop-down bg-black text-white p-4 absolute hidden">
-            <li class="border-b-2 border-[#cec] pb-2">
-              <a href="" class="">Furniture</a>
-            </li>
-            <li class="border-b-2 border-[#cec] pb-2">
-              <a href="" class="">Accessories</a>
-            </li>
-            <li class="border-b-2 border-[#cec] pb-2">
-              <a href="" class="">Sports</a>
-            </li>
-            <li class="border-b-2 border-[#cec] pb-2">
-              <a href="" class="">Clothings</a>
-            </li>
-          </ul>
-        </li>
-        <li class="cursor-pointer">
-          <a href="" class="text-[#FEFEFE] text-md md:text-md"
-            >Product</a
-          >
-        </li>
-        <li class="cursor-pointer">
-          <a href="" class="text-[#FEFEFE] text-md md:text-md"
-            >Blog</a
-          >
-        </li>
-        <li class="cursor-pointer">
-          <a href="" class="text-[#FEFEFE] text-md md:text-md"
-            >Contact Us</a
-          >
-        </li>
-      </ul>
-      </nav>
-    </div>
-    <div class="container mx-auto md:flex md:justify-between md:items-center border-t-2 border-[#6C7275] pt-4 text-[#FEFEFE]">
-      <div class="md:flex md:gap-10">
-        <p class="">Copyright ©2024 3legant. <span class="block md:inline"> All rights reserved</span></p>
-        <a href="" class="block my-4 md:inline md:my-0">Privacy Policy</a>
-        <a href="" class="block my-4 md:inline md:my-0">Terms of Use</a>
+        <div class="md:flex md:gap-10">
+          <p class="">
+            Copyright ©2024 3legant.
+            <span class="block md:inline"> All rights reserved</span>
+          </p>
+          <a href="" class="block my-4 md:inline md:my-0">Privacy Policy</a>
+          <a href="" class="block my-4 md:inline md:my-0">Terms of Use</a>
+        </div>
+        <div class="text-center md:flex gap-8">
+          <i class="fa-brands fa-instagram mx-2 md:mx-0"></i>
+          <i class="fa-brands fa-facebook-f mx-2 md:mx-0"></i>
+          <i class="fa-brands fa-youtube mx-2 md:mx-0"></i>
+        </div>
       </div>
-      <div class="text-center md:flex gap-8">
-        <i class="fa-brands fa-instagram mx-2 md:mx-0"></i>
-        <i class="fa-brands fa-facebook-f mx-2 md:mx-0"></i>
-        <i class="fa-brands fa-youtube mx-2 md:mx-0"></i>
-      </div>
-    </div>
-  </footer>
-  <script src="../js/script.js"></script>
-</body>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/validate.js"></script>
+  </body>
 </html>

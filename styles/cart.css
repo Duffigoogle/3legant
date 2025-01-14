@@ -11,3 +11,14 @@
 .steps-section > .active-tab > span {
   background-color: #d2aa1a;
 }
+
+
+.error-border {
+  border-color: red; /* Or any other visual cue */
+}
+
+.error-message {
+  color: red;
+  font-size: small;
+  display: block; /* Or inline-block as needed */
+}
